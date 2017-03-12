@@ -1,0 +1,26 @@
+<footer class="footer-bsk footer-bsk-default site-footer">
+  <div class="container">
+    <!-- main content -->
+    <div class="pull-left">
+      {% include snippets/is-something-wrong.html %}
+    </div>
+    <div class="pull-right">
+        {% include snippets/back-to-top.html %}
+    </div>
+    <div class="clearfix"></div>
+    <div role="separator" class="footer-bsk-divider"></div>
+    <!-- Copyright & legal -->
+    <div class="footer-bsk-ogl">
+      <a class="ogl-symbol" rel="license" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"><img alt="Open Government Licence logo" src="https://s3-eu-west-1.amazonaws.com/bas-cdn-dev/scratch/bas-style-kit-jekyll-theme/img/ogl-symbol-white.png"></a>
+      <div class="ogl-text">All content is licensed under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence v3.0</a>, except where otherwise stated</div>
+    </div>
+    <div class="footer-bsk-policy-links">
+      © {{site.time | date: "%Y"}} NERC BAS
+      <ul class="list-inline">
+        <li><a href="{{ site.copyright_href }}">Copyright</a></li>
+        <li><a href="{{ site.privacy_href }}">Privacy</a></li>
+        <li><a href="{{ site.cookies_href }}">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

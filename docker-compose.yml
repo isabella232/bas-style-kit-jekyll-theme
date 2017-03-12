@@ -1,0 +1,13 @@
+---
+version: '2'
+
+services:
+  app:
+    build: .
+    image: docker-registry.data.bas.ac.uk/bsk/bas-style-kit-jekyll-theme:0.1.0-alpine
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "9000:9000"
+    environment:
+      - JEKYLL_ENV=development
