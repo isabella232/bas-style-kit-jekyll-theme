@@ -17,9 +17,9 @@
         {% for item in site.nav_items %}
             {% comment %} Single navbar items {% endcomment %}
             {% if item.type == 'single_item' %}
-            {% assign page_url = page.url | remove: '.html' %}
-            
-            <li {% if page_url == item.href %} class="active"{% endif %} {% unless page_url == '/' %}{% unless item.href == '/' %}{% if page_url + '/' == item.href %} class="active"{% endif %}{% endunless %}{% endunless %}>
+              {% assign page_url = page.url | remove: '.html' %}
+              {% assign item_url = item.href | append: '/' %}
+            <li {% if page_url == item.href %}class="active"{% endif %} {% unless page_url == '/' %}{% unless item.href == '/' %}{% if page_url == item_url %} class="active"{% endif %}{% endunless %}{% endunless %}>
                 {% if page_url == item.href %}<span class="sr-only">(current)</span>{% endif %} {% unless page_url == '/' %}{% unless item.href == '/' %}{% if page_url + '/' == item.href %}<span class="sr-only">(current)</span>{% endif %}{% endunless %}{% endunless %}
                 <a href="{{ item.href }}">{{ item.name }}</a>
             </li>
@@ -31,6 +31,10 @@
                     {% if page_url == action.href %}
                         {% assign is_active = true %}
                     {% endif %}
+                    {% assign action_url = action.href | append: '/' %}
+                    {% if page_url == action_url %}
+                        {% assign is_active = true %}
+                    {% endif %}
                 {% endfor %}
             <li class="dropdown {% if is_active %}active{% endif %}">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -38,9 +42,10 @@
                 {{ item.name }} <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-menu-bsk">
                 {% for action in item.actions %}
-                    <li {% if page_url == action.href %} class="active"{% endif %}>
-                        {% if page_url == action.href %}<span class="sr-only">(current)</span>{% endif %}
-                        <a href="{{ action.href }}">{{ action.name }}</a>
+                    {% assign action_url = action.href | append: '/' %}
+                    <li {% if page_url == action.href %}class="active"{% endif %} {% unless page_url == '/' %}{% unless action.href == '/' %}{% if page_url == action_url %} class="active"{% endif %}{% endunless %}{% endunless %}>
+                      {% if page_url == action.href %}class="active"{% endif %} {% unless page_url == '/' %}{% unless action.href == '/' %}{% if page_url == action_url %}<span class="sr-only">(current)</span>{% endif %}{% endunless %}{% endunless %}
+                      <a href="{{ action.href }}">{{ action.name }}</a>
                     </li>
                 {% endfor %}
                 </ul>
