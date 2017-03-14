@@ -18,8 +18,9 @@
             {% comment %} Single navbar items {% endcomment %}
             {% if item.type == 'single_item' %}
             {% assign page_url = page.url | remove: '.html' %}
-            <li {% if page_url == item.href %} class="active"{% endif %}>
-                {% if page_url == item.url %}<span class="sr-only">(current)</span>{% endif %}
+            
+            <li {% if page_url == item.href %} class="active"{% endif %} {% unless page_url == '/' %}{% unless item.href == '/' %}{% if page_url + '/' == item.href %} class="active"{% endif %}{% endunless %}{% endunless %}>
+                {% if page_url == item.href %}<span class="sr-only">(current)</span>{% endif %} {% unless page_url == '/' %}{% unless item.href == '/' %}{% if page_url + '/' == item.href %}<span class="sr-only">(current)</span>{% endif %}{% endunless %}{% endunless %}
                 <a href="{{ item.href }}">{{ item.name }}</a>
             </li>
 
