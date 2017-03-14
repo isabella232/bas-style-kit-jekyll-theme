@@ -32,6 +32,7 @@ encoding: UTF-8
 
 baseurl: "" # e.g. /foo
 url: "http://localhost:9000" # base hostname & protocol for canonical links
+permalink: pretty
 
 title: BAS Style Kit Jekyll Theme
 description: > # Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.

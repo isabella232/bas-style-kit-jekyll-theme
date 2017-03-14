@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.1.2 - 14/03/2017
+
+### Fixed
+
+* Active site navigation item support when using 'pretty' permalinks
+
+## 0.1.1 - Skipped
+
 ## 0.1.0 - 12/03/2017
 
 ### Added
