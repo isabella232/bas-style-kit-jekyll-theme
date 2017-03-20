@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = ["screenshot.png", "README.md", "LICENSE.md", "LICENSE-MIT.md", "CONTRIBUTING.md", "CHANGELOG.md"] 
-  spec.files         += Dir['_includes/**/*'] + Dir['_layouts/**/*'] + Dir['_sass/**/*'] + Dir['assets/**/*'] 
+  spec.files         += Dir['_data/**/*'] + Dir['_includes/**/*'] + Dir['_layouts/**/*'] + Dir['_sass/**/*'] + Dir['assets/**/*'] 
 
   spec.add_runtime_dependency "jekyll", "~> 3.4"
 

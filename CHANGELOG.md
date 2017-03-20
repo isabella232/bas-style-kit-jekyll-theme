@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Documenting that the site base URL will be prefixed to navigation item URLs if one is defined
+
+### Changed
+
+* Body JS include now references files from a data file, and allows per-page files to loaded using front-matter
+
 ## 0.1.2 - 14/03/2017
 
 ### Fixed
