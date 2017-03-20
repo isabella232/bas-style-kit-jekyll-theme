@@ -412,6 +412,8 @@ The most basic item type, set manually and displayed as a navbar item (link).
 | -------- | ------ | -------- | --------------------------------- | ------------- | ------------------------------------------------ |
 | `href`   | String | Yes      | Used as the link `href` attribute | `/about`      | Set the `href` property to `/` for the home page |
 
+**Note:** The base URL of the website will be prepended to the `href` property, if one is defined.
+
 **Active item**
 
 When the current page matches the `href` attribute, the item is made the active navbar item.
@@ -444,6 +446,8 @@ A more complex item type, set manually and displayed as a
 | `actions`          | List   | Yes      | Defines the actions for the drop-down menu | N/A           | -                                                |
 | `actions.*.name`   | String | Yes      | Used as the action text                    | `Downloads`   | Example of a single action                       |
 | `actions.*.href`   | String | Yes      | Used as the action `href` atttibute        | `/resources/downloads` | Example of a single action              |
+
+**Note:** The base URL of the website will be prepended to the `action.*.href` property, if one is defined.
 
 **Active item**
 
