@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Variables data file to provide information about the theme and version of the Style Kit version used for example
+
 ### Fixed
 
 * Documenting that the site base URL will be prefixed to navigation item URLs if one is defined
@@ -12,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed
 
 * Body JS include now references files from a data file, and allows per-page files to loaded using front-matter
+* Updating theme screen shot
 
 ## 0.1.2 - 14/03/2017
 

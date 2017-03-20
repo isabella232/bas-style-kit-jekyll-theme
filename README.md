@@ -282,6 +282,15 @@ Theme specific options which **SHOULD** be set:
 | `nav_items`         | List   | Items in this website to include in the site navigation        | *List of items*       | See the *Site navigation* section for more information                      |
 | `nav_related_sites` | List   | Items for other BAS websites to include in the site navigation | *List of items*       | See the *Site navigation* section for more information                      |
 
+### Theme variables
+
+The `bsk_jekyll_vars.json` Jekyll data file contains variables which can be used by websites using this theme.
+
+| Variable        | Type   | Description                                         | Notes |
+| --------------- | ------ | --------------------------------------------------- | ----- |
+| `theme_version` | String | Version of the BAS Style Kit Jekyll Theme           | -     |
+| `bsk_version`   | String | Version of the BAS Style Kit used within this theme | -     |
+
 ### JavaScript
 
 JavaScript files can be loaded after the main site content in two ways:
@@ -691,7 +700,7 @@ listed it won't be included. This is separate to the Git `.gitignore` file.
 
 ## Release procedures
 
-1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml`
+1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml` and `_data/bsk_jekyll_vars.json`
 2. `docker-compose build`
 3. `docker-compose push`
 4. close release
