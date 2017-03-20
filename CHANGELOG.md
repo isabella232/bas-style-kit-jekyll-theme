@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.2.0 - 20/03/2017
+
 ### Added
 
 * Variables data file to provide information about the theme and version of the Style Kit version used for example
