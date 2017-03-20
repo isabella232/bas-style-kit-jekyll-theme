@@ -167,12 +167,10 @@ include.
 
 **File:** `snippets/body-js.html`
 
-Inserts `<script>` tags for:
+Inserts `<script>` tags to reference JavaScript files. Entries defined in the `bsk_jekyll_js.json` data file will be
+output first, followed by per-page files using the `body_js_files` front-matter option.
 
-* jQuery (required for Bootstrap's JavaScript components and the cookie banner)
-* Bootstrap JavaScript components (required for components such as drop-down menus)
-* JS Cookie (required for the cookie banner)
-* cookie banner (a script to hide the cookie banner using a cookie, if the user chooses to)
+See the *JavaScript* section for more information.
 
 **Note:** This snippet is designed for loading JavaScript *after* the main page content. If a script needs to be run 
 before this content, you will need to do this manually.
@@ -229,6 +227,8 @@ All assets in this theme are scoped to the `bsk-jekyll` directory.
 website that uses this theme. This makes such sites more consistent, and gives performance benefits using browser 
 caching.
 
+**Note:** To include JavaScript files, after the page has loaded, see the *JavaScript* section.
+
 #### `bsk-jekyll/bas-style-kit-jekyll-theme.scss`
 
 CSS styles specific to this theme, designed to be the same for each site using this theme.
@@ -248,6 +248,8 @@ Image used if this website is pinned to the start screen of a smartphone.
 Simple script to set a cookie when the user dismisses the cookie banner. If this cookie is present the banner will not 
 be shown on subsequent pages for a period of 30 days. After this time the banner will be shown again, until dismissed 
 again for another 30 days.
+
+See the *JavaScript* section for more information on how this file is loaded.
 
 #### `css/main.scss`
 
@@ -279,6 +281,87 @@ Theme specific options which **SHOULD** be set:
 | `ga_property`       | String | Google Analytics property for website                          | "UA-64130716-XX"      | Values should start with `UA-64130716-` for BAS Google Analytics properties |
 | `nav_items`         | List   | Items in this website to include in the site navigation        | *List of items*       | See the *Site navigation* section for more information                      |
 | `nav_related_sites` | List   | Items for other BAS websites to include in the site navigation | *List of items*       | See the *Site navigation* section for more information                      |
+
+### JavaScript
+
+JavaScript files can be loaded after the main site content in two ways:
+
+1. Using the `bsk_jekyll_js.json` Jekyll data file - for files that should be loaded in all pages
+2. Using the `body_js_files` front-matter option - for files that should only be loaded for specific pages
+
+Both methods are added to the page using the *Body JS* include, using the following structure for each script:
+
+| Property  | Type   | Required | Description                                       | Example Value                            | Notes                                            |
+| --------- | ------ | -------- | ------------------------------------------------- | ---------------------------------------- | ------------------------------------------------ |
+| `comment` | String | Yes      | Used as a HTML comment added before each script   | `Code for managing cookie banner`        | -                                                |
+| `href`    | String | Yes      | Defines the location of the script to be loaded   | `/assets/bsk-jekyll/js/cookie-banner.js` | Depends on the type property value               |
+| `type`    | String | Yes      | Controls how this item is processed and displayed | `local`                                  | See below for valid values                       |
+
+Supported script types are:
+
+* `local`
+* `remote`
+
+**Note:** See the `bsk_jekyll_js.json` Jekyll data file for scripts which are included in all pages by default.
+
+**Example**
+
+For scripts referenced in the `bsk_jekyll_js.json` Jekyll data file:
+
+```json
+{
+  {
+    "comment": "Cookie library used to persistently hide the cookie banner",
+    "href": "https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js",
+    "type": "remote"
+  },
+  {
+    "comment": "Code for managing cookie banner",
+    "href": "/assets/bsk-jekyll/js/cookie-banner.js",
+    "type": "local"
+  }
+]
+```
+
+For scripts referenced in the `body_js_files` front-matter option:
+
+```md
+---
+title: A page
+body_js_files:
+  - comment: Cookie library used to persistently hide the cookie banner
+    href: https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js
+    type: remote
+  - comment: Code for managing cookie banner
+    href: /assets/bsk-jekyll/js/cookie-banner.js
+    type: local
+---
+
+# Page content
+...
+```
+
+#### Remote scripts
+
+Set the `href` property to the URL of a remote file.
+
+**Example**
+
+```
+href: https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js
+```
+
+#### Local scripts
+
+Set the `href` property to a URL relative to the base of the current website.
+
+**Note:** The base URL of the website will be prepended to the `href` property, if one is defined.
+
+**Example**
+
+```
+href: /assets/bsk-jekyll/js/cookie-banner.js
+```
 
 ### Site navigation
 
