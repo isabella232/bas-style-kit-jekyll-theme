@@ -12,7 +12,7 @@ RUN bundle install
 # Setup `jekyll serve`
 EXPOSE 9000
 ENTRYPOINT []
-CMD ["jekyll", "serve"]
+CMD ["jekyll", "serve", "--config", "_config-internal.yml"]
 
 # Ideally we wouldn't override the ENTRYPOINT defined by the 'antarctica/jekyll-image' image, however GitLab CI doesn't
 # yet support using, or overriding, this property properlly yet. Once this is fixed the 'jekyll' element can be removed
