@@ -30,10 +30,22 @@ Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for g
 
 ### Selecting the BAS Style Kit Jekyll theme
 
-Add this line to your Jekyll site's `_config.yml`:
+Add these lines to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: jekyll-theme-bas-style-kit
+
+gems:
+  - jekyll-data
+```
+
+**Note:** This theme sets additional config options, see the *Config options* section for more information.
+
+**Note:** If you have loaded any Jekyll plugins using the `gems` option, also include these plugins:
+
+```yaml
+gems:
+  - jekyll-data
 ```
 
 ### Layouts
@@ -262,25 +274,32 @@ be left empty if not needed.
 
 ### Config options
 
-There are a number of config options used by this theme, which **SHOULD** be set, within `_config.yml`.
+There are a number of general config options which **SHOULD** be set for this theme:
 
-Jekyll config options which **SHOULD** be set:
+| Option        | Type   | Description                | Default Value | Example Value                                       | Notes                                      |
+| ------------- | ------ | -------------------------- | ------------- | --------------------------------------------------- | ------------------------------------------ |
+| `title`       | String | Name of the website        | *None*        | "Example Website"                                   | Also used for the title HTML property      |
+| `description` | String | Description of the website | *None*        | "Example website for the BAS Style Kit Jekyll Theme | Used in the description meta HTTP property |
 
-* `title`
-* `description`
-
-Theme specific options which **SHOULD** be set:
+There are a number of theme specific config options, some of which **SHOULD** be set:
                         
-| Option              | Type   | Description                                                    | Example Value         | Notes                                                                       |
-| ------------------- | ------ | -------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------- |
-| `phase`             | String | Current development phase for website                          | "alpha"               | See the *Development phase notice* section for more information             |
-| `copyright_href`    | String | URL to copyright statement for website                         | "/copyright-statement | See the *Legal policies* section for more information                       |
-| `privacy_href`      | String | URL to privacy policy for website                              | "/privacy-policy"     | See the *Legal policies* section for more information                       |
-| `cookies_href`      | String | URL to cookie policy for website                               | "/cookie-policy"      | See the *Legal policies* section for more information                       |
-| `feedback_href`     | String | URL to feedback page for website                               | "/feedback"           | See the *Website feedback* section for more information                     |
-| `ga_property`       | String | Google Analytics property for website                          | "UA-64130716-XX"      | Values should start with `UA-64130716-` for BAS Google Analytics properties |
-| `nav_items`         | List   | Items in this website to include in the site navigation        | *List of items*       | See the *Site navigation* section for more information                      |
-| `nav_related_sites` | List   | Items for other BAS websites to include in the site navigation | *List of items*       | See the *Site navigation* section for more information                      |
+| Option              | Type   | Description                                                    | Default Value | Example Value          | Notes                                                                       |
+| ------------------- | ------ | -------------------------------------------------------------- | ------------- | ---------------------- | --------------------------------------------------------------------------- |
+| `phase`             | String | Current development phase of the website                       | `live`        | `alpha`                | See the *Development phase notice* section for more information             |
+| `copyright_href`    | String | URL to copyright statement of the website                      | *None*        | `/copyright-statement` | See the *Legal policies* section for more information                       |
+| `privacy_href`      | String | URL to privacy policy of the website                           | *None*        | `/privacy-policy`      | See the *Legal policies* section for more information                       |
+| `cookies_href`      | String | URL to cookie policy of the website                            | *None*        | `/cookie-policy`       | See the *Legal policies* section for more information                       |
+| `feedback_href`     | String | URL to feedback page of the website                            | *None*        | `/feedbac`             | See the *Website feedback* section for more information                     |
+| `ga_property`       | String | Google Analytics property of the website                       | *None*        | `UA-64130716-XX`       | Values should start with `UA-64130716-` for BAS Google Analytics properties |
+| `nav_items`         | List   | Items in the website to include in the site navigation         | *None*        | *List of items*        | See the *Site navigation* section for more information                      |
+| `nav_related_sites` | List   | Items for other BAS websites to include in the site navigation | *List*        | *List of items*        | See the *Site navigation* section for more information                      |
+
+There are some additional general config options which are set by this theme, but can be overriden if needed:
+
+| Option      | Type   | Description                                                          | Default Value | Example Value   | Notes                                                                    |
+| ----------- | ------ | -------------------------------------------------------------------- | ------------- | --------------- | ------------------------------------------------------------------------ |
+| `gems`      | List   | List of Jekyll plugins to include, set to dependencies of this theme | *List*        | *List of items* | If this option is set within a website, ensure these values are included |
+| `permalink` | String | Removes the `.html` file extension from URLs generated by Jekyll     | `pretty`      | `pretty`        | Other options are available, see the Jekyll documentation                |
 
 ### Theme variables
 
@@ -689,6 +708,20 @@ $ docker-compose push app
 [1] The first time you use this registry, you will need to authenticate using:
 `docker login docker-registry.data.bas.ac.uk`
 
+### Jekyll plugins
+
+Additional Jekyll plugins can be used by listing them as dependencies of this theme.
+
+When the theme is installed by an end-user these plugins will be also be installed. This theme includes a `_config.yml`
+to set `gems` option to include any required plugins.
+
+### Jekyll config options
+
+The Jekyll Data plugin is used to set config options within sites that use this theme. For this to work the site still 
+needs to call the Data plugin, other config options can then be set by this plugin.
+
+**Note:** Make sure to document which config options are set by this theme, especially conventional options.
+
 ### Ruby Gem
 
 This theme is distributed as a Ruby Gem, through the public [Ruby Gems](https://rubygems.org) gem hosting service.
@@ -703,11 +736,13 @@ listed it won't be included. This is separate to the Git `.gitignore` file.
 1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml` and `_data/bsk_jekyll_vars.json`
 2. `docker-compose build`
 3. `docker-compose push`
-4. update screen-shot (width: 900px)
-5. close release
-6. commit changes to git and tag with new version
-7. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
-8. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
+4. if new plugins have been added, update the usage section for where users override the `gems` config option
+5. if new config options have been set, update the usage section
+6. update screen-shot (width: 900px)
+7. close release
+8. commit changes to git and tag with new version
+9. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
+10. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
 
 ## Issue tracking
 

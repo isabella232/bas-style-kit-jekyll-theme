@@ -1,88 +1,38 @@
-# Welcome to Jekyll!
+# This file is **NOT** a standard Jekyll config file. 
+# 
+# It is used to define config options for use by the BAS Style Kit Jekyll Theme, which will be merged together with 
+# individual website options at runtime using the Jekyll Data plugin.
 
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# If any of these options are set within a site's config file, it will override the values defined here.
 
-# Build settings
+# Plugins (required by this theme)
 
-markdown: kramdown
-# theme: NONE - normally this would be 'jekyll-theme-bas-style-kit' but this *is* that theme so that won't work
+gems:
+  - jekyll-data
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - CHANGELOG.md
-  - CONTRIBUTING.md
-  - LICENSE-MIT.md
-  - LICENSE.md
-  - README.md	
-  - Dockerfile
-  - docker-compose.yml
-  - jekyll-theme-bas-style-kit.gemspec
-  - screenshot.png
+# Set default permalink format
 
-# Server settings
-
-host: 0.0.0.0
-port: 9000
-url: localhost
-encoding: UTF-8
-
-# Site settings
-
-baseurl: "" # e.g. /foo
-url: "http://localhost:9000" # base hostname & protocol for canonical links
 permalink: pretty
 
-title: BAS Style Kit Jekyll Theme
-description: > # Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.
+# Set default development phase
 
 phase: live
 
-copyright_href: "https://www.bas.ac.uk/about-this-site/copyright-statement/"
-privacy_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-cookies_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-feedback_href: "#"
+# Set default layout
 
-ga_property: UA-64130716-XX
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
 
-nav_items:
-  -
-    name: Home
-    type: single_item
-    href: /
-  -
-    name: About
-    type: single_item
-    href: /about
-  -
-    name: Layouts
-    type: dropdown_item
-    actions:
-      -
-        name: Blank
-        href: /samples/layouts/blank
-      -
-        name: HTML
-        href: /samples/layouts/html
-      -
-        name: Default
-        href: /samples/layouts/default
-  -
-    name: Includes
-    type: dropdown_item
-    actions:
-      -
-        name: Page JS
-        href: /samples/includes/page-js
+# Set default related sites
 
 nav_related_sites:
   -
     name: BAS Home
     href: https://www.bas.ac.uk
-  - 
-    name: BAS Style Kit
-    href: https://style-kit.web.bas.ac.uk
   - 
     name: Discover BAS data
     href: https://data.bas.ac.uk

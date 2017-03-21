@@ -5,6 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.2.2 - 21/03/2017
+
+### Added
+
+* Jekyll Data plugin as a theme/gem dependency, allows default config options to be set, and the use of theme data files
+
+### Changed
+
+* Including theme config file in Gemspec to allow default config options to be set
+* Switching previous config file used for previewing the theme to an internal config file
+* Config option documentation is now consistent, and includes whether a default value is set for each option
+* Updating theme screen shot
+
 ## 0.2.1 - 21/03/2017
 
 ### Added
