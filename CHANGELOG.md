@@ -13,6 +13,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Removing if statement for `body_js_files` front-matter option, which was checking the wrong value and is redundant
 
+### Changed
+
+* Updating release procedures to update theme screen-shot
+
 ## 0.2.0 - 20/03/2017
 
 ### Added

@@ -703,10 +703,11 @@ listed it won't be included. This is separate to the Git `.gitignore` file.
 1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml` and `_data/bsk_jekyll_vars.json`
 2. `docker-compose build`
 3. `docker-compose push`
-4. close release
-5. commit changes to git and tag with new version
-6. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
-7. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
+4. update screen-shot (width: 900px)
+5. close release
+6. commit changes to git and tag with new version
+7. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
+8. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
 
 ## Issue tracking
 
