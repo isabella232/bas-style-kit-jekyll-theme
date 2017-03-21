@@ -4,7 +4,7 @@ version: '2'
 services:
   app:
     build: .
-    image: docker-registry.data.bas.ac.uk/bsk/bas-style-kit-jekyll-theme:0.2.0-alpine
+    image: docker-registry.data.bas.ac.uk/bsk/bas-style-kit-jekyll-theme:0.2.1-alpine
     volumes:
       - .:/usr/src/app
     ports:

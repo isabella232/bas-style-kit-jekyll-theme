@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.2.1 - 21/03/2017
+
 ### Added
 
 * Test page for loading per-page JavaScript files
