@@ -14,7 +14,11 @@ layout: default
 * [HTML]({{ '/samples/layouts/html' | prepend: site.baseurl }})
 * [default]({{ '/samples/layouts/default' | prepend: site.baseurl }})
 
-### Variables
+### Includes
+
+* [page body JS]({{ '/samples/includes/page-js' | prepend: site.baseurl }})
+
+## Variables
 
 | Variable        | Value                                           |
 | --------------- | ----------------------------------------------- |

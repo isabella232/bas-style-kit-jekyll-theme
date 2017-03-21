@@ -68,6 +68,13 @@ nav_items:
       -
         name: Default
         href: /samples/layouts/default
+  -
+    name: Includes
+    type: dropdown_item
+    actions:
+      -
+        name: Page JS
+        href: /samples/includes/page-js
 
 nav_related_sites:
   -

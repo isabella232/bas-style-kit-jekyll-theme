@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Test page for loading per-page JavaScript files
+
 ### Fixed
 
 * Removing if statement for `body_js_files` front-matter option, which was checking the wrong value and is redundant
