@@ -5,10 +5,8 @@
     {% if script.type == 'local' %}<script src="{{ script.href | prepend: site.baseurl }}"></script>{% endif %}
 {% endfor %}
 {% comment %}Additional JS files listed on per-page basis{% endcomment %}
-{% if body_js_files %}
 {% for script in page.body_js_files %}
     <!-- {{ script.comment }} -->
     {% if script.type == 'remote' %}<script src="{{ script.href }}"></script>{% endif %}
     {% if script.type == 'local' %}<script src="{{ script.href | prepend: site.baseurl }}"></script>{% endif %}
 {% endfor %}
-{% endif %}
