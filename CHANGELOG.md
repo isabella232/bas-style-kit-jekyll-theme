@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Fixed
 
 * Inconsistent indentation in site-navigation include
+* Incorrectly displaying active class name instead of screen-reader active element, in drop-down main navigation items
 
 ## 0.2.2 - 21/03/2017
 

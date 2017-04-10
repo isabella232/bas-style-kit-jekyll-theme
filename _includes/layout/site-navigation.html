@@ -45,7 +45,7 @@
               {% for action in item.actions %}
                   {% assign action_url = action.href | append: '/' %}
                   <li {% if page_url == action.href %}class="active"{% endif %} {% unless page_url == '/' %}{% unless action.href == '/' %}{% if page_url == action_url %} class="active"{% endif %}{% endunless %}{% endunless %}>
-                    {% if page_url == action.href %}class="active"{% endif %} {% unless page_url == '/' %}{% unless action.href == '/' %}{% if page_url == action_url %}<span class="sr-only">(current)</span>{% endif %}{% endunless %}{% endunless %}
+                    {% if page_url == action.href %}<span class="sr-only">(current)</span>{% endif %} {% unless page_url == '/' %}{% unless action.href == '/' %}{% if page_url == action_url %}<span class="sr-only">(current)</span>{% endif %}{% endunless %}{% endunless %}
                     <a href="{{ action.href }}">{{ action.name }}</a>
                   </li>
               {% endfor %}
