@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ### Fixed
 
+* Error in site-navigation include, where once an item is found to be active, all subsequent items are flagged as well
 * Inconsistent indentation in site-navigation include
 * Incorrectly displaying active class name instead of screen-reader active element, in drop-down main navigation items
 
