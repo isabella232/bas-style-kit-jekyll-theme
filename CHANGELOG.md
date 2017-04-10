@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Inconsistent indentation in site-navigation include
+
 ## 0.2.2 - 21/03/2017
 
 ### Added
