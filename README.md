@@ -744,6 +744,8 @@ listed it won't be included. This is separate to the Git `.gitignore` file.
 9. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
 10. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
 
+**Note:** If the BAS Style Kit version changes, make sure to bump that version in `_data/bsk_jekyll_vars.json` too.
+
 ## Issue tracking
 
 This project uses issue tracking, see the 

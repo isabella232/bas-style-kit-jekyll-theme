@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Note in release notes to ensure the Jekyll variable is updated to reflect the changed version
+
 ### Fixed
 
 * Error in site-navigation include, where once an item is found to be active, all subsequent items are flagged as well
