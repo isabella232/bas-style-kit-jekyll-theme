@@ -17,8 +17,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Removed [BREAKING!]
 
 * *default* layout, switch to either *bsk--base* or *bsk--standard* as needed
+* apple touch icons - although these never worked correctly
 * 'back to top' and 'is something wrong' links - these will be re-added in a future release
 * HTML5 shim and Respond.js as the Style Kit no longer supports IE 10 or below
+* All local assets as they are either now part of the Style Kit, or will be re-added in a future release
 
 ### Added
 
