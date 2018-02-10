@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Re-licensing project under the Open Government License
 * Upgrading to Jekyll 3.7.2
+* Upgrading to Style Kit 0.3.0
 
 ### Changed
 
