@@ -5,13 +5,27 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
-### Changed [Breaking]
+### Changed [BREAKING!]
 
 * Re-licensing project under the Open Government License
 * Upgrading to Jekyll 3.7.2
 * Upgrading to Style Kit 0.3.0
 * Layouts and Includes are now namespaced in `bas-style-kit`
 * Refactoring *blank* and *HTML* generic layouts and tests
+* All includes have been developed, if you have used these outside of these theme you need to update any references
+
+### Removed [BREAKING!]
+
+* *default* layout, switch to either *bsk--base* or *bsk--standard* as needed
+* 'back to top' and 'is something wrong' links - these will be re-added in a future release
+* HTML5 shim and Respond.js as the Style Kit no longer supports IE 10 or below
+
+### Added
+
+* *bsk--base* layout which implements the Style Kit, but in a very generic way
+* *bsk--standard* layout which implements the Style Kit with typical elements such as a header and footer
+* CSS files are now loaded from a manifest file, as with JavaScript
+* CSS and JavaScript files can now use Sub-Resource Integrity (SRI) for better security
 
 ### Changed
 
@@ -21,6 +35,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Improving Dockerfile
 * Tidying up README
 * Tidying up Dockerfile and Docker Compose
+
+### Removed
+
+* CSS and JavaScript files can no longer have comments
 
 ## 0.2.3 - 11/04/2017
 

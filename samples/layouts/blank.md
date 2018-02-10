@@ -1,5 +1,0 @@
----
-layout: blank
----
-
-Sample content.

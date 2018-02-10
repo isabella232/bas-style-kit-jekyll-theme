@@ -1,0 +1,17 @@
+{% if site.data.bsk_jekyll_vars.bsk_attributes.container_class == 'bsk-container' %}
+    {% assign cookie_notice_wrapper_class = 'bsk-fix-alert-static-top-fixed-container-wrapper' %}
+{% elsif site.data.bsk_jekyll_vars.bsk_attributes.container_class == 'bsk-container-fluid' %}
+    {% assign cookie_notice_wrapper_class = 'bsk-fix-alert-static-top-fluid-container-wrapper' %}
+{% endif %}
+
+<div class="{{ cookie_notice_wrapper_class }}">
+    <div class="{{ site.data.bsk_jekyll_vars.bsk_attributes.container_class }}">
+        <div class="bsk-alert bsk-alert-static-top bsk-alert-dismissible bsk-alert-solid bsk-alert-cookie-notice" bsk-role='cookie-notice'>
+            <button class="bsk-close" type="button" data-dismiss="alert" aria-label="Close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+            This website uses cookies to help us make it better - 
+            <a class="bsk-alert-link" href="{{ site.data.bsk_jekyll_vars.bsk_attributes.cookie_notice_href }}">find out more</a>
+        </div>
+    </div>
+</div>

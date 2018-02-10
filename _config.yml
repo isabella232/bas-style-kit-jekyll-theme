@@ -1,9 +1,10 @@
 # This file is **NOT** a standard Jekyll config file. 
 # 
-# It is used to define config options for use by the BAS Style Kit Jekyll Theme, which will be merged together with 
-# individual website options at runtime using the Jekyll Data plugin.
+# It is used to define default config options for this theme.
+# These settings will be merged with site specific settings at runtime, site specific settings override these defaults.
 
-# If any of these options are set within a site's config file, it will override the values defined here.
+# Additional config options are defined using the Jekyll Data plugin, under the `site.data.bsk_jekyll_vars` namespace.
+# E.g. `site.data.bsk_jekyll_vars.bsk_attributes.bsk_version` gives the version of the BAS Style Kit this theme uses.
 
 # Plugins (required by this theme)
 
@@ -14,10 +15,6 @@ gems:
 
 permalink: pretty
 
-# Set default development phase
-
-phase: live
-
 # Set default layout
 
 defaults:
@@ -25,14 +22,4 @@ defaults:
     scope:
       path: "" # an empty string here means all files in the project
     values:
-      layout: "default"
-
-# Set default related sites
-
-nav_related_sites:
-  -
-    name: BAS Home
-    href: https://www.bas.ac.uk
-  - 
-    name: Discover BAS data
-    href: https://data.bas.ac.uk
+      layout: "bas-style-kit/bsk--standard"

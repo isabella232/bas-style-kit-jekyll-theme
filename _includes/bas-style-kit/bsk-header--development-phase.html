@@ -1,0 +1,12 @@
+{% unless site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase == 'live-stable' %}
+    <div class="{{ site.data.bsk_jekyll_vars.bsk_attributes.container_class }}">
+        {% unless site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase == 'experimental' %}
+            <span class="bsk-text-uppercase bsk-label bsk-label-phase-{{ site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase }}">{{ site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase }}</span>
+            This is a new website – your <a href="{{ site.data.bsk_jekyll_vars.bsk_attributes.site_feedback_href }}">feedback</a> will help us to improve it.
+        {% else %}
+            <span class="bsk-text-uppercase bsk-label bsk-label-{{ site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase }}">{{ site.data.bsk_jekyll_vars.bsk_attributes.site_development_phase }}</span>
+            This website is used for testing – your <a href="{{ site.data.bsk_jekyll_vars.bsk_attributes.site_feedback_href }}">feedback</a> will help us to improve it.
+        {% endunless %}
+        <hr />
+    </div>
+{% endunless %}

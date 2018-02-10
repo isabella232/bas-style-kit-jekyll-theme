@@ -1,0 +1,9 @@
+<body>
+    {% include bas-style-kit/bsk-body--back-to-top.html %}
+    {% include bas-style-kit/bsk-body--standard-header.html %}
+    <main class="{{ site.data.bsk_jekyll_vars.bsk_attributes.container_class }}">
+        {{ content }}
+    </main>
+    {% include bas-style-kit/bsk-body--standard-footer.html %}
+    {% include bas-style-kit/bsk-body--core-scripts.html %}
+</body>
