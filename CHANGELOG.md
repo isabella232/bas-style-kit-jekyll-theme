@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Changed [Breaking]
+
+* Re-licensing project under the Open Government License
 ## 0.2.3 - 11/04/2017
 
 ### Added

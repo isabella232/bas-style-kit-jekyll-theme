@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Jekyll theme implementing the BAS Style Kit"
   spec.homepage      = "https://gitlab.data.bas.ac.uk/BSK/bas-style-kit-jekyll-theme"
-  spec.license       = "MIT"
+  spec.license       = "OGL v3"
 
-  spec.files         = ["screenshot.png", "README.md", "LICENSE.md", "LICENSE-MIT.md", "CONTRIBUTING.md", "CHANGELOG.md", "_config.yml"]
+  spec.files         = ["screenshot.png", "README.md", "LICENSE.md", "CONTRIBUTING.md", "CHANGELOG.md", "_config.yml"]
   spec.files         += Dir['_data/**/*'] + Dir['_includes/**/*'] + Dir['_layouts/**/*'] + Dir['_sass/**/*'] + Dir['assets/**/*']
 
   spec.add_runtime_dependency "jekyll", "~> 3.4"
