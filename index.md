@@ -10,9 +10,9 @@ layout: default
 
 ### Layouts
 
-* [blank]({{ '/samples/layouts/blank' | prepend: site.baseurl }})
-* [HTML]({{ '/samples/layouts/html' | prepend: site.baseurl }})
 * [default]({{ '/samples/layouts/default' | prepend: site.baseurl }})
+* [blank]({{ '/tests/layouts/blank' | prepend: site.baseurl }})
+* [HTML]({{ '/tests/layouts/html' | prepend: site.baseurl }})
 
 ### Includes
 

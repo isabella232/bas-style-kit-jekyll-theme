@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Upgrading to Jekyll 3.7.2
 * Upgrading to Style Kit 0.3.0
 * Layouts and Includes are now namespaced in `bas-style-kit`
+* Refactoring *blank* and *HTML* generic layouts and tests
 
 ### Changed
 
