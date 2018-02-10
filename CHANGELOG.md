@@ -5,6 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Changed [Breaking]
+
+* Re-licensing project under the Open Government License
+* Upgrading to Jekyll 3.7.2
+
+### Changed
+
+* Upgrading other Gem dependencies to latest versions
+* Upgrading application Docker image to use latest BAS Jekyll image 
+* Improving Dockerfile
+* Tidying up README
+* Tidying up Dockerfile and Docker Compose
+
 ## 0.2.3 - 11/04/2017
 
 ### Added

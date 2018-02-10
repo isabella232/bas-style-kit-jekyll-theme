@@ -1,6 +1,6 @@
 # jekyll-theme-bas-style-kit
 
-Jekyll theme implementation of the [BAS Style Kit](https://stlye-kit.web.bas.ac.uk).
+Jekyll theme for the [BAS Style Kit](https://stlye-kit.web.bas.ac.uk).
 
 ![Screenshot of theme](screenshot.png)
 
@@ -655,70 +655,55 @@ See the *Site navigation*, *Site footer* and *Development phase notice* sections
 
 ## Development
 
-[Git](https://git-scm.com) and [Docker](https://www.docker.com/products/docker) [1] are required to build this project 
-locally.
+[Git](https://git-scm.com), [Docker](https://www.docker.com/community-edition) and Docker Compose are required to build
+this project locally.
 
 To update the Docker image for this project, access to the private 
-[BAS Docker Registry](https://docker-registry.data.bas.ac.uk) [2] is also required.
+[BAS Docker Registry](https://docker-registry.data.bas.ac.uk) [1] is also required.
 
 ```shell
-$ git clone https://gitlab.data.bas.ac.uk/BSK/bas-style-kit-jekyll-theme.git
+$ git clone https://gitlab.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme.git
 $ cd bas-style-kit-jekyll-theme
-
 $ docker-compose up
 ```
 
-Go to [localhost:9000](http://localhost:9000) to preview the theme.
+Visit [localhost:9000](http://localhost:9000) to see a preview of the theme.
 
 **Note:** If you don't have access to the BAS Private Docker Registry, you will need to build the project Docker image 
 locally first using `docker-compose build`.
 
-[1] To install Git and Docker:
-
-**On macOS**
+[1] The first time you use this registry, you will need to authenticate using:
 
 ```shell
-$ brew install git
-$ brew cask install docker
+$ docker login docker-registry.data.bas.ac.uk
 ```
-
-**On Windows**
-
-* Install Docker and Git using their respective installers
-
-[2] The first time you use this registry, you will need to authenticate using:
-`docker login docker-registry.data.bas.ac.uk`
 
 ### Updating dependencies
 
-If `Gemfile` is changed, the project Docker image will need to be rebuilt and pushed to the private BAS Docker 
-Repository [1].
-
-The current project version is used as part of the project Docker image tag to ensure the latest version is used by all 
-developers. Before rebuilding this image you **MUST** update this tag value in `docker-compose.yml` and `.gitlab-ci.yml` 
-first.
+If the `.gemspec` for this project is changed, the project Docker image will need to be rebuilt and pushed to the 
+private BAS Docker Repository [1].
 
 ```shell
-$ cd jekyll-theme-bas-style-kit/
-
 $ docker-compose build app
 $ docker-compose push app
 ```
 
 [1] The first time you use this registry, you will need to authenticate using:
-`docker login docker-registry.data.bas.ac.uk`
+
+```shell
+$ docker login docker-registry.data.bas.ac.uk
+```
 
 ### Jekyll plugins
 
-Additional Jekyll plugins can be used by listing them as dependencies of this theme.
+Additional Jekyll plugins (gems) can be used by listing them as dependencies in the `gems` option in `_config.yml`.
 
-When the theme is installed by an end-user these plugins will be also be installed. This theme includes a `_config.yml`
-to set `gems` option to include any required plugins.
+They will be installed automatically when this theme is used by an end-user.
 
 ### Jekyll config options
 
 The Jekyll Data plugin is used to set config options within sites that use this theme. For this to work the site still 
-needs to call the Data plugin, other config options can then be set by this plugin.
+needs to call the Data plugin.
 
 **Note:** Make sure to document which config options are set by this theme, especially conventional options.
 
@@ -748,19 +733,21 @@ listed it won't be included. This is separate to the Git `.gitignore` file.
 
 ## Issue tracking
 
-This project uses issue tracking, see the 
-[issue tracker](https://gitlab.data.bas.ac.uk/BSK/bas-style-kit-jekyll-theme/issues) for more information.
+This project uses [issue tracking](https://gitlab.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme) to manage 
+development of new features/improvements and reporting bugs.
 
 **Note:** Read & write access to this issue tracker is restricted. Contact the project maintainer to request access.
 
 ## Feedback
 
-The maintainer of this project is the BAS Web & Applications Team, they can be contacted at: webapps@bas.ac.uk.
+The maintainer of this project is the BAS Web & Applications Team, they can be contacted through the 
+[BAS Service Desk](mailto:servicedesk@bas.ac.uk)
 
 ## License
 
-Copyright 2017 NERC BAS.
+© Natural Environment Research Council (NERC), 2017 - 2018, British Antarctic Survey.
 
-Unless stated otherwise, all code is licensed under the MIT license.
+You may use and re-use this software and associated documentation files free of charge in any format or medium, under 
+the terms of the Open Government Licence v3.0.
 
-Copies of this licenses are included within this project.
+You may obtain a copy of the Open Government Licence at http://www.nationalarchives.gov.uk/doc/open-government-licence/

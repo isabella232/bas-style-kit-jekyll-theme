@@ -1,7 +1,8 @@
 # License
 
-Copyright 2017 NERC BAS.
+© Natural Environment Research Council (NERC), 2017-2018, British Antarctic Survey.
 
-Unless stated otherwise all code is licensed under the MIT license.
+You may use and re-use this software and associated documentation files free of charge in any format or medium, under 
+the terms of the Open Government Licence v3.0.
 
-Copies of this license are included within this project.
+You may obtain a copy of the Open Government Licence at http://www.nationalarchives.gov.uk/doc/open-government-licence/
