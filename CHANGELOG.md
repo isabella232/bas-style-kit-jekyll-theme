@@ -28,6 +28,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * *bsk--standard* layout which implements the Style Kit with typical elements such as a header and footer
 * CSS files are now loaded from a manifest file, as with JavaScript
 * CSS and JavaScript files can now use Sub-Resource Integrity (SRI) for better security
+* Jekyll Menus plugin
 
 ### Changed
 
@@ -37,6 +38,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Improving Dockerfile
 * Tidying up README
 * Tidying up Dockerfile and Docker Compose
+* Gemfile lock file is now tracked
 
 ### Removed
 

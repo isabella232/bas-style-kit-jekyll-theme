@@ -2,6 +2,8 @@
 
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+plugins:
+  - jekyll-menus
 
 # Build settings
 
@@ -45,25 +47,3 @@ feedback_href: "#"
 
 ga_property: UA-64130716-XX
 
-nav_items:
-  -
-    name: Home
-    type: single_item
-    href: /
-  -
-    name: About
-    type: single_item
-    href: /about
-  -
-    name: Layouts
-    type: dropdown_item
-    actions:
-      -
-        name: Blank
-        href: /samples/layouts/blank
-      -
-        name: HTML
-        href: /samples/layouts/html
-      -
-        name: Default
-        href: /samples/layouts/default

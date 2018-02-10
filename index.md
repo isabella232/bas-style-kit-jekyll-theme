@@ -16,6 +16,12 @@ layout: bas-style-kit/bsk--standard
 * [BSK Base]({{ '/tests/layouts/bsk--base' | prepend: site.baseurl }})
 * [BSK Standard]({{ '/tests/layouts/bsk--standard' | prepend: site.baseurl }})
 
+## Pages
+
+* [about]({{ '/tests/pages/about' | prepend: site.baseurl }})
+
+<div class="bsk-alert bsk-alert-highlight bsk-alert-info">Pages use the <code>bsk--standard</code> layout</div>
+
 ## Variables
 
 | Variable        | Value                                           |
