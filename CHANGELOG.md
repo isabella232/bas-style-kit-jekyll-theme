@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Upgrading other Gem dependencies to latest versions
 * Upgrading application Docker image to use latest BAS Jekyll image 
 * Improving Dockerfile
+* Tidying up README
+* Tidying up Dockerfile and Docker Compose
 
 ## 0.2.3 - 11/04/2017
 

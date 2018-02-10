@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Felix Fennell"]
   spec.email         = ["felnne@bas.ac.uk"]
 
-  spec.summary       = "Jekyll theme implementing the BAS Style Kit"
   spec.homepage      = "https://gitlab.data.bas.ac.uk/BSK/bas-style-kit-jekyll-theme"
+  spec.summary       = "Jekyll theme for the BAS Style Kit"
   spec.license       = "OGL v3"
 
   spec.files         = ["screenshot.png", "README.md", "LICENSE.md", "CONTRIBUTING.md", "CHANGELOG.md", "_config.yml"]

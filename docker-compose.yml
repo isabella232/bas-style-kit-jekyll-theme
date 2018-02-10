@@ -9,5 +9,3 @@ services:
       - .:/usr/src/app
     ports:
       - "9000:9000"
-    environment:
-      - JEKYLL_ENV=development
