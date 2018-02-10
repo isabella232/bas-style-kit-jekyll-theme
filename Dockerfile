@@ -1,4 +1,4 @@
-FROM antarctica/jekyll-image:0.2.0-alpine
+FROM docker-registry.data.bas.ac.uk/web-apps/infrastructure/bdi/jekyll-image:0.3.0-alpine
 
 MAINTAINER Felix Fennell <felnne@bas.ac.uk>
 
