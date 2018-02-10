@@ -7,19 +7,24 @@
 # E.g. `site.data.bsk_jekyll_vars.bsk_attributes.bsk_version` gives the version of the BAS Style Kit this theme uses.
 
 # Plugins (required by this theme)
+#
 
-gems:
+plugins:
   - jekyll-data
 
-# Set default permalink format
+# Build settings
+#
 
+# Set default permalink format
 permalink: pretty
 
-# Set default layout
+# Site settings
+#
 
+# Set default layout - the empty `path` acts as a wildcard targetting all files in the site
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ""
     values:
       layout: "bas-style-kit/bsk--standard"

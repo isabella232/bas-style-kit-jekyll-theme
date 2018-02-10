@@ -7,9 +7,7 @@ layout: bas-style-kit/bsk--standard
     <h1>BAS Style Kit - Jekyll Template <small>{{ site.data.bsk_jekyll_vars.theme_version }}</small></h1>
 </header>
 
-## Samples
-
-### Layouts
+## Layouts
 
 * [blank]({{ '/tests/layouts/blank' | prepend: site.baseurl }})
 * [HTML]({{ '/tests/layouts/html' | prepend: site.baseurl }})

@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Layouts and Includes are now namespaced in `bas-style-kit`
 * Refactoring *blank* and *HTML* generic layouts and tests
 * All includes have been developed, if you have used these outside of these theme you need to update any references
+* All data files now use Yaml formatting to support comments
 
 ### Removed [BREAKING!]
 
