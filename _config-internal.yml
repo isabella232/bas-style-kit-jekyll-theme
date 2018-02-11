@@ -13,7 +13,8 @@ plugins:
 #
 
 markdown: kramdown
-theme: !!null # - normally this would be 'jekyll-theme-bas-style-kit' but this *is* that theme so that won't work
+# - normally this would be 'jekyll-theme-bas-style-kit' but this *is* that theme so that won't work
+theme: !!null
 
 # This wouldn't normally be necessary as the site would be contained in a `site` sub-directory or similar
 exclude:
@@ -40,8 +41,10 @@ encoding: UTF-8
 # Site settings
 #
 
-baseurl: "" # e.g. /foo
-url: "http://localhost:9000" # base hostname & protocol for canonical links
+# e.g. /foo
+baseurl: ''
+# base hostname & protocol for canonical links
+url: 'http://localhost:9000'
 
 title: BAS Style Kit Jekyll Theme
 description: > # Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.
