@@ -1,7 +1,7 @@
 <body>
     {% include bas-style-kit/bsk-body--back-to-top.html %}
     {% include bas-style-kit/bsk-body--standard-header.html %}
-    <main class="{{ site.data.bsk_jekyll_vars.bsk_attributes.container_class }}">
+    <main class="{% if site.bas_style_kit_jekyll_theme.attributes.container == 'fixed' %}bsk-container{% elsif site.bas_style_kit_jekyll_theme.attributes.container == 'fluid' %}bsk-container-fluid{% endif %}">
         {{ content }}
     </main>
     {% include bas-style-kit/bsk-body--standard-footer.html %}

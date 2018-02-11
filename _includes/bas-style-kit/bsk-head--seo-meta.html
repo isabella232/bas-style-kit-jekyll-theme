@@ -1,3 +1,4 @@
 <!-- Recommended meta tags for SEO -->
-<title>{{ site.data.bsk_jekyll_vars.bsk_attributes.site_title }}</title>
-<meta name="description" content="{{ site.data.bsk_jekyll_vars.bsk_attributes.site_description }}">
+{% if page.title %}<title>{{ page.title }}{% if site.bas_style_kit_jekyll_theme.attributes.head_title.appended %}{{ site.bas_style_kit_jekyll_theme.attributes.head_title.appended }}{% endif %}</title>
+{% elsif site.bas_style_kit_jekyll_theme.attributes.head_title.default %}<title>{{ site.bas_style_kit_jekyll_theme.attributes.head_title.default }}</title>{% endif %}
+{% if site.bas_style_kit_jekyll_theme.attributes.head_description %}<meta name="description" content="{{ site.bas_style_kit_jekyll_theme.attributes.head_description }}">{% endif %}

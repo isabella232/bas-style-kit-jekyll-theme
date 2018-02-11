@@ -46,15 +46,43 @@ baseurl: ''
 # base hostname & protocol for canonical links
 url: 'http://localhost:9000'
 
-title: BAS Style Kit Jekyll Theme
-description: > # Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.
+# Theme settings
+#
 
-phase: live
+# This is a copy of the settings defined in `_config.yml` 
+# as this file isn't loaded when the theme is being tested internally
+bas_style_kit_jekyll_theme:
+  attributes: 
+    container: 'fixed'
 
-copyright_href: "https://www.bas.ac.uk/about-this-site/copyright-statement/"
-privacy_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-cookies_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-feedback_href: "#"
+    head_title:
+      # Used when `page.title` isn't set
+      default: 'BAS Style Kit Jekyll Theme'
+      # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
+      appended: ' - BAS Style Kit Jekyll Theme'
+      
+    head_description: 'Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.'
 
-ga_property: UA-64130716-XX
+    site_brand:
+      text: 'BAS Style Kit Jekyll Theme'
+      href: '/'
 
+    site_development_phase: 'alpha'
+  
+    site_feedback_href: '#'
+
+    site_analytics: 
+      id: 'UA-64130716-27'
+
+    # These settings aren't usually changed
+    head_favicon: 'data:;base64,iVBORw0KGgo='
+    site_back_to_top_target_href: '#site-top'
+    site_footer:
+      ogl:
+        href: 'http://www.nationalarchives.gov.uk/doc/open-government-licence'
+        img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
+        text_version: 'v3.0'
+      legal_policies:
+        copyright_href: '#'
+        cookies_href: '#'
+        privacy_href: '#'

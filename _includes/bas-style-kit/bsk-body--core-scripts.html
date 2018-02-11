@@ -4,3 +4,4 @@
 {% for script in page.body_js_files %}
     <script {% if script.type == 'remote' %}src="{{ script.href }}"{% elsif script.type == 'local' %}src="{{ script.href | prepend: site.baseurl }}"{% endif %} {% if script.integrity %}integrity="{{ script.integrity }}" crossorigin="anonymous"{% endif %}></script>
 {% endfor %}
+{% include bas-style-kit/bsk-body--analytics-script.html %}

@@ -1,3 +1,9 @@
+{% if site.bas_style_kit_jekyll_theme.attributes.container == 'fixed' %}
+    {% assign bsk_attributes_container_class = "bsk-container" %}
+{% elsif site.bas_style_kit_jekyll_theme.attributes.container == 'fluid' %}
+    {% assign bsk_attributes_container_class = "bsk-container-fluid" %}
+{% endif %}
+
 <header class="site-header">
     {% include bas-style-kit/bsk-header--cookie-notice.html %}
     {% include bas-style-kit/bsk-header--site-navigation.html %}

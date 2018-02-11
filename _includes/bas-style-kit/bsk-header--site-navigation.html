@@ -1,5 +1,5 @@
 <nav class="bsk-navbar">
-  <div class="{{ site.data.bsk_jekyll_vars.bsk_attributes.container_class }}">
+  <div class="{{ bsk_attributes_container_class }}">
     <div class="bsk-navbar-header">
         <button class="bsk-navbar-toggle bsk-collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
             <span class="bsk-sr-only">Toggle navigation</span>
@@ -7,8 +7,13 @@
             <span class="bsk-icon-bar"></span>
             <span class="bsk-icon-bar"></span>
         </button>
-        <a class="bsk-navbar-brand" href="{{ site.data.bsk_jekyll_vars.bsk_attributes.site_nav_brand_href }}">
-            {{ site.data.bsk_jekyll_vars.bsk_attributes.site_nav_brand_text }}
+        <a class="bsk-navbar-brand {% if site.bas_style_kit_jekyll_theme.attributes.site_brand.img %}bsk-navbar-brand-image-{{ site.bas_style_kit_jekyll_theme.attributes.site_brand.img_size }}{% endif %}" href="{{ site.bas_style_kit_jekyll_theme.attributes.site_brand.href }}">
+            {% if site.bas_style_kit_jekyll_theme.attributes.site_brand.img %}
+                <img {% if site.bas_style_kit_jekyll_theme.attributes.site_brand.text %}class="bsk-fix-navbar-brand-img-txt"{% endif %} src="{{ site.bas_style_kit_jekyll_theme.attributes.site_brand.img }}">
+            {% endif %}
+            {% if site.bas_style_kit_jekyll_theme.attributes.site_brand.text %}
+                {{ site.bas_style_kit_jekyll_theme.attributes.site_brand.text }}
+            {% endif %}
         </a>
     </div>
     <div class="bsk-collapse bsk-navbar-collapse" id="navbar-collapse">
