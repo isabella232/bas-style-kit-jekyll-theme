@@ -33,6 +33,19 @@ defaults:
 #
 
 bas_style_kit_jekyll_theme:
+  feature_flags:
+    site:
+      back_to_top_anchor: true
+      standard_header: true
+      standard_footer: true
+    standard_header:
+      cookie_notice: true
+      site_navigation: true
+      development_phase: true
+    standard_footer:
+      divider: true
+      ogl: true
+      legal_policies: true
   attributes:
     container: fixed
 

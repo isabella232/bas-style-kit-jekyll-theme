@@ -1,5 +1,7 @@
 <body>
-    {% include bas-style-kit/bsk-body--back-to-top.html %}
+    {% if site.bas_style_kit_jekyll_theme.feature_flags.site.back_to_top_anchor == True %}
+        {% include bas-style-kit/bsk-body--back-to-top.html %}
+    {% endif %}
     {{ content }}
     {% include bas-style-kit/bsk-body--core-scripts.html %}
 </body>
