@@ -48,25 +48,19 @@ bas_style_kit_jekyll_theme:
       legal_policies: true
   attributes:
     container: fixed
-
     head_title:
       # Used when `page.title` isn't set
       default: 'site title'
       # Appended to either `page.title` or `head_title.default` - e.g. `- Site Foo`
       appended: !!null
-
     head_description: 'site description'
-
     site_brand:
         text: 'site title'
         img: !!null
         img_size: !!null
         href: '/'
-      
     site_development_phase: 'alpha'
-    
     site_feedback_href: '#'
-
     site_analytics: 
       id: !!null
 
@@ -82,4 +76,3 @@ bas_style_kit_jekyll_theme:
         copyright_href: '#'
         cookies_href: '#'
         privacy_href: '#'
-  

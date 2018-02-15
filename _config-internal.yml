@@ -67,23 +67,17 @@ bas_style_kit_jekyll_theme:
       legal_policies: true
   attributes: 
     container: 'fixed'
-
     head_title:
       # Used when `page.title` isn't set
       default: 'BAS Style Kit Jekyll Theme'
       # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
-      appended: ' - BAS Style Kit Jekyll Theme'
-      
+      appended: ' - BAS Style Kit Jekyll Theme' 
     head_description: 'Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.'
-
     site_brand:
       text: 'BAS Style Kit Jekyll Theme'
       href: '/'
-
     site_development_phase: 'alpha'
-  
     site_feedback_href: '#'
-
     site_analytics: 
       id: 'UA-64130716-27'
 
