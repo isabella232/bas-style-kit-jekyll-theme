@@ -2,6 +2,8 @@
     {% if site.bas_style_kit_jekyll_theme.feature_flags.site.back_to_top_anchor == True %}
         {% include bas-style-kit/bsk-body--back-to-top.html %}
     {% endif %}
-    {{ content }}
+    <main id="site-content">
+        {{ content }}
+    </main>
     {% include bas-style-kit/bsk-body--core-scripts.html %}
 </body>
