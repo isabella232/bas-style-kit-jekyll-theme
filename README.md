@@ -50,47 +50,22 @@ gems:
 
 ### Layouts
 
-This theme provides three layouts:
+Layouts define a common design/structure for a set of content pages. Typically they will wrap page content in elements
+such as fixed or fluid width containers, and include common elements such as headers and footers.
 
-* blank
-* HTML
-* default
+This theme defines two types of layout - *generic* and *non-generic*. Generic layouts are non Style Kit specific and 
+intended for atypical content. Non-generic layouts implement the Style Kit either broadly or using a more opinionated, 
+*standard* way for ease of use and consistency.
 
-#### Blank
+Generic layouts:
 
-Returns content without modification, and is used as the fundamental layout, from which all other layouts derive.
+* [blank](/docs/layouts/blank.md)
+* [html](/docs/layouts/html.md)
 
-This layout is useful if you need to output data in a format other than HTML (such as JSON or XML).
+Style Kit specific layouts:
 
-**Note:** You will need to set a suitable content-type header if returning non-HTML content.
-
-#### HTML
-
-Returns content in the `<body>` tag of a basic HTML page. Includes `<head>` elements returned by the *head* include.
-
-**Note:** This layout includes the BAS Style Kit CSS styles, but not Bootstrap JavaScript components (see the 
-*default* layout for this).
-
-**Note:** This layout does not include information about the use of Cookies, which **MUST** be displayed if used on a
-website. You will need to provide a suitable notice to users if this applies. See the *Cookie notice* section for more
-information.
-
-This layout is useful if you need to show content in isolation, or using a specific page style, such as a page designed
-for printing, or for displaying full screen.
-
-#### Default
-
-Returns content in a [container](https://style-kit.web.bas.ac.uk/core/layout/#fixed-width-container) with a number of 
-additional components using includes:
-
-| Component                | Include File                     | Description                                                                                  | Notes                                                                                      |
-| ------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Cookie notice banner     | `layout/cookie-banner.html`      | Dismissible cookie notice                                                                    | See the *Cookie notice* section for more information                                       |
-| Site navigation          | `layout/site-navigation.html`    | [Navbar](https://style-kit.web.bas.ac.uk/components/navbar/) containing site navigation      | See the *Site navigation* section for more information                                     |
-| Development phase banner | `layout/phase-banner.html`       | Contextual warning for current development phase                                             | See the *Development phase* section for more information                                   |
-| Site footer              | `layout/site-footer.html`        | Basic [footer](https://style-kit.web.bas.ac.uk/components/footer/)                           | Designed to be overiden, see the *Legal policies* section for information it must contain |
-| JavaScript               | `snippets/body-js.html`          | Scripts required for jQuery, Bootstrap's JavaScript components, and the cookie notice banner | -                                                                                          |
-| Analytics                | `snippets/google-analytics.html` | Scripts required for Google Analytics                                                        | Not included if `ga_property` config option is not set                                     |
+* [bsk--base](/docs/layouts/bsk--base.md)
+* [bsk--base](/docs/layouts/bsk--standard.md)
 
 ### Includes
 
