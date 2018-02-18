@@ -49,12 +49,12 @@ This theme defines two types of layout - *generic* and *non-generic*. Generic la
 intended for atypical content. Non-generic layouts implement the Style Kit either broadly or using a more opinionated, 
 *standard* way for ease of use and consistency.
 
-Generic layouts:
+#### Generic layouts:
 
 * [blank](/docs/layout/blank.md)
 * [html](/docs/layout/html.md)
 
-Style Kit specific layouts:
+#### Style Kit specific layouts:
 
 * [`bsk--base`](/docs/layout/bsk--base.md)
 * [`bsk--base`](/docs/layout/bsk--standard.md)
@@ -75,21 +75,25 @@ reimplement large parts of an otherwise fine include.
 Includes are often combined with a conditional, typically controlled using a related configuration option. This allows
 page elements that are not desired to be disabled more easily.
 
-Generic includes:
+#### Generic includes:
 
 * [`head`](/docs/include/head.md)
 * [`body`](/docs/include/body.md)
 
-Style Kit specific includes:
+#### Style Kit specific includes:
 
 * [`bsk-head`](/docs/include/bsk-head.md)
 * [`bsk-body`](/docs/include/bsk-body.md)
 * [`bsk-body--standard`](/docs/include/bsk-body--standard.md)
 
+HTML Head includes:
+
 * [`bsk-head--core-meta`](/docs/include/bsk-head--core-meta.md)
 * [`bsk-head--seo-meta`](/docs/include/bsk-head--seo-meta.md)
 * [`bsk-head--core-styles`](/docs/include/bsk-head--core-styles.md)
 * [`bsk-head--favicon`](/docs/include/bsk-head--favicon.md)
+
+HTML Body includes:
 
 * [`bsk-body--core-scripts`](/docs/include/bsk-body--core-scripts.md)
 * [`bsk-body--analytics-script`](/docs/include/bsk-body--analytics-script.md)
@@ -97,20 +101,24 @@ Style Kit specific includes:
 * [`bsk-body--standard-header`](/docs/include/bsk-body--standard-header.md)
 * [`bsk-body--standard-footer`](/docs/include/bsk-body--standard-footer.md)
 
+Footer includes:
+
 * [`bsk-footer--contents`](/docs/include/bsk-footer--contents.md)
 * [`bsk-footer--legal-policies`](/docs/include/bsk-footer--legal-policies.md)
 * [`bsk-footer--ogl`](/docs/include/bsk-footer--ogl.md)
+
+Header includes:
 
 * [`bsk-header--cookie-notice`](/docs/include/bsk-header--cookie-notice.md)
 * [`bsk-header--site-navigation`](/docs/include/bsk-header--site-navigation.md)
 * [`bsk-header--development-phase`](/docs/include/bsk-header--development-phase.md)
 
+Navigation includes:
+
 * [`bsk-nav--header`](/docs/include/bsk-nav--header.md)
 * [`bsk-nav--collapse`](/docs/include/bsk-nav--collapse.md)
-
 * [`bsk-nav-header--collapse-trigger`](/docs/include/bsk-nav-header--collapse-trigger.md)
 * [`bsk-nav-header--brand`](/docs/include/bsk-nav-header--brand.md)
-
 * [`bsk-nav-collapse--primary-navigation`](/docs/include/bsk-nav-collapse--primary-navigation.md)
 * [`bsk-nav-collapse--secondary-navigation`](/docs/include/bsk-nav-collapse--secondary-navigation.md)
 
