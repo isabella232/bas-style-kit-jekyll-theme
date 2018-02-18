@@ -1,4 +1,4 @@
-# jekyll-theme-bas-style-kit
+# BAS Style Kit Jekyll Theme
 
 Jekyll theme for the [BAS Style Kit](https://stlye-kit.web.bas.ac.uk).
 
@@ -24,29 +24,21 @@ Or install it yourself as:
 $ gem install jekyll-theme-bas-style-kit
 ```
 
-## Usage
-
-Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
-
-### Selecting the BAS Style Kit Jekyll theme
-
-Add these lines to your Jekyll site's `_config.yml`:
+Add these lines to your `_config.yml` to use the Style Kit theme:
 
 ```yaml
 theme: jekyll-theme-bas-style-kit
 
-gems:
-  - jekyll-data
+# If your site uses additional plugins, append these items
+plugins:
+  - jekyll-menus
 ```
 
-**Note:** This theme sets additional config options, see the *Config options* section for more information.
+## Usage
 
-**Note:** If you have loaded any Jekyll plugins using the `gems` option, also include these plugins:
+Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
 
-```yaml
-gems:
-  - jekyll-data
-```
+This theme includes numerous layouts, includes, data files and configuration options to give a flexible design.
 
 ### Layouts
 
@@ -64,8 +56,8 @@ Generic layouts:
 
 Style Kit specific layouts:
 
-* [bsk--base](/docs/layouts/bsk--base.md)
-* [bsk--base](/docs/layouts/bsk--standard.md)
+* [`bsk--base`](/docs/layouts/bsk--base.md)
+* [`bsk--base`](/docs/layouts/bsk--standard.md)
 
 ### Includes
 
