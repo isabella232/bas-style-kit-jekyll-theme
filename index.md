@@ -22,8 +22,8 @@ layout: bas-style-kit/bsk--standard
 
 ## Variables
 
-| Variable        | Value                                           |
-| --------------- | ----------------------------------------------- |
-| `theme_version` | *{{ site.data.bsk_jekyll_vars.theme_version }}* |
-| `bsk_version`   | *{{ site.data.bsk_jekyll_vars.bsk_version }}*   |
+| Variable        | Value                                                  |
+| --------------- | ------------------------------------------------------ |
+| `theme_version` | *{{ site.data.bas-style-kit.bsk_vars.theme_version }}* |
+| `bsk_version`   | *{{ site.data.bas-style-kit.bsk_vars.bsk_version }}*   |
 {: .bsk-table }
