@@ -61,132 +61,59 @@ Style Kit specific layouts:
 
 ### Includes
 
-Includes for this theme are split into *layout* and *snippets*. Layouts are used as part of the visual structure of the
-site (such as the main navigation). Snippets are more general and used in various places (including in other includes).
+Includes represent common content used across a website, either once per page (such as a header and footer), or multiple
+times (such as an alert). Content can include page content or `<head>` element properties for example. Includes can be 
+configurable, accepting parameters or blocks of content, though most are used as-is.
 
-#### Cookie Banner
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/include/) for more background information.
 
-**Type:** Layout
+This theme uses includes extensively, to give finer grained control over how elements of a page are structured and to 
+give flexibility when this isn't suitable. For example the main navigation menu is made of includes such as the site 
+title and navigation links, each of which can be changed, or included in a different order, minimising the need to 
+reimplement large parts of an otherwise fine include.
 
-**File:** `layout/cookie-banner.html`
+Includes are often combined with a conditional, typically controlled using a related configuration option. This allows
+page elements that are not desired to be disabled more easily.
 
-Presents a full-width banner, pinned to the top of the page, with a statement that the site uses cookies, and where a
-user can find out more information.
+Generic includes:
 
-This banner can be dismissed by the user, which will hide the message for 30 days using (ironically) a cookie.
+* [`head`](/docs/include/head.md)
+* [`body`](/docs/include/body.md)
 
-See the *Cookie notice* section for more information.
+Style Kit specific includes:
 
-**Note:** This include depends on the `snippets/body-js.html` include.
+* [`bsk-head`](/docs/include/bsk-head.md)
+* [`bsk-body`](/docs/include/bsk-body.md)
+* [`bsk-body--standard`](/docs/include/bsk-body--standard.md)
 
-#### Phase Banner
+* [`bsk-head--core-meta`](/docs/include/bsk-head--core-meta.md)
+* [`bsk-head--seo-meta`](/docs/include/bsk-head--seo-meta.md)
+* [`bsk-head--core-styles`](/docs/include/bsk-head--core-styles.md)
+* [`bsk-head--favicon`](/docs/include/bsk-head--favicon.md)
 
-**Type:** Layout
+* [`bsk-body--core-scripts`](/docs/include/bsk-body--core-scripts.md)
+* [`bsk-body--analytics-script`](/docs/include/bsk-body--analytics-script.md)
+* [`bsk-body--back-to-top`](/docs/include/bsk-body--back-to-top.md)
+* [`bsk-body--standard-header`](/docs/include/bsk-body--standard-header.md)
+* [`bsk-body--standard-footer`](/docs/include/bsk-body--standard-footer.md)
 
-**File:** `layout/phase-banner.html`
+* [`bsk-footer--contents`](/docs/include/bsk-footer--contents.md)
+* [`bsk-footer--legal-policies`](/docs/include/bsk-footer--legal-policies.md)
+* [`bsk-footer--ogl`](/docs/include/bsk-footer--ogl.md)
 
-Presents a full-width banner, pinned after the site navigation, with a statement describing the status of the website. 
-For example, if a website is in the *beta* phase of development, a notice advising users that the website is still 
-under development will be shown, with an invitation for them to submit feedback.
+* [`bsk-header--cookie-notice`](/docs/include/bsk-header--cookie-notice.md)
+* [`bsk-header--site-navigation`](/docs/include/bsk-header--site-navigation.md)
+* [`bsk-header--development-phase`](/docs/include/bsk-header--development-phase.md)
 
-If a website is in the *live* phase of development, no banner is shown.
+* [`bsk-nav--header`](/docs/include/bsk-nav--header.md)
+* [`bsk-nav--collapse`](/docs/include/bsk-nav--collapse.md)
 
-See the *Development phase notice* and *Website feedback* sections for more information.
+* [`bsk-nav-header--collapse-trigger`](/docs/include/bsk-nav-header--collapse-trigger.md)
+* [`bsk-nav-header--brand`](/docs/include/bsk-nav-header--brand.md)
 
-**Note:** The message shown for each development phase cannot currently be changed.
+* [`bsk-nav-collapse--primary-navigation`](/docs/include/bsk-nav-collapse--primary-navigation.md)
+* [`bsk-nav-collapse--secondary-navigation`](/docs/include/bsk-nav-collapse--secondary-navigation.md)
 
-#### Site footer
-
-**Type:** Layout
-
-**File:** `layout/site-footer.html`
-
-Provides a basic [footer](https://style-kit.web.bas.ac.uk/components/footer/) designed to meet requirements for:
-
-* linking to the top of the current page and to give feedback
-* explaining the license for content within the website
-* displaying links to legal polices
-
-As footers will vary greatly between websites, this footer is deliberately basic, and limited, in its structure. It is
-expected this include will be overiden by each website with its own specific footer.
-
-See the *Legal policies* and *Website feedback* sections for information on what a footer **MUST** contain.
-
-#### Site navigation
-
-**Type:** Layout
-
-**File:** `layout/site-navigation.html`
-
-Provides a default implementation of a [navbar](https://style-kit.web.bas.ac.uk/components/navbar/) designed to meet 
-the needs of most websites. The navbar consists of:
-
-* the site title
-* a toggle to show or hide navigation items on smaller devices (such as phones)
-* a set of navigation items (see the *Site navigation* section for how to set these)
-* a drop-down of other relevant BAS websites, including the BAS public website and data catalogue
-* a link to give feedback about the website
-
-See the *Site navigation* and *Website feedback* sections for more information.
-
-#### Back to top
-
-**Type:** Snippet
-
-**File:** `snippets/back-to-top.html`
-
-Provides a link to the `#site-top` anchor, positioned at the top of each page. It is shown in the default footer 
-include.
-
-**Note:** This snippet depends on the *default* layout being used, or a layout with a `#site-top` element defined.
-
-#### Body JS
-
-**Type:** Snippet
-
-**File:** `snippets/body-js.html`
-
-Inserts `<script>` tags to reference JavaScript files. Entries defined in the `bsk_jekyll_js.json` data file will be
-output first, followed by per-page files using the `body_js_files` front-matter option.
-
-See the *JavaScript* section for more information.
-
-**Note:** This snippet is designed for loading JavaScript *after* the main page content. If a script needs to be run 
-before this content, you will need to do this manually.
-
-#### Google Analytics
-
-**Type:** Snippet
-
-**File:** `snippets/google-analytics.html`
-
-If the `ga_property` config option is set, include the Google Analytics tracking script, and configures it for the 
-relevant Google Analytics property.
-
-The tracking script is configured to anonymise the IP address of visitors client side, meaning we it is never visible 
-to the Google Analytics service.
-
-#### Head
-
-**Type:** Snippet
-
-**File:** `snippets/head.html`
-
-Represents the `<head>` tag of a HTML page with these elements:
-
-* HTML doc-type
-* UTF-8 character encoding scheme
-* directive for Internet Explorer to use the latest rendering engine available (ignored by Microsoft Edge)
-* directive for devices to set the viewport width to the width of the current device in CSS pixels at a scale of 100%,
-and an initial scale of 100%
-* the title directive, containing a page title (if set) followed by the site `title` config option
-* the description directive, containing the site `description` config option
-* the canonical directive, used for constructing internal URLs and by search engines for deduplicating content where it
-is available from multiple locations. Uses the `baseurl` config option and expresses a preference for URLs without a
-`.html` extension if used.
-* links to the image used by mobile devices if this website is pinned to a home-screen
-* references to the BAS Style Kit, Jekyll theme, and website specific CSS
-* workarounds for older versions of Internet Explorer to not break with the use of modern HTML features
 
 #### Is something wrong
 
@@ -358,191 +285,7 @@ Set the `href` property to a URL relative to the base of the current website.
 href: /assets/bsk-jekyll/js/cookie-banner.js
 ```
 
-### Site navigation
 
-Two kinds of navigation item are supported within the site navigation (an instance of the  
-[navbar](https://style-kit.web.bas.ac.uk/components/navbar/) component):
-
-1. resources within the current website - shown after the site title
-2. BAS websites relevant to the current website - shown before the feedback item on the navbar's right
-
-Both kinds of item are displayed using the *Site navigation* include, and set using config options:
-
-* internal items: `nav_items`
-* related items: `nav_related_sites`
-
-#### Internal items
-
-This theme allows multiple types of item to be used for internal navigation items. Some of these types are generic, 
-some are included to integrate more easily with Jekyll's conventions and features.
-
-**Properties**
-
-| Property | Type   | Required | Description                                       | Example Value | Notes                                            |
-| -------- | ------ | -------- | ------------------------------------------------- | ------------- | ------------------------------------------------ |
-| `name`   | String | Yes      | Used as the link text                             | `About`       | -                                                |
-| `type`   | String | Yes      | Controls how this item is processed and displayed | `single_item` | May require additional properties to be set      |
-
-Supported item types are:
-
-* `single_item`
-* `dropdown_item`
-
-**Example**
-
-```yml
-nav_items:
-  -
-    name: About
-    type: single_item
-```
-
-##### Single item
-
-The most basic item type, set manually and displayed as a navbar item (link).
-
-**Additional Properties**
-
-| Property | Type   | Required | Description                       | Example Value | Notes                                            |
-| -------- | ------ | -------- | --------------------------------- | ------------- | ------------------------------------------------ |
-| `href`   | String | Yes      | Used as the link `href` attribute | `/about`      | Set the `href` property to `/` for the home page |
-
-**Note:** The base URL of the website will be prepended to the `href` property, if one is defined.
-
-**Active item**
-
-When the current page matches the `href` attribute, the item is made the active navbar item.
-
-**Example**
-
-```yml
-nav_items:
-  -
-    name: Home
-    type: single_item
-    href: /
-  -
-    name: About
-    type: single_item
-    href: /about
-```
-
-##### Dropdown item
-
-A more complex item type, set manually and displayed as a 
-[navbar drop-down](https://style-kit.web.bas.ac.uk/components/navbar/#drop-down-menus).
-
-**Note:** Advanced drop-down features such as dividers and headers are not supported.
-
-**Additional Properties**
-
-| Property           | Type   | Required | Description                                | Example Value | Notes                                            |
-| ------------------ | ------ | -------- | ------------------------------------------ | ------------- | ------------------------------------------------ |
-| `actions`          | List   | Yes      | Defines the actions for the drop-down menu | N/A           | -                                                |
-| `actions.*.name`   | String | Yes      | Used as the action text                    | `Downloads`   | Example of a single action                       |
-| `actions.*.href`   | String | Yes      | Used as the action `href` atttibute        | `/resources/downloads` | Example of a single action              |
-
-**Note:** The base URL of the website will be prepended to the `action.*.href` property, if one is defined.
-
-**Active item**
-
-When the current page matches the `href` attribute of an action in a drop-down item, the drop-down action is made 
-active, and drop-down menu the active navbar item.
-
-**Example**
-
-```yml
-nav_items:
-  -
-    name: Resources
-    type: dropdown_item
-    actions:
-      -
-        name: Downloads
-        href: /resources/downloads
-```
-
-#### Related items
-
-Related items are comparatively  easier to define than internal items, it uses the same structure as the `single_item`
-internal item type.
-
-**Note:** Related items **SHOULD** always include entries for the BAS public website and BAS data catalogue.
-
-**Note:** Related items **SHOULD NOT** include non-BAS websites, as the drop-down menu title 'Part of the British 
-Antarctic Survey' implies its contents will be BAS operated websites.
-
-**Example**
-
-```yml
-nav_related_sites:
-  -
-    name: BAS Home
-    href: https://www.bas.ac.uk
-  - 
-    name: BAS Style Kit
-    href: https://style-kit.bas.ac.uk
-  - 
-    name: Discover BAS data
-    href: https://data.bas.ac.uk
-```
-
-### Cookie notice
-
-By law and by policy BAS websites are required to tell end-users whether cookies are used, and if so, where they can 
-find out more information about these cookies.
-
-It is assumed all BAS websites will use cookies, not least as all websites are expected to use analytics tracking,
-which depends on cookies.
-
-This theme provides a cookie banner to meet this need. It consists of:
-
-* the `phase` config option - which defines the URL to a page explaining how cookies are used on this website
-* the *Cookie banner* include - which displays a dismissible message and a link to the cookies usage page
-* the *Site footer* include - which includes a link to the cookies usage page
-* the *Body JS*  include - which includes the JavaScript needed to make the cookie banner dismissible
-
-The `cookies_href` config option **MUST** be set to a location with more information on how the website uses cookies.
-See the *Legal policies* section for more information.
-
-**Note:** This **SHOULD NOT** be the cookie policy used on the BAS public website, as it is not representative of our 
-other websites.
-
-### Development phase notice
-
-Websites exist at various stages of a development lifecycle - from inception, development, general availability through
-to retirement.
-
-Various points in this lifecycle are relevant to highlight to end-users, to give context and managing expectations.
-For example, new websites likely won't perform well, or have missing information.
-
-The BAS Style Kit, and this theme, support the 
-[development phases](https://www.gov.uk/service-manual/agile-delivery#phases-of-an-agile-project) defined by the 
-Government Digital Service (GDS) - these are:
-
-* Discovery - a stage before any website is built
-* Alpha - an early prototyping stage
-* Beta - a pre-release stage, things are expected to work correctly but with restrictions in terms of scale, 
-completeness or performance
-* Live - a service in general release - expected to work correctly without restrictions
-* Retirement - a service being wound down - expected to work until being shut-down, but no further improvements made
-
-This theme provides a development phase banner to inform end-users of the current development phase. It consists of:
-
-* the `phase` config option - which defines current development phase for the website
-* the *Phase banner* include - which displays information to end-users
-
-The `phase` config option **MUST** be set to one of these options:
-
-* `alpha`
-* `beta`
-* `live`
-* `retired`
-
-For all phases except live, a banner with a link to give site feedback will be shown. In the live phase no additional
-information is shown.
-
-**Note:** The *discovery* phase is not supported as website prototypes should only be made in the *alpha* stage.
 
 ### Legal policies
 
