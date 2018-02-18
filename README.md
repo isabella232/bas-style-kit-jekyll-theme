@@ -49,12 +49,17 @@ This theme defines two types of layout - *generic* and *non-generic*. Generic la
 intended for atypical content. Non-generic layouts implement the Style Kit either broadly or using a more opinionated, 
 *standard* way for ease of use and consistency.
 
-#### Generic layouts:
+All layouts use the `.html` extension. I.e. the layout `blank` is referenced as `blank.html`.
+
+All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` is available as
+`bas-style-kit/blank.html`.
+
+#### Generic layouts
 
 * [blank](/docs/layout/blank.md)
 * [html](/docs/layout/html.md)
 
-#### Style Kit specific layouts:
+#### Style Kit specific layouts
 
 * [`bsk--base`](/docs/layout/bsk--base.md)
 * [`bsk--base`](/docs/layout/bsk--standard.md)
@@ -72,15 +77,20 @@ give flexibility when this isn't suitable. For example the main navigation menu 
 title and navigation links, each of which can be changed, or included in a different order, minimising the need to 
 reimplement large parts of an otherwise fine include.
 
-Includes are often combined with a conditional, typically controlled using a related configuration option. This allows
-page elements that are not desired to be disabled more easily.
+Includes are often used conditionally, typically controlled using a related configuration option. This allows page
+elements that are not desired to be disabled more easily.
 
-#### Generic includes:
+All includes use the `.html` extension. I.e. the include `body` is referenced as `body.html`.
+
+All includes are namespaced using a `bas-style-kit/` directory - i.e. the include `body.html` is available as
+`bas-style-kit/body.html`.
+
+#### Generic includes
 
 * [`head`](/docs/include/head.md)
 * [`body`](/docs/include/body.md)
 
-#### Style Kit specific includes:
+#### Style Kit specific includes
 
 * [`bsk-head`](/docs/include/bsk-head.md)
 * [`bsk-body`](/docs/include/bsk-body.md)
