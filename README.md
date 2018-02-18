@@ -125,47 +125,6 @@ Displays a link to give feedback about the current website. It is shown in the d
 
 See the *Website feedback* section for more information.
 
-### Assets
-
-All assets in this theme are scoped to the `bsk-jekyll` directory.
-
-**Note:** In the longer term, all of these assets are due to be hosted within the BAS CDN, rather than within each 
-website that uses this theme. This makes such sites more consistent, and gives performance benefits using browser 
-caching.
-
-**Note:** To include JavaScript files, after the page has loaded, see the *JavaScript* section.
-
-#### `bsk-jekyll/bas-style-kit-jekyll-theme.scss`
-
-CSS styles specific to this theme, designed to be the same for each site using this theme.
-
-**Note:** This file **SHOULD NOT** be overiden, use `css/main.scss` instead.
-
-**Note:** This file currently contains some styles that are waiting to be merged with the upstream Style Kit project.
-
-#### `bsk-jekyll/img/apple-touch-icon.png`
-
-Image used if this website is pinned to the start screen of a smartphone.
-
-**Note:** The name of this file is conventional, and **SHOULD NOT** be changed. It **MAY** be overiden if needed.
-
-#### `bsk-jekyll/js/cookie-banner.js`
-
-Simple script to set a cookie when the user dismisses the cookie banner. If this cookie is present the banner will not 
-be shown on subsequent pages for a period of 30 days. After this time the banner will be shown again, until dismissed 
-again for another 30 days.
-
-See the *JavaScript* section for more information on how this file is loaded.
-
-#### `css/main.scss`
-
-CSS styles specific to each website. This file is empty by default and is designed to be overiden by each website.
-
-**Note:** This file is included in the *head* include, and so **SHOULD NOT** be removed to avoid 404 errors. It **MAY**
-be left empty if not needed.
-
-**Note:** This file will not be moved to the BAS CDN.
-
 ### Config options
 
 There are a number of general config options which **SHOULD** be set for this theme:
