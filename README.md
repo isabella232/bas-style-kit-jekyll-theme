@@ -51,13 +51,13 @@ intended for atypical content. Non-generic layouts implement the Style Kit eithe
 
 Generic layouts:
 
-* [blank](/docs/layouts/blank.md)
-* [html](/docs/layouts/html.md)
+* [blank](/docs/layout/blank.md)
+* [html](/docs/layout/html.md)
 
 Style Kit specific layouts:
 
-* [`bsk--base`](/docs/layouts/bsk--base.md)
-* [`bsk--base`](/docs/layouts/bsk--standard.md)
+* [`bsk--base`](/docs/layout/bsk--base.md)
+* [`bsk--base`](/docs/layout/bsk--standard.md)
 
 ### Includes
 

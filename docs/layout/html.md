@@ -3,7 +3,7 @@
 ## HTML layout
 
 A generic layout which defines a very basic HTML5 structure, with content placed in an empty `<body>` element using the
-[`body`](/docs/includes/body.md) include. An empty `<head>` element is set using the [`head`](/docs/includes/head.md) 
+[`body`](/docs/include/body.md) include. An empty `<head>` element is set using the [`head`](/docs/include/head.md) 
 include.
 
 These includes are intended to be overridden to include necessary styles, scripts and page structure to suit the needs 
