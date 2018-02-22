@@ -51,7 +51,7 @@ bas_style_kit_jekyll_theme:
     head_title:
       # Used when `page.title` isn't set
       default: 'site title'
-      # Appended to either `page.title` or `head_title.default` - e.g. `- Site Foo`
+      # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
       appended: !!null
     head_description: 'site description'
     site_brand:
@@ -60,12 +60,12 @@ bas_style_kit_jekyll_theme:
         img_size: !!null
         href: '/'
     site_development_phase: 'alpha'
-    site_feedback_href: '#'
+    site_feedback_href: '/feedback.html'
     site_analytics: 
       id: !!null
 
     # These settings aren't usually changed
-    head_description: 'data:;base64,iVBORw0KGgo='
+    head_favicon: 'data:;base64,iVBORw0KGgo='
     site_back_to_top_target_href: '#site-top'
     site_footer:
       ogl:
@@ -73,6 +73,6 @@ bas_style_kit_jekyll_theme:
         img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
         text_version: 'v3.0'
       legal_policies:
-        copyright_href: '#'
-        cookies_href: '#'
-        privacy_href: '#'
+        copyright_href: '/legal/copyright.html'
+        cookies_href: '/legal/copyright.html'
+        privacy_href: '/legal/privacy.html'
