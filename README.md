@@ -283,18 +283,44 @@ Merge requests **WILL NOT** be accepted on this mirror.
 
 ## Release procedures
 
-1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml` and `_data/bsk_jekyll_vars.json`
-2. `docker-compose build`
-3. `docker-compose push`
-4. if new plugins have been added, update the usage section for where users override the `gems` config option
-5. if new config options have been set, update the usage section
-6. update screen-shot (width: 900px)
-7. close release
-8. commit changes to git and tag with new version
-9. `docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec`
-10. `docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem`
+Before release:
+
+1. create a release branch
+2. remove `-develop` from the version in:
+  * `jekyll-theme-bas-style-kit.gemspec`
+  * `docker-compose.yml`
+  * `_data/bsk_jekyll_vars.json`
+3. push the app docker image [1]
+4. if new config options have been set, update the usage section
+5. update screen-shot (width: 900px)
+6. close release in changelog
+7. commit changes, merge with master and tag with new version
+8. push the release to Ruby Gems [2]
 
 **Note:** If the BAS Style Kit version changes, make sure to bump that version in `_data/bsk_jekyll_vars.json` too.
+
+After release:
+
+1. bump the version with `-develop` as a prefix in:
+  * `jekyll-theme-bas-style-kit.gemspec`
+  * `docker-compose.yml`
+  * `_data/bsk_jekyll_vars.json`
+2. push the app docker image [1]
+3. commit changes, merge with master and close release branch
+
+[1]
+
+```shell
+$ docker-compose build
+$ docker-compose push
+```
+
+[2]
+
+```shell
+$ docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec
+$ docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem
+```
 
 ## Issue tracking
 
