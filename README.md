@@ -32,6 +32,7 @@ theme: jekyll-theme-bas-style-kit
 # If your site uses additional plugins, append these items
 plugins:
   - jekyll-menus
+  - jekyll-tidy
 ```
 
 ## Usage
@@ -208,6 +209,7 @@ This theme depends on these plugins:
 
 * [Jekyll data](https://github.com/ashmaroli/jekyll-data) - for including theme data files into a site's configuration
 * [Jekyll menu](https://github.com/forestryio/jekyll-menus) - for managing navigation menus
+* [Jekyll tidy](https://github.com/apsislabs/jekyll-tidy) - for rewriting HTML output to be well structured
 
 ## Development
 
