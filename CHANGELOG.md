@@ -10,25 +10,26 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Re-licensing project under the Open Government License
 * Upgrading to Jekyll 3.7.2
 * Upgrading to Style Kit 0.3.0
-* Layouts and Includes are now namespaced in `bas-style-kit`
-* Refactoring *blank* and *HTML* generic layouts and tests
-* All includes have been developed, if you have used these outside of these theme you need to update any references
+* Layouts, includes and data files are now in a `bas-style-kit` namespace 
+* Generic *blank* and *HTML* layouts and associated includes have been redeveloped
+* The Style Kit layout has been split into *base* and *standard* layouts
+* Style Kit includes have been redeveloped and renamed
 * All data files now use Yaml formatting to support comments
 
 ### Removed [BREAKING!]
 
 * *default* layout, switch to either *bsk--base* or *bsk--standard* as needed
 * apple touch icons - although these never worked correctly
-* 'back to top' and 'is something wrong' links - these will be re-added in a future release
+* 'back to top' and 'is something wrong' links - these will be re-added when supported in the Style Kit
 * HTML5 shim and Respond.js as the Style Kit no longer supports IE 10 or below
-* All local assets as they are either now part of the Style Kit, or will be re-added in a future release
+* All local assets as they are either now part of the Style Kit, or will be re-added when supported in the Style Kit
 
 ### Added
 
 * *bsk--base* layout which implements the Style Kit, but in a very generic way
 * *bsk--standard* layout which implements the Style Kit with typical elements such as a header and footer
-* CSS files are now loaded from a manifest file, as with JavaScript
-* CSS and JavaScript files can now use Sub-Resource Integrity (SRI) for better security
+* CSS files are now loaded from a data file, as with JavaScript
+* CSS and JavaScript files can and do use Sub-Resource Integrity (SRI) for better security
 * Jekyll Menus plugin
 
 ### Changed
@@ -40,10 +41,6 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Tidying up README
 * Tidying up Dockerfile and Docker Compose
 * Gemfile lock file is now tracked
-
-### Removed
-
-* CSS and JavaScript files can no longer have comments
 
 ## 0.2.3 - 11/04/2017
 
