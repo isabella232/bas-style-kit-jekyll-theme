@@ -134,16 +134,6 @@ Navigation includes:
 
 ### Data files
 
-#### Is something wrong
-
-**Type:** Snippet
-
-**File:** `snippets/is-something-wrong.html`
-
-Displays a link to give feedback about the current website. It is shown in the default footer include.
-
-See the *Website feedback* section for more information.
-
 Data files represent structured data in formats such as JSON, Yaml and CSV. Their contents can be accessed through the
 `site.data` variable to populate tables, navigation menus or other use cases.
 
