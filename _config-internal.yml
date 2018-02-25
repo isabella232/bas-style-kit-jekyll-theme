@@ -1,13 +1,22 @@
-# Welcome to Jekyll!
+# This file **is** a standard Jekyll config file. 
+#
+# It is used to test the components that make up the BAS Style Kit Jekyll Theme works as expected, it does not test the
+# theme itself (i.e. in terms of treating includes as 'theme' includes, rather than 'site' includes, and config merging)
 
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Plugins
+#
+
+plugins:
+  - jekyll-menus
 
 # Build settings
+#
 
 markdown: kramdown
-# theme: NONE - normally this would be 'jekyll-theme-bas-style-kit' but this *is* that theme so that won't work
+# - normally this would be 'jekyll-theme-bas-style-kit' but this *is* that theme so that won't work
+theme: !!null
 
+# This wouldn't normally be necessary as the site would be contained in a `site` sub-directory or similar
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -22,6 +31,7 @@ exclude:
   - screenshot.png
 
 # Server settings
+#
 
 host: 0.0.0.0
 port: 9000
@@ -29,41 +39,57 @@ url: localhost
 encoding: UTF-8
 
 # Site settings
+#
 
-baseurl: "" # e.g. /foo
-url: "http://localhost:9000" # base hostname & protocol for canonical links
+# e.g. /foo
+baseurl: ''
+# base hostname & protocol for canonical links
+url: 'http://localhost:9000'
 
-title: BAS Style Kit Jekyll Theme
-description: > # Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.
+# Theme settings
+#
 
-phase: live
+# This is a copy of the settings defined in `_config.yml` 
+# as this file isn't loaded when the theme is being tested internally
+bas_style_kit_jekyll_theme:
+  feature_flags:
+    site:
+      back_to_top_anchor: true
+      standard_header: true
+      standard_footer: true
+    standard_header:
+      cookie_notice: true
+      site_navigation: true
+      development_phase: true
+    standard_footer:
+      divider: false
+      ogl: true
+      legal_policies: true
+  attributes: 
+    container: 'fixed'
+    head_title:
+      # Used when `page.title` isn't set
+      default: 'BAS Style Kit Jekyll Theme'
+      # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
+      appended: ' - BAS Style Kit Jekyll Theme' 
+    head_description: 'Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.'
+    site_brand:
+      text: 'BAS Style Kit Jekyll Theme'
+      href: '/'
+    site_development_phase: 'alpha'
+    site_feedback_href: '#'
+    site_analytics: 
+      id: 'UA-64130716-27'
 
-copyright_href: "https://www.bas.ac.uk/about-this-site/copyright-statement/"
-privacy_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-cookies_href: "https://www.bas.ac.uk/about-this-site/privacy-cookie-policy/"
-feedback_href: "#"
-
-ga_property: UA-64130716-XX
-
-nav_items:
-  -
-    name: Home
-    type: single_item
-    href: /
-  -
-    name: About
-    type: single_item
-    href: /about
-  -
-    name: Layouts
-    type: dropdown_item
-    actions:
-      -
-        name: Blank
-        href: /samples/layouts/blank
-      -
-        name: HTML
-        href: /samples/layouts/html
-      -
-        name: Default
-        href: /samples/layouts/default
+    # These settings aren't usually changed
+    head_favicon: 'data:;base64,iVBORw0KGgo='
+    site_back_to_top_target_href: '#site-top'
+    site_footer:
+      ogl:
+        href: 'http://www.nationalarchives.gov.uk/doc/open-government-licence'
+        img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
+        text_version: 'v3.0'
+      legal_policies:
+        copyright_href: '#'
+        cookies_href: '#'
+        privacy_href: '#'

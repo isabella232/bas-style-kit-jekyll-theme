@@ -1,27 +1,29 @@
 ---
 title: Home
-layout: default
+layout: bas-style-kit/bsk--standard
 ---
 
-# BAS Style Kit - Jekyll Template <small>{{ site.data.bsk_jekyll_vars.theme_version }}</small>
+<header class="bsk-page-header">
+    <h1>BAS Style Kit - Jekyll Template <small>{{ site.data.bsk_jekyll_vars.theme_version }}</small></h1>
+</header>
 
-## Samples
-{:.page-header }
+## Layouts
 
-### Layouts
+* [blank]({{ '/tests/layouts/blank' | prepend: site.baseurl }})
+* [HTML]({{ '/tests/layouts/html' | prepend: site.baseurl }})
+* [BSK Base]({{ '/tests/layouts/bsk--base' | prepend: site.baseurl }})
+* [BSK Standard]({{ '/tests/layouts/bsk--standard' | prepend: site.baseurl }})
 
-* [blank]({{ '/samples/layouts/blank' | prepend: site.baseurl }})
-* [HTML]({{ '/samples/layouts/html' | prepend: site.baseurl }})
-* [default]({{ '/samples/layouts/default' | prepend: site.baseurl }})
+## Pages
 
-### Includes
+* [about]({{ '/tests/pages/about' | prepend: site.baseurl }})
 
-* [page body JS]({{ '/samples/includes/page-js' | prepend: site.baseurl }})
+<div class="bsk-alert bsk-alert-highlight bsk-alert-info">Pages use the <code>bsk--standard</code> layout</div>
 
 ## Variables
 
-| Variable        | Value                                           |
-| --------------- | ----------------------------------------------- |
-| `theme_version` | *{{ site.data.bsk_jekyll_vars.theme_version }}* |
-| `bsk_version`   | *{{ site.data.bsk_jekyll_vars.bsk_version }}*   |
-{: .table }
+| Variable        | Value                                                  |
+| --------------- | ------------------------------------------------------ |
+| `theme_version` | *{{ site.data.bas-style-kit.bsk_vars.theme_version }}* |
+| `bsk_version`   | *{{ site.data.bas-style-kit.bsk_vars.bsk_version }}*   |
+{: .bsk-table }

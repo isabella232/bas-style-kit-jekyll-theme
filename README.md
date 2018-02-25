@@ -1,4 +1,4 @@
-# jekyll-theme-bas-style-kit
+# BAS Style Kit Jekyll Theme
 
 Jekyll theme for the [BAS Style Kit](https://stlye-kit.web.bas.ac.uk).
 
@@ -24,202 +24,115 @@ Or install it yourself as:
 $ gem install jekyll-theme-bas-style-kit
 ```
 
-## Usage
-
-Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
-
-### Selecting the BAS Style Kit Jekyll theme
-
-Add these lines to your Jekyll site's `_config.yml`:
+Add these lines to your `_config.yml` to use the Style Kit theme:
 
 ```yaml
 theme: jekyll-theme-bas-style-kit
 
-gems:
-  - jekyll-data
+# If your site uses additional plugins, append these items
+plugins:
+  - jekyll-menus
 ```
 
-**Note:** This theme sets additional config options, see the *Config options* section for more information.
+## Usage
 
-**Note:** If you have loaded any Jekyll plugins using the `gems` option, also include these plugins:
+Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
 
-```yaml
-gems:
-  - jekyll-data
-```
+This theme includes numerous layouts, includes, data files and configuration options to give a flexible design.
 
 ### Layouts
 
-This theme provides three layouts:
+Layouts define a common design/structure for a set of content pages. Typically they will wrap page content in elements
+such as fixed or fluid width containers, and include common elements such as headers and footers.
 
-* blank
-* HTML
-* default
+This theme defines two types of layout - *generic* and *non-generic*. Generic layouts are non Style Kit specific and 
+intended for atypical content. Non-generic layouts implement the Style Kit either broadly or using a more opinionated, 
+*standard* way for ease of use and consistency.
 
-#### Blank
+All layouts use the `.html` extension. I.e. the layout `blank` is referenced as `blank.html`.
 
-Returns content without modification, and is used as the fundamental layout, from which all other layouts derive.
+All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` is available as
+`bas-style-kit/blank.html`.
 
-This layout is useful if you need to output data in a format other than HTML (such as JSON or XML).
+#### Generic layouts
 
-**Note:** You will need to set a suitable content-type header if returning non-HTML content.
+* [blank](/docs/layout/blank.md)
+* [html](/docs/layout/html.md)
 
-#### HTML
+#### Style Kit specific layouts
 
-Returns content in the `<body>` tag of a basic HTML page. Includes `<head>` elements returned by the *head* include.
-
-**Note:** This layout includes the BAS Style Kit CSS styles, but not Bootstrap JavaScript components (see the 
-*default* layout for this).
-
-**Note:** This layout does not include information about the use of Cookies, which **MUST** be displayed if used on a
-website. You will need to provide a suitable notice to users if this applies. See the *Cookie notice* section for more
-information.
-
-This layout is useful if you need to show content in isolation, or using a specific page style, such as a page designed
-for printing, or for displaying full screen.
-
-#### Default
-
-Returns content in a [container](https://style-kit.web.bas.ac.uk/core/layout/#fixed-width-container) with a number of 
-additional components using includes:
-
-| Component                | Include File                     | Description                                                                                  | Notes                                                                                      |
-| ------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Cookie notice banner     | `layout/cookie-banner.html`      | Dismissible cookie notice                                                                    | See the *Cookie notice* section for more information                                       |
-| Site navigation          | `layout/site-navigation.html`    | [Navbar](https://style-kit.web.bas.ac.uk/components/navbar/) containing site navigation      | See the *Site navigation* section for more information                                     |
-| Development phase banner | `layout/phase-banner.html`       | Contextual warning for current development phase                                             | See the *Development phase* section for more information                                   |
-| Site footer              | `layout/site-footer.html`        | Basic [footer](https://style-kit.web.bas.ac.uk/components/footer/)                           | Designed to be overiden, see the *Legal policies* section for information it must contain |
-| JavaScript               | `snippets/body-js.html`          | Scripts required for jQuery, Bootstrap's JavaScript components, and the cookie notice banner | -                                                                                          |
-| Analytics                | `snippets/google-analytics.html` | Scripts required for Google Analytics                                                        | Not included if `ga_property` config option is not set                                     |
+* [`bsk--base`](/docs/layout/bsk--base.md)
+* [`bsk--base`](/docs/layout/bsk--standard.md)
 
 ### Includes
 
-Includes for this theme are split into *layout* and *snippets*. Layouts are used as part of the visual structure of the
-site (such as the main navigation). Snippets are more general and used in various places (including in other includes).
+Includes represent common content used across a website, either once per page (such as a header and footer), or multiple
+times (such as an alert). Content can include page content or `<head>` element properties for example. Includes can be 
+configurable, accepting parameters or blocks of content, though most are used as-is.
 
-#### Cookie Banner
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/include/) for more background information.
 
-**Type:** Layout
+This theme uses includes extensively, to give finer grained control over how elements of a page are structured and to 
+give flexibility when this isn't suitable. For example the main navigation menu is made of includes such as the site 
+title and navigation links, each of which can be changed, or included in a different order, minimising the need to 
+reimplement large parts of an otherwise fine include.
 
-**File:** `layout/cookie-banner.html`
+Includes are often used conditionally, typically controlled using a related configuration option. This allows page
+elements that are not desired to be disabled more easily.
 
-Presents a full-width banner, pinned to the top of the page, with a statement that the site uses cookies, and where a
-user can find out more information.
+All includes use the `.html` extension. I.e. the include `body` is referenced as `body.html`.
 
-This banner can be dismissed by the user, which will hide the message for 30 days using (ironically) a cookie.
+All includes are namespaced using a `bas-style-kit/` directory - i.e. the include `body.html` is available as
+`bas-style-kit/body.html`.
 
-See the *Cookie notice* section for more information.
+#### Generic includes
 
-**Note:** This include depends on the `snippets/body-js.html` include.
+* [`head`](/docs/include/head.md)
+* [`body`](/docs/include/body.md)
 
-#### Phase Banner
+#### Style Kit specific includes
 
-**Type:** Layout
+* [`bsk-head`](/docs/include/bsk-head.md)
+* [`bsk-body`](/docs/include/bsk-body.md)
+* [`bsk-body--standard`](/docs/include/bsk-body--standard.md)
 
-**File:** `layout/phase-banner.html`
+HTML Head includes:
 
-Presents a full-width banner, pinned after the site navigation, with a statement describing the status of the website. 
-For example, if a website is in the *beta* phase of development, a notice advising users that the website is still 
-under development will be shown, with an invitation for them to submit feedback.
+* [`bsk-head--core-meta`](/docs/include/bsk-head--core-meta.md)
+* [`bsk-head--seo-meta`](/docs/include/bsk-head--seo-meta.md)
+* [`bsk-head--core-styles`](/docs/include/bsk-head--core-styles.md)
+* [`bsk-head--favicon`](/docs/include/bsk-head--favicon.md)
 
-If a website is in the *live* phase of development, no banner is shown.
+HTML Body includes:
 
-See the *Development phase notice* and *Website feedback* sections for more information.
+* [`bsk-body--core-scripts`](/docs/include/bsk-body--core-scripts.md)
+* [`bsk-body--analytics-script`](/docs/include/bsk-body--analytics-script.md)
+* [`bsk-body--back-to-top`](/docs/include/bsk-body--back-to-top.md)
+* [`bsk-body--standard-header`](/docs/include/bsk-body--standard-header.md)
+* [`bsk-body--standard-footer`](/docs/include/bsk-body--standard-footer.md)
 
-**Note:** The message shown for each development phase cannot currently be changed.
+Footer includes:
 
-#### Site footer
+* [`bsk-footer--contents`](/docs/include/bsk-footer--contents.md)
+* [`bsk-footer--legal-policies`](/docs/include/bsk-footer--legal-policies.md)
+* [`bsk-footer--ogl`](/docs/include/bsk-footer--ogl.md)
 
-**Type:** Layout
+Header includes:
 
-**File:** `layout/site-footer.html`
+* [`bsk-header--cookie-notice`](/docs/include/bsk-header--cookie-notice.md)
+* [`bsk-header--site-navigation`](/docs/include/bsk-header--site-navigation.md)
+* [`bsk-header--development-phase`](/docs/include/bsk-header--development-phase.md)
 
-Provides a basic [footer](https://style-kit.web.bas.ac.uk/components/footer/) designed to meet requirements for:
+Navigation includes:
 
-* linking to the top of the current page and to give feedback
-* explaining the license for content within the website
-* displaying links to legal polices
+* [`bsk-nav--header`](/docs/include/bsk-nav--header.md)
+* [`bsk-nav--collapse`](/docs/include/bsk-nav--collapse.md)
+* [`bsk-nav-header--collapse-trigger`](/docs/include/bsk-nav-header--collapse-trigger.md)
+* [`bsk-nav-header--brand`](/docs/include/bsk-nav-header--brand.md)
+* [`bsk-nav-collapse--primary-navigation`](/docs/include/bsk-nav-collapse--primary-navigation.md)
+* [`bsk-nav-collapse--secondary-navigation`](/docs/include/bsk-nav-collapse--secondary-navigation.md)
 
-As footers will vary greatly between websites, this footer is deliberately basic, and limited, in its structure. It is
-expected this include will be overiden by each website with its own specific footer.
-
-See the *Legal policies* and *Website feedback* sections for information on what a footer **MUST** contain.
-
-#### Site navigation
-
-**Type:** Layout
-
-**File:** `layout/site-navigation.html`
-
-Provides a default implementation of a [navbar](https://style-kit.web.bas.ac.uk/components/navbar/) designed to meet 
-the needs of most websites. The navbar consists of:
-
-* the site title
-* a toggle to show or hide navigation items on smaller devices (such as phones)
-* a set of navigation items (see the *Site navigation* section for how to set these)
-* a drop-down of other relevant BAS websites, including the BAS public website and data catalogue
-* a link to give feedback about the website
-
-See the *Site navigation* and *Website feedback* sections for more information.
-
-#### Back to top
-
-**Type:** Snippet
-
-**File:** `snippets/back-to-top.html`
-
-Provides a link to the `#site-top` anchor, positioned at the top of each page. It is shown in the default footer 
-include.
-
-**Note:** This snippet depends on the *default* layout being used, or a layout with a `#site-top` element defined.
-
-#### Body JS
-
-**Type:** Snippet
-
-**File:** `snippets/body-js.html`
-
-Inserts `<script>` tags to reference JavaScript files. Entries defined in the `bsk_jekyll_js.json` data file will be
-output first, followed by per-page files using the `body_js_files` front-matter option.
-
-See the *JavaScript* section for more information.
-
-**Note:** This snippet is designed for loading JavaScript *after* the main page content. If a script needs to be run 
-before this content, you will need to do this manually.
-
-#### Google Analytics
-
-**Type:** Snippet
-
-**File:** `snippets/google-analytics.html`
-
-If the `ga_property` config option is set, include the Google Analytics tracking script, and configures it for the 
-relevant Google Analytics property.
-
-The tracking script is configured to anonymise the IP address of visitors client side, meaning we it is never visible 
-to the Google Analytics service.
-
-#### Head
-
-**Type:** Snippet
-
-**File:** `snippets/head.html`
-
-Represents the `<head>` tag of a HTML page with these elements:
-
-* HTML doc-type
-* UTF-8 character encoding scheme
-* directive for Internet Explorer to use the latest rendering engine available (ignored by Microsoft Edge)
-* directive for devices to set the viewport width to the width of the current device in CSS pixels at a scale of 100%,
-and an initial scale of 100%
-* the title directive, containing a page title (if set) followed by the site `title` config option
-* the description directive, containing the site `description` config option
-* the canonical directive, used for constructing internal URLs and by search engines for deduplicating content where it
-is available from multiple locations. Uses the `baseurl` config option and expresses a preference for URLs without a
-`.html` extension if used.
-* links to the image used by mobile devices if this website is pinned to a home-screen
-* references to the BAS Style Kit, Jekyll theme, and website specific CSS
-* workarounds for older versions of Internet Explorer to not break with the use of modern HTML features
+### Data files
 
 #### Is something wrong
 
@@ -231,427 +144,80 @@ Displays a link to give feedback about the current website. It is shown in the d
 
 See the *Website feedback* section for more information.
 
-### Assets
+Data files represent structured data in formats such as JSON, Yaml and CSV. Their contents can be accessed through the
+`site.data` variable to populate tables, navigation menus or other use cases.
 
-All assets in this theme are scoped to the `bsk-jekyll` directory.
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/datafiles/) for more background information.
 
-**Note:** In the longer term, all of these assets are due to be hosted within the BAS CDN, rather than within each 
-website that uses this theme. This makes such sites more consistent, and gives performance benefits using browser 
-caching.
+This theme uses data files to define a list of CSS and JavaScript resources to load and to expose some variables about
+the theme.
 
-**Note:** To include JavaScript files, after the page has loaded, see the *JavaScript* section.
+All data files use the `.yml` (Yaml) extension and are namespaced using a `bas-style-kit/` directory - i.e. a data 
+element `foo` in the data file `bsk-vars.yml` is available as  `site.data.bas-style-kit.bsk-vars.foo`.
 
-#### `bsk-jekyll/bas-style-kit-jekyll-theme.scss`
+#### Style Kit specific data files
 
-CSS styles specific to this theme, designed to be the same for each site using this theme.
+* [bsk-css](/data-file/bsk-css.md)
+* [bsk-js](/data-file/bsk-js.md)
+* [bsk-vars](/data-file/bsk-vars.md)
 
-**Note:** This file **SHOULD NOT** be overiden, use `css/main.scss` instead.
+### Variables
 
-**Note:** This file currently contains some styles that are waiting to be merged with the upstream Style Kit project.
+This theme defines the following variables which can be used for reporting or debugging purposes.
 
-#### `bsk-jekyll/img/apple-touch-icon.png`
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/variables/) for more background information.
 
-Image used if this website is pinned to the start screen of a smartphone.
+#### Style Kit specific variables
 
-**Note:** The name of this file is conventional, and **SHOULD NOT** be changed. It **MAY** be overiden if needed.
+| Variable        | Fully Qualified Variable                         | Purpose                                         | Example | Notes |
+| --------------- | ------------------------------------------------ | ----------------------------------------------- | ------- | ----- |
+| `theme_version` | `site.data.bas-style-kit.bsk_vars.theme_version` | Version of this theme                           | `0.3.0` | -     |
+| `bsk_version`   | `site.data.bas-style-kit.bsk_vars.bsk_version`   | Version of the Style Kit used within this theme | `0.3.0` | -     |
 
-#### `bsk-jekyll/js/cookie-banner.js`
+### Configuration options
 
-Simple script to set a cookie when the user dismisses the cookie banner. If this cookie is present the banner will not 
-be shown on subsequent pages for a period of 30 days. After this time the banner will be shown again, until dismissed 
-again for another 30 days.
+Configuration options are used to control how various aspects of a Jekyll site work and to set variable values (if 
+used site wide). Some configuration options are defined by Jekyll alter fundamental properties, such as the rendering 
+engine used, others are defined within the context of a site, such as a variable for the version of a project.
 
-See the *JavaScript* section for more information on how this file is loaded.
+Configuration options defined by a theme can be overridden by setting the same option in a site configuration file.
 
-#### `css/main.scss`
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/configuration/) for more background information.
 
-CSS styles specific to each website. This file is empty by default and is designed to be overiden by each website.
+Configuration options are used extensively throughout this theme. Some variables are used to set properties such as the
+brand text or image in the navbar (attributes), others are used to enable various features (feature flags).
 
-**Note:** This file is included in the *head* include, and so **SHOULD NOT** be removed to avoid 404 errors. It **MAY**
-be left empty if not needed.
+Configuration options for this theme are namespaced under a `bas_style_kit_jekyll_theme` option - i.e. an option `foo`
+is set as `bas_style_kit_jekyll_theme.foo`.
 
-**Note:** This file will not be moved to the BAS CDN.
-
-### Config options
-
-There are a number of general config options which **SHOULD** be set for this theme:
-
-| Option        | Type   | Description                | Default Value | Example Value                                       | Notes                                      |
-| ------------- | ------ | -------------------------- | ------------- | --------------------------------------------------- | ------------------------------------------ |
-| `title`       | String | Name of the website        | *None*        | "Example Website"                                   | Also used for the title HTML property      |
-| `description` | String | Description of the website | *None*        | "Example website for the BAS Style Kit Jekyll Theme | Used in the description meta HTTP property |
-
-There are a number of theme specific config options, some of which **SHOULD** be set:
-                        
-| Option              | Type   | Description                                                    | Default Value | Example Value          | Notes                                                                       |
-| ------------------- | ------ | -------------------------------------------------------------- | ------------- | ---------------------- | --------------------------------------------------------------------------- |
-| `phase`             | String | Current development phase of the website                       | `live`        | `alpha`                | See the *Development phase notice* section for more information             |
-| `copyright_href`    | String | URL to copyright statement of the website                      | *None*        | `/copyright-statement` | See the *Legal policies* section for more information                       |
-| `privacy_href`      | String | URL to privacy policy of the website                           | *None*        | `/privacy-policy`      | See the *Legal policies* section for more information                       |
-| `cookies_href`      | String | URL to cookie policy of the website                            | *None*        | `/cookie-policy`       | See the *Legal policies* section for more information                       |
-| `feedback_href`     | String | URL to feedback page of the website                            | *None*        | `/feedbac`             | See the *Website feedback* section for more information                     |
-| `ga_property`       | String | Google Analytics property of the website                       | *None*        | `UA-64130716-XX`       | Values should start with `UA-64130716-` for BAS Google Analytics properties |
-| `nav_items`         | List   | Items in the website to include in the site navigation         | *None*        | *List of items*        | See the *Site navigation* section for more information                      |
-| `nav_related_sites` | List   | Items for other BAS websites to include in the site navigation | *List*        | *List of items*        | See the *Site navigation* section for more information                      |
-
-There are some additional general config options which are set by this theme, but can be overriden if needed:
-
-| Option      | Type   | Description                                                          | Default Value | Example Value   | Notes                                                                    |
-| ----------- | ------ | -------------------------------------------------------------------- | ------------- | --------------- | ------------------------------------------------------------------------ |
-| `gems`      | List   | List of Jekyll plugins to include, set to dependencies of this theme | *List*        | *List of items* | If this option is set within a website, ensure these values are included |
-| `permalink` | String | Removes the `.html` file extension from URLs generated by Jekyll     | `pretty`      | `pretty`        | Other options are available, see the Jekyll documentation                |
-
-### Theme variables
-
-The `bsk_jekyll_vars.json` Jekyll data file contains variables which can be used by websites using this theme.
-
-| Variable        | Type   | Description                                         | Notes |
-| --------------- | ------ | --------------------------------------------------- | ----- |
-| `theme_version` | String | Version of the BAS Style Kit Jekyll Theme           | -     |
-| `bsk_version`   | String | Version of the BAS Style Kit used within this theme | -     |
-
-### JavaScript
-
-JavaScript files can be loaded after the main site content in two ways:
-
-1. Using the `bsk_jekyll_js.json` Jekyll data file - for files that should be loaded in all pages
-2. Using the `body_js_files` front-matter option - for files that should only be loaded for specific pages
-
-Both methods are added to the page using the *Body JS* include, using the following structure for each script:
-
-| Property  | Type   | Required | Description                                       | Example Value                            | Notes                                            |
-| --------- | ------ | -------- | ------------------------------------------------- | ---------------------------------------- | ------------------------------------------------ |
-| `comment` | String | Yes      | Used as a HTML comment added before each script   | `Code for managing cookie banner`        | -                                                |
-| `href`    | String | Yes      | Defines the location of the script to be loaded   | `/assets/bsk-jekyll/js/cookie-banner.js` | Depends on the type property value               |
-| `type`    | String | Yes      | Controls how this item is processed and displayed | `local`                                  | See below for valid values                       |
-
-Supported script types are:
-
-* `local`
-* `remote`
-
-**Note:** See the `bsk_jekyll_js.json` Jekyll data file for scripts which are included in all pages by default.
-
-**Example**
-
-For scripts referenced in the `bsk_jekyll_js.json` Jekyll data file:
-
-```json
-{
-  {
-    "comment": "Cookie library used to persistently hide the cookie banner",
-    "href": "https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js",
-    "type": "remote"
-  },
-  {
-    "comment": "Code for managing cookie banner",
-    "href": "/assets/bsk-jekyll/js/cookie-banner.js",
-    "type": "local"
-  }
-]
-```
-
-For scripts referenced in the `body_js_files` front-matter option:
-
-```md
----
-title: A page
-body_js_files:
-  - comment: Cookie library used to persistently hide the cookie banner
-    href: https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js
-    type: remote
-  - comment: Code for managing cookie banner
-    href: /assets/bsk-jekyll/js/cookie-banner.js
-    type: local
----
-
-# Page content
-...
-```
-
-#### Remote scripts
-
-Set the `href` property to the URL of a remote file.
-
-**Example**
-
-```
-href: https://cdn.web.bas.ac.uk/js-libs/js.cookie-2.1.3.min.js
-```
-
-#### Local scripts
-
-Set the `href` property to a URL relative to the base of the current website.
-
-**Note:** The base URL of the website will be prepended to the `href` property, if one is defined.
-
-**Example**
-
-```
-href: /assets/bsk-jekyll/js/cookie-banner.js
-```
-
-### Site navigation
-
-Two kinds of navigation item are supported within the site navigation (an instance of the  
-[navbar](https://style-kit.web.bas.ac.uk/components/navbar/) component):
-
-1. resources within the current website - shown after the site title
-2. BAS websites relevant to the current website - shown before the feedback item on the navbar's right
-
-Both kinds of item are displayed using the *Site navigation* include, and set using config options:
-
-* internal items: `nav_items`
-* related items: `nav_related_sites`
-
-#### Internal items
-
-This theme allows multiple types of item to be used for internal navigation items. Some of these types are generic, 
-some are included to integrate more easily with Jekyll's conventions and features.
-
-**Properties**
-
-| Property | Type   | Required | Description                                       | Example Value | Notes                                            |
-| -------- | ------ | -------- | ------------------------------------------------- | ------------- | ------------------------------------------------ |
-| `name`   | String | Yes      | Used as the link text                             | `About`       | -                                                |
-| `type`   | String | Yes      | Controls how this item is processed and displayed | `single_item` | May require additional properties to be set      |
-
-Supported item types are:
-
-* `single_item`
-* `dropdown_item`
-
-**Example**
+Configuration options in this documentation use a dot notation to indicate a nested structure - i.e. an option `foo.bar`
+should be set as:
 
 ```yml
-nav_items:
-  -
-    name: About
-    type: single_item
+foo:
+  bar
 ```
 
-##### Single item
-
-The most basic item type, set manually and displayed as a navbar item (link).
-
-**Additional Properties**
-
-| Property | Type   | Required | Description                       | Example Value | Notes                                            |
-| -------- | ------ | -------- | --------------------------------- | ------------- | ------------------------------------------------ |
-| `href`   | String | Yes      | Used as the link `href` attribute | `/about`      | Set the `href` property to `/` for the home page |
-
-**Note:** The base URL of the website will be prepended to the `href` property, if one is defined.
-
-**Active item**
-
-When the current page matches the `href` attribute, the item is made the active navbar item.
-
-**Example**
+A configuration option `bas_style_kit_jekyll_theme.feature_flags.site.back_to_top_anchor` should be set as:
 
 ```yml
-nav_items:
-  -
-    name: Home
-    type: single_item
-    href: /
-  -
-    name: About
-    type: single_item
-    href: /about
+bas_style_kit_jekyll_theme:
+  feature_flags:
+    site:
+      back_to_top_anchor: '[value]'
 ```
 
-##### Dropdown item
+#### Style Kit specific configuration options
 
-A more complex item type, set manually and displayed as a 
-[navbar drop-down](https://style-kit.web.bas.ac.uk/components/navbar/#drop-down-menus).
+* [feature flags](/docs/config/feature-flags.md)
+* [attributes](/docs/config/attributes.md)
 
-**Note:** Advanced drop-down features such as dividers and headers are not supported.
+### Plugins
 
-**Additional Properties**
+This theme depends on these plugins:
 
-| Property           | Type   | Required | Description                                | Example Value | Notes                                            |
-| ------------------ | ------ | -------- | ------------------------------------------ | ------------- | ------------------------------------------------ |
-| `actions`          | List   | Yes      | Defines the actions for the drop-down menu | N/A           | -                                                |
-| `actions.*.name`   | String | Yes      | Used as the action text                    | `Downloads`   | Example of a single action                       |
-| `actions.*.href`   | String | Yes      | Used as the action `href` atttibute        | `/resources/downloads` | Example of a single action              |
-
-**Note:** The base URL of the website will be prepended to the `action.*.href` property, if one is defined.
-
-**Active item**
-
-When the current page matches the `href` attribute of an action in a drop-down item, the drop-down action is made 
-active, and drop-down menu the active navbar item.
-
-**Example**
-
-```yml
-nav_items:
-  -
-    name: Resources
-    type: dropdown_item
-    actions:
-      -
-        name: Downloads
-        href: /resources/downloads
-```
-
-#### Related items
-
-Related items are comparatively  easier to define than internal items, it uses the same structure as the `single_item`
-internal item type.
-
-**Note:** Related items **SHOULD** always include entries for the BAS public website and BAS data catalogue.
-
-**Note:** Related items **SHOULD NOT** include non-BAS websites, as the drop-down menu title 'Part of the British 
-Antarctic Survey' implies its contents will be BAS operated websites.
-
-**Example**
-
-```yml
-nav_related_sites:
-  -
-    name: BAS Home
-    href: https://www.bas.ac.uk
-  - 
-    name: BAS Style Kit
-    href: https://style-kit.bas.ac.uk
-  - 
-    name: Discover BAS data
-    href: https://data.bas.ac.uk
-```
-
-### Cookie notice
-
-By law and by policy BAS websites are required to tell end-users whether cookies are used, and if so, where they can 
-find out more information about these cookies.
-
-It is assumed all BAS websites will use cookies, not least as all websites are expected to use analytics tracking,
-which depends on cookies.
-
-This theme provides a cookie banner to meet this need. It consists of:
-
-* the `phase` config option - which defines the URL to a page explaining how cookies are used on this website
-* the *Cookie banner* include - which displays a dismissible message and a link to the cookies usage page
-* the *Site footer* include - which includes a link to the cookies usage page
-* the *Body JS*  include - which includes the JavaScript needed to make the cookie banner dismissible
-
-The `cookies_href` config option **MUST** be set to a location with more information on how the website uses cookies.
-See the *Legal policies* section for more information.
-
-**Note:** This **SHOULD NOT** be the cookie policy used on the BAS public website, as it is not representative of our 
-other websites.
-
-### Development phase notice
-
-Websites exist at various stages of a development lifecycle - from inception, development, general availability through
-to retirement.
-
-Various points in this lifecycle are relevant to highlight to end-users, to give context and managing expectations.
-For example, new websites likely won't perform well, or have missing information.
-
-The BAS Style Kit, and this theme, support the 
-[development phases](https://www.gov.uk/service-manual/agile-delivery#phases-of-an-agile-project) defined by the 
-Government Digital Service (GDS) - these are:
-
-* Discovery - a stage before any website is built
-* Alpha - an early prototyping stage
-* Beta - a pre-release stage, things are expected to work correctly but with restrictions in terms of scale, 
-completeness or performance
-* Live - a service in general release - expected to work correctly without restrictions
-* Retirement - a service being wound down - expected to work until being shut-down, but no further improvements made
-
-This theme provides a development phase banner to inform end-users of the current development phase. It consists of:
-
-* the `phase` config option - which defines current development phase for the website
-* the *Phase banner* include - which displays information to end-users
-
-The `phase` config option **MUST** be set to one of these options:
-
-* `alpha`
-* `beta`
-* `live`
-* `retired`
-
-For all phases except live, a banner with a link to give site feedback will be shown. In the live phase no additional
-information is shown.
-
-**Note:** The *discovery* phase is not supported as website prototypes should only be made in the *alpha* stage.
-
-### Legal policies
-
-By law and by policy BAS websites are required to provide end-users with information on various legal policies. Namely:
-
-1. a copyright statement
-2. a privacy policy
-3. a cookies policy
-
-Links to these policies are displayed in the *Site footer* include, using config options to set their locations.
-
-#### Copyright statement
-
-The `copyright_href` config option **MUST** be set to a location with more information on how information on this 
-website is licensed, and how it can be used.
-
-It **MUST** document, which legal entity owns the content on the website, the license they make it available to 
-different auidences under, and what these users can and can't do as a result of this license.
-
-It **MUST** acknowledge other rights holders, and the terms under which they make their information available, if this
-applies. This may include information from other parts of BAS or NERC, which are licensed differently.
-
-The license under which the majority of the website's content is made available **SHOULD** be displayed in the site 
-footer, to make it easy to find by end-users. The phrase `Except where otherwise stated` can be used where multiple 
-licenses apply to different types of concept, providing this is suitably explained in the copyright statement, or next
-to the relevant content.
-
-Template policies which can be used as an example/base for such policies are being developed with relevant stake
-holders. Until these are ready contact the Web & Applications team for advice on what to put in such polices.
-
-**Note:** This **SHOULD NOT** be the copyright statement used on the BAS public website, as it is not representative of 
-our other websites.
-
-#### Privacy policy
-
-The `privacy_href` config option **MUST** be set to a location with more information on how user's information is used
-by the website.
-
-It **MUST** document if any personal information is collected from end-users, why it is collected, who will hold it 
-and process it, how long it will be held for, and how the end-user can access, update or remove this information.
-
-Template policies which can be used as an example/base for such policies are being developed with relevant stake
-holders. Until these are ready contact the Web & Applications team for advice on what to put in such polices.
-
-**Note:** This **SHOULD NOT** be the privacy policy used on the BAS public website, as it is not representative of our 
-other websites.
-
-#### Cookies policy
-
-The `cookies_href` config option **MUST** be set to a location with more information on how the website uses cookies.
-
-It should document the cookies used, what they are for and when they are set to expire. It should also provide 
-information on how users can view and manage cookies used by this website.
-
-Template policies which can be used as an example/base for such policies are being developed with relevant stake
-holders. Until these are ready contact the Web & Applications team for advice on what to put in such polices.
-
-**Note:** This **SHOULD NOT** be the cookie policy used on the BAS public website, as it is not representative of our 
-other websites.
-
-### Website feedback
-
-Feedback from end-users is vital to build a website based on their needs, rather than the needs we think they have.
-
-To this end, an easy to use mechanism for end-users to submit feedback **SHOULD** be available on all websites.
-
-This theme provides numerous links to a feedback URL, defined using the `feedback_href` config option. This **SHOULD**
-take the user to a form where they can provide feedback about the website.
-
-Links to this URL are shown:
-
-* in the site navigation, as the right most item
-* in the development phase banner, for development phases except *live*
-* in the site footer, as a 'is something wrong with this page?' link
-
-See the *Site navigation*, *Site footer* and *Development phase notice* sections for more information.
+* [Jekyll data](https://github.com/ashmaroli/jekyll-data) - for including theme data files into a site's configuration
+* [Jekyll menu](https://github.com/forestryio/jekyll-menus) - for managing navigation menus
 
 ## Development
 

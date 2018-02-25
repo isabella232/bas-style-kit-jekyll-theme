@@ -1,0 +1,32 @@
+{% if site.menus.site_navigation_primary %}
+    <ul class="bsk-nav bsk-navbar-nav">
+        {% for item in site.menus.site_navigation_primary %}
+            {% if item.children %}
+                {% assign is_active = false %}
+                {% for item in item.children %}
+                    {% if page.url == item.url %}
+                        {% assign is_active = true %}
+                    {% endif %}
+                {% endfor %}
+                <li class="bsk-dropdown {% if is_active == true %}bsk-active{% endif %}">
+                    <a class="bsk-dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {{ item.title }} <span class="bsk-caret"></span>
+                    </a>
+                    <ul class="bsk-dropdown-menu">
+                        {% for item in item.children %}
+                            <li {% if page.url == item.url %}class="bsk-active"{% endif %}>
+                                {% if page.url == item.url %}<span class="bsk-sr-only">(current)</span>{% endif %}
+                                <a href="{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li {% if page.url == item.url %}class="bsk-active"{% endif %}>
+                    {% if page.url == item.url %}<span class="bsk-sr-only">(current)</span>{% endif %}
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}

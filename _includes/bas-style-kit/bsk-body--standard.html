@@ -1,0 +1,15 @@
+<body>
+    {% if site.bas_style_kit_jekyll_theme.feature_flags.site.back_to_top_anchor == true %}
+        {% include bas-style-kit/bsk-body--back-to-top.html %}
+    {% endif %}
+    {% if site.bas_style_kit_jekyll_theme.feature_flags.site.standard_header == true %}
+        {% include bas-style-kit/bsk-body--standard-header.html %}
+    {% endif %}
+    <main class="{% if site.bas_style_kit_jekyll_theme.attributes.container == 'fixed' %}bsk-container{% elsif site.bas_style_kit_jekyll_theme.attributes.container == 'fluid' %}bsk-container-fluid{% endif %}" id="site-content">
+        {{ content }}
+    </main>
+    {% if site.bas_style_kit_jekyll_theme.feature_flags.site.standard_footer == true %}
+        {% include bas-style-kit/bsk-body--standard-footer.html %}
+    {% endif %}
+    {% include bas-style-kit/bsk-body--core-scripts.html %}
+</body>

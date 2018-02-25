@@ -1,38 +1,78 @@
 # This file is **NOT** a standard Jekyll config file. 
 # 
-# It is used to define config options for use by the BAS Style Kit Jekyll Theme, which will be merged together with 
-# individual website options at runtime using the Jekyll Data plugin.
+# It is used to define default config options for this theme.
+# These settings will be merged with site specific settings at runtime, site specific settings override these defaults.
 
-# If any of these options are set within a site's config file, it will override the values defined here.
+# Additional config options are defined using the Jekyll Data plugin, under the `site.data.bsk_jekyll_vars` namespace.
+# E.g. `site.data.bsk_jekyll_vars.bsk_attributes.bsk_version` gives the version of the BAS Style Kit this theme uses.
 
 # Plugins (required by this theme)
+#
 
-gems:
+plugins:
   - jekyll-data
 
-# Set default permalink format
+# Build settings
+#
 
+# Set default permalink format
 permalink: pretty
 
-# Set default development phase
+# Site settings
+#
 
-phase: live
-
-# Set default layout
-
+# Set default layout - the empty `path` acts as a wildcard targetting all files in the site
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ''
     values:
-      layout: "default"
+      layout: 'bas-style-kit/bsk--standard'
 
-# Set default related sites
+# Theme settings
+#
 
-nav_related_sites:
-  -
-    name: BAS Home
-    href: https://www.bas.ac.uk
-  - 
-    name: Discover BAS data
-    href: https://data.bas.ac.uk
+bas_style_kit_jekyll_theme:
+  feature_flags:
+    site:
+      back_to_top_anchor: true
+      standard_header: true
+      standard_footer: true
+    standard_header:
+      cookie_notice: true
+      site_navigation: true
+      development_phase: true
+    standard_footer:
+      divider: true
+      ogl: true
+      legal_policies: true
+  attributes:
+    container: fixed
+    head_title:
+      # Used when `page.title` isn't set
+      default: 'site title'
+      # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
+      appended: !!null
+    head_description: 'site description'
+    site_brand:
+        text: 'site title'
+        img: !!null
+        img_size: !!null
+        href: '/'
+    site_development_phase: 'alpha'
+    site_feedback_href: '/feedback.html'
+    site_analytics: 
+      id: !!null
+
+    # These settings aren't usually changed
+    head_favicon: 'data:;base64,iVBORw0KGgo='
+    site_back_to_top_target_href: '#site-top'
+    site_footer:
+      ogl:
+        href: 'http://www.nationalarchives.gov.uk/doc/open-government-licence'
+        img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
+        text_version: 'v3.0'
+      legal_policies:
+        copyright_href: '/legal/copyright.html'
+        cookies_href: '/legal/copyright.html'
+        privacy_href: '/legal/privacy.html'
