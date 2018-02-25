@@ -31,6 +31,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * CSS files are now loaded from a data file, as with JavaScript
 * CSS and JavaScript files can and do use Sub-Resource Integrity (SRI) for better security
 * Jekyll Menus plugin
+* Jekyll Tidy plugin
 
 ### Changed
 
@@ -41,6 +42,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Tidying up README
 * Tidying up Dockerfile and Docker Compose
 * Gemfile lock file is now tracked
+* Updated release procedures
 
 ## 0.2.3 - 11/04/2017
 
