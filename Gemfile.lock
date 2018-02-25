@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-bas-style-kit (0.3.0.pre.develop)
+    jekyll-theme-bas-style-kit (0.3.0.pre.rc1)
       jekyll (~> 3.7.2)
       jekyll-data (~> 1.0)
       jekyll-menus (~> 0.6.0)
