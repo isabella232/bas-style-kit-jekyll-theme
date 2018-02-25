@@ -282,6 +282,13 @@ The `jekyll-theme-bas-style-kit.gemspec` file details the properties of the Gem 
 **Note:** The `spec.files` parameter controls which files in this project are copied into the Gem. If a file is not 
 listed it won't be included. This is separate to the Git `.gitignore` file.
 
+## GitHub mirror
+
+A read-only mirror of this project's repository is maintained on GitHub, to support Jekyll's automatic theme 
+installation, and to allow use by those outside of BAS.
+
+Merge requests **WILL NOT** be accepted on this mirror.
+
 ## Release procedures
 
 1. bump version in `jekyll-theme-bas-style-kit.gemspec` and `docker-compose.yml` and `_data/bsk_jekyll_vars.json`
