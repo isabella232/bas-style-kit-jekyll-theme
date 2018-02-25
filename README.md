@@ -134,16 +134,6 @@ Navigation includes:
 
 ### Data files
 
-#### Is something wrong
-
-**Type:** Snippet
-
-**File:** `snippets/is-something-wrong.html`
-
-Displays a link to give feedback about the current website. It is shown in the default footer include.
-
-See the *Website feedback* section for more information.
-
 Data files represent structured data in formats such as JSON, Yaml and CSV. Their contents can be accessed through the
 `site.data` variable to populate tables, navigation menus or other use cases.
 
@@ -281,6 +271,13 @@ The `jekyll-theme-bas-style-kit.gemspec` file details the properties of the Gem 
 
 **Note:** The `spec.files` parameter controls which files in this project are copied into the Gem. If a file is not 
 listed it won't be included. This is separate to the Git `.gitignore` file.
+
+## GitHub mirror
+
+A read-only mirror of this project's repository is maintained on GitHub, to support Jekyll's automatic theme 
+installation, and to allow use by those outside of BAS.
+
+Merge requests **WILL NOT** be accepted on this mirror.
 
 ## Release procedures
 
