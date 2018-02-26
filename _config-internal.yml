@@ -47,6 +47,10 @@ baseurl: ''
 # base hostname & protocol for canonical links
 url: 'http://localhost:9000'
 
+collections:
+  tests:
+    output: true
+
 # Theme settings
 #
 

@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-bas-style-kit (0.3.0.pre.develop)
-      jekyll (~> 3.7.2)
+    jekyll-theme-bas-style-kit (0.3.0.pre.rc1)
+      jekyll (~> 3.7, >= 3.7.2)
       jekyll-data (~> 1.0)
-      jekyll-menus (~> 0.6.0)
-      jekyll-tidy (~> 0.2.2)
+      jekyll-menus (~> 0.6, >= 0.6.0)
+      jekyll-tidy (~> 0.2, >= 0.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -77,7 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16.1)
+  bundler (~> 1.16, >= 1.16.1)
   jekyll-theme-bas-style-kit!
   rake (~> 12.3)
 
