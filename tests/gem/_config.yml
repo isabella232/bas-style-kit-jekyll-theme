@@ -1,0 +1,50 @@
+# Build settings
+#
+
+markdown: kramdown
+theme: jekyll-theme-bas-style-kit
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - Dockerfile
+
+# Server settings
+#
+
+host: 0.0.0.0
+port: 9000
+url: localhost
+encoding: UTF-8
+
+# Site settings
+#
+
+# e.g. /foo
+baseurl: ''
+# base hostname & protocol for canonical links
+url: 'http://localhost:9000'
+
+defaults:
+  -
+    scope:
+      # an empty string here means all files in the project
+      path: ""
+    values:
+      layout: "bas-style-kit/bsk--standard"
+
+# Theme settings
+#
+
+bas_style_kit_jekyll_theme:
+  attributes:
+    container: fixed
+    head_title:
+      # Used when `page.title` isn't set
+      default: 'BAS Style Kit Jekyll Theme'
+    head_description: 'A test site for the BAS Style Kit Jekyll Theme'
+    site_brand:
+        text: 'BAS Style Kit Jekyll Theme'
+        href: '/'
+    site_development_phase: 'experimental'
