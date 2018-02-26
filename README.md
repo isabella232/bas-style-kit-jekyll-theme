@@ -28,37 +28,28 @@ Add these lines to your `_config.yml` to use the Style Kit theme:
 
 ```yaml
 theme: jekyll-theme-bas-style-kit
-
-# If your site uses additional plugins, append these items
-plugins:
-  - jekyll-menus
-  - jekyll-tidy
 ```
 
 ## Usage
 
 Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
 
-This theme includes numerous layouts, includes, data files and configuration options to give a flexible design.
-
 ### Layouts
 
-Layouts define a common design/structure for a set of content pages. Typically they will wrap page content in elements
-such as fixed or fluid width containers, and include common elements such as headers and footers.
+This theme defines two types of layout:
 
-This theme defines two types of layout - *generic* and *non-generic*. Generic layouts are non Style Kit specific and 
-intended for atypical content. Non-generic layouts implement the Style Kit either broadly or using a more opinionated, 
-*standard* way for ease of use and consistency.
+* *generic* - non Style Kit specific intended for atypical content
+* *non-generic* - implement the Style Kit either broadly or in more opinionated forms
 
-All layouts use the `.html` extension. I.e. the layout `blank` is referenced as `blank.html`.
+All layouts use the `.html` extension. I.e. the layout `blank` should be referenced as `blank.html`.
 
-All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` is available as
+All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` should be referenced as
 `bas-style-kit/blank.html`.
 
 #### Generic layouts
 
-* [blank](/docs/layout/blank.md)
-* [html](/docs/layout/html.md)
+* [`blank`](/docs/layout/blank.md)
+* [`html`](/docs/layout/html.md)
 
 #### Style Kit specific layouts
 
@@ -67,23 +58,16 @@ All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout 
 
 ### Includes
 
-Includes represent common content used across a website, either once per page (such as a header and footer), or multiple
-times (such as an alert). Content can include page content or `<head>` element properties for example. Includes can be 
-configurable, accepting parameters or blocks of content, though most are used as-is.
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/include/) for general information.
 
-Refer to [Jekyll's documentation](https://jekyllrb.com/docs/include/) for more background information.
+This theme uses includes extensively to give fine grained control over how elements such as the navbar behave, including
+both their content and structure.
 
-This theme uses includes extensively, to give finer grained control over how elements of a page are structured and to 
-give flexibility when this isn't suitable. For example the main navigation menu is made of includes such as the site 
-title and navigation links, each of which can be changed, or included in a different order, minimising the need to 
-reimplement large parts of an otherwise fine include.
+Includes are often used conditionally using a related configuration option, to be disabled more easily.
 
-Includes are often used conditionally, typically controlled using a related configuration option. This allows page
-elements that are not desired to be disabled more easily.
+All includes use the `.html` extension. I.e. the include `body` should be referenced as `body.html`.
 
-All includes use the `.html` extension. I.e. the include `body` is referenced as `body.html`.
-
-All includes are namespaced using a `bas-style-kit/` directory - i.e. the include `body.html` is available as
+All includes are namespaced using a `bas-style-kit/` directory - i.e. the include `body.html` should be referenced as
 `bas-style-kit/body.html`.
 
 #### Generic includes
@@ -135,16 +119,12 @@ Navigation includes:
 
 ### Data files
 
-Data files represent structured data in formats such as JSON, Yaml and CSV. Their contents can be accessed through the
-`site.data` variable to populate tables, navigation menus or other use cases.
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/datafiles/) for general information.
 
-Refer to [Jekyll's documentation](https://jekyllrb.com/docs/datafiles/) for more background information.
-
-This theme uses data files to define a list of CSS and JavaScript resources to load and to expose some variables about
-the theme.
+This theme uses data files to define CSS and JavaScript resources to load and for some variables about the theme.
 
 All data files use the `.yml` (Yaml) extension and are namespaced using a `bas-style-kit/` directory - i.e. a data 
-element `foo` in the data file `bsk-vars.yml` is available as  `site.data.bas-style-kit.bsk-vars.foo`.
+element `foo` in the data file `bsk-vars.yml` is available as `site.data.bas-style-kit.bsk-vars.foo`.
 
 #### Style Kit specific data files
 
@@ -154,26 +134,18 @@ element `foo` in the data file `bsk-vars.yml` is available as  `site.data.bas-st
 
 ### Variables
 
-This theme defines the following variables which can be used for reporting or debugging purposes.
-
-Refer to [Jekyll's documentation](https://jekyllrb.com/docs/variables/) for more background information.
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/variables/) for general information.
 
 #### Style Kit specific variables
 
 | Variable        | Fully Qualified Variable                         | Purpose                                         | Example | Notes |
 | --------------- | ------------------------------------------------ | ----------------------------------------------- | ------- | ----- |
-| `theme_version` | `site.data.bas-style-kit.bsk_vars.theme_version` | Version of this theme                           | `0.3.0` | -     |
-| `bsk_version`   | `site.data.bas-style-kit.bsk_vars.bsk_version`   | Version of the Style Kit used within this theme | `0.3.0` | -     |
+| `theme_version` | `site.data.bas-style-kit.bsk-vars.theme_version` | Version of this theme                           | `0.3.0` | -     |
+| `bsk_version`   | `site.data.bas-style-kit.bsk-vars.bsk_version`   | Version of the Style Kit used within this theme | `0.3.0` | -     |
 
 ### Configuration options
 
-Configuration options are used to control how various aspects of a Jekyll site work and to set variable values (if 
-used site wide). Some configuration options are defined by Jekyll alter fundamental properties, such as the rendering 
-engine used, others are defined within the context of a site, such as a variable for the version of a project.
-
-Configuration options defined by a theme can be overridden by setting the same option in a site configuration file.
-
-Refer to [Jekyll's documentation](https://jekyllrb.com/docs/configuration/) for more background information.
+Refer to [Jekyll's documentation](https://jekyllrb.com/docs/configuration/) for general information.
 
 Configuration options are used extensively throughout this theme. Some variables are used to set properties such as the
 brand text or image in the navbar (attributes), others are used to enable various features (feature flags).
@@ -213,8 +185,8 @@ This theme depends on these plugins:
 
 ## Development
 
-[Git](https://git-scm.com), [Docker](https://www.docker.com/community-edition) and Docker Compose are required to build
-this project locally.
+[Git](https://git-scm.com), [Docker](https://www.docker.com/community-edition) and 
+[Docker Compose](https://docs.docker.com/compose/overview/) are required to build this project locally.
 
 To update the Docker image for this project, access to the private 
 [BAS Docker Registry](https://docker-registry.data.bas.ac.uk) [1] is also required.
@@ -260,10 +232,8 @@ They will be installed automatically when this theme is used by an end-user.
 
 ### Jekyll config options
 
-The Jekyll Data plugin is used to set config options within sites that use this theme. For this to work the site still 
-needs to call the Data plugin.
-
-**Note:** Make sure to document which config options are set by this theme, especially conventional options.
+The Jekyll Data plugin is used to set config options within sites that use this theme. Make sure to document which 
+config options are set by this theme.
 
 ### Ruby Gem
 
@@ -322,6 +292,8 @@ $ docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec
 $ docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem
 ```
 
+**Note:** Add `entrypoint: ash` to the `app` service in `docker-compose.yml`
+
 ## Issue tracking
 
 This project uses [issue tracking](https://gitlab.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme) to manage 
@@ -332,7 +304,7 @@ development of new features/improvements and reporting bugs.
 ## Feedback
 
 The maintainer of this project is the BAS Web & Applications Team, they can be contacted through the 
-[BAS Service Desk](mailto:servicedesk@bas.ac.uk)
+[BAS Service Desk](mailto:servicedesk@bas.ac.uk).
 
 ## License
 
