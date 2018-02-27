@@ -1,6 +1,9 @@
 {% for script in site.data.bas-style-kit.bsk-js %}
     <script {% if script.type == 'remote' %}src="{{ script.href }}"{% elsif script.type == 'local' %}src="{{ script.href | prepend: site.baseurl }}"{% endif %} {% if script.integrity %}integrity="{{ script.integrity }}" crossorigin="anonymous"{% endif %}></script>
 {% endfor %}
+{% for script in site.bas_style_kit_jekyll_theme.attributes.site_scripts %}
+    <script {% if script.type == 'remote' %}src="{{ script.href }}"{% elsif script.type == 'local' %}src="{{ script.href | prepend: site.baseurl }}"{% endif %} {% if script.integrity %}integrity="{{ script.integrity }}" crossorigin="anonymous"{% endif %}></script>
+{% endfor %}
 {% for script in page.body_js_files %}
     <script {% if script.type == 'remote' %}src="{{ script.href }}"{% elsif script.type == 'local' %}src="{{ script.href | prepend: site.baseurl }}"{% endif %} {% if script.integrity %}integrity="{{ script.integrity }}" crossorigin="anonymous"{% endif %}></script>
 {% endfor %}

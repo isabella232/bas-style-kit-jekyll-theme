@@ -4,9 +4,11 @@
 
 Defines the CSS files to be included in the page.
 
-Uses two loops to include:
+Uses three loops to include:
 
 * core (Style Kit) styles defined by the [bsk_jekyll_css](/docs/data/bsk_jekyll_css.md)
+* optional site-wide scripts defined by the 
+  [`bas_style_kit_jekyll_theme.attributes.site_styles`](/docs/config/attributes.md) configuration option
 * optional site-specific styles defined by the `body_css_files` page variable
 
 For each script `integrity` and `crossorigin` attributes are set if a SRI value is set.

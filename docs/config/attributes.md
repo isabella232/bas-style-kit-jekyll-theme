@@ -136,6 +136,24 @@ Default value: *None*
 
 If set, Google Analytics page view tracking will be enabled.
 
+### `bas_style_kit_jekyll_theme.attributes.site_styles`
+
+Allowed values: *Array of Style object*
+
+Default value: *Empty array*
+
+Use to set additional site wide styles. See the documentation for the [bsk-css](/data-file/bsk-css.md) data file for
+how to define a *style object*.
+
+### `bas_style_kit_jekyll_theme.attributes.site_scripts`
+
+Allowed values: *Array of Script object*
+
+Default value: *Empty array*
+
+Use to set additional site wide scripts. See the documentation for the [bsk-js](/data-file/bsk-js.md) data file for
+how to define a *script object*.
+
 ### `bas_style_kit_jekyll_theme.attributes.head_favicon`
 
 Allowed values: *Any image source (URL)*

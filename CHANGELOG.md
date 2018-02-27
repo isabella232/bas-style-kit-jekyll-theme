@@ -30,6 +30,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * *bsk--standard* layout which implements the Style Kit with typical elements such as a header and footer
 * CSS files are now loaded from a data file, as with JavaScript
 * CSS and JavaScript files can and do use Sub-Resource Integrity (SRI) for better security
+* Additional CSS and JavaScript files can be added site wide, in addition to specific pages
 * Jekyll Menus plugin
 * Jekyll Tidy plugin
 
