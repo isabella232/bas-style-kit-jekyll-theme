@@ -46,6 +46,18 @@ All layouts use the `.html` extension. I.e. the layout `blank` should be referen
 All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` should be referenced as
 `bas-style-kit/blank.html`.
 
+To use a layout by default add the following to your `_config.yml`:
+
+```yml
+defaults:
+  -
+    scope:
+      # an empty string here means all files in the project
+      path: ""
+    values:
+      layout: "bas-style-kit/bsk--standard"
+```
+
 #### Generic layouts
 
 * [`blank`](/docs/layout/blank.md)
