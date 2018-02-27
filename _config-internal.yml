@@ -36,7 +36,6 @@ exclude:
 
 host: 0.0.0.0
 port: 9000
-url: localhost
 encoding: UTF-8
 
 # Site settings
@@ -44,8 +43,6 @@ encoding: UTF-8
 
 # e.g. /foo
 baseurl: ''
-# base hostname & protocol for canonical links
-url: 'http://localhost:9000'
 
 collections:
   tests:

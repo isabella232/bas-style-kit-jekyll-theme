@@ -23,6 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * 'back to top' and 'is something wrong' links - these will be re-added when supported in the Style Kit
 * HTML5 shim and Respond.js as the Style Kit no longer supports IE 10 or below
 * All local assets as they are either now part of the Style Kit, or will be re-added when supported in the Style Kit
+* Canonical configuration options removed due to removal of canonical HTML meta tag
 
 ### Added
 
