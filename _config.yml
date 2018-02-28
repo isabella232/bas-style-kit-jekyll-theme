@@ -19,17 +19,6 @@ plugins:
 # Set default permalink format
 permalink: pretty
 
-# Site settings
-#
-
-# Set default layout - the empty `path` acts as a wildcard targetting all files in the site
-defaults:
-  -
-    scope:
-      path: ''
-    values:
-      layout: 'bas-style-kit/bsk--standard'
-
 # Theme settings
 #
 
