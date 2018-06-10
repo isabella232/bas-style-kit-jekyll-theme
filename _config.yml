@@ -65,6 +65,6 @@ bas_style_kit_jekyll_theme:
         img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
         text_version: 'v3.0'
       legal_policies:
-        copyright_href: '/legal/copyright.html'
-        cookies_href: '/legal/copyright.html'
-        privacy_href: '/legal/privacy.html'
+        copyright_href: '/legal/copyright'
+        cookies_href: '/legal/cookies'
+        privacy_href: '/legal/privacy'
