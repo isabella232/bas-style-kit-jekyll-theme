@@ -110,9 +110,11 @@ HTML Body includes:
 
 Footer includes:
 
+* [`bsk-footer--back-to-top`](/docs/include/bsk-footer--back-to-top.md)
 * [`bsk-footer--contents`](/docs/include/bsk-footer--contents.md)
+* [`bsk-footer--governance`](/docs/include/bsk-footer--governance.md)
+* [`bsk-footer--is-something-wrong`](/docs/include/bsk-footer--is-something-wrong.md)
 * [`bsk-footer--legal-policies`](/docs/include/bsk-footer--legal-policies.md)
-* [`bsk-footer--ogl`](/docs/include/bsk-footer--ogl.md)
 
 Header includes:
 

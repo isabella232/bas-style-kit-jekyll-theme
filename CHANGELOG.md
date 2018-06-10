@@ -5,13 +5,23 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* 'is something wrong' and 'back to top' footer includes with optional footer spacer when used with footer content
+* Governance statement for use in footers
+
 ### Changed [BREAKING!]
 
+* Refactored OGL statement as part of the new governance statement footer include, requiring some variable changes
 * Upgraded to Style Kit 0.4.0-beta
 
 ### Fixed
 
 * Default URLs to legal policies
+
+### Changed
+
+* Updating order of legal policy links and copyright statement (also changed to 'British Antarctic Survey')
 
 ## 0.3.0 - 28/02/2018 - BREAKING!
 

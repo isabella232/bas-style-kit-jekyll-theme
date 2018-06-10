@@ -68,6 +68,40 @@ Default value: `true`
 
 Conditional for the [bsk-header--development-phase](/docs/include/bsk-header--development-phase.md) include.
 
+### `feature_flags.standard_footer.is_something_wrong`
+
+Allowed values:
+
+* `true`
+* `false`
+
+Default value: `true`
+
+Conditional for the [bsk-footer--divider](/docs/include/bsk-footer--is-something-wrong.md) include.
+
+### `feature_flags.standard_footer.back_to_top`
+
+Allowed values:
+
+* `true`
+* `false`
+
+Default value: `true`
+
+Conditional for the [bsk-footer--back-to-top](/docs/include/bsk-footer--back-to-top.md) include.
+
+### `feature_flags.standard_footer.spacer`
+
+Allowed values:
+
+* `true`
+* `false`
+
+Default value: `false`
+
+Conditional for whether a spacer is added between 'is something wrong with this page' and/or 'back to top' links and 
+any footer content.
+
 ### `feature_flags.standard_footer.divider`
 
 Allowed values:
@@ -79,7 +113,7 @@ Default value: `true`
 
 Conditional for the [bsk-footer--divider](/docs/include/bsk-footer--divider.md) include.
 
-### `feature_flags.standard_header.ogl`
+### `feature_flags.standard_header.governance`
 
 Allowed values:
 
@@ -88,7 +122,7 @@ Allowed values:
 
 Default value: `true`
 
-Conditional for the [bsk-footer--ogl](/docs/include/bsk-footer--ogl.md) include.
+Conditional for the [bsk-footer--governance](/docs/include/bsk-footer--governance.md) include.
 
 ### `feature_flags.standard_header.legal_policies`
 
