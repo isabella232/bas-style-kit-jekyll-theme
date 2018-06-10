@@ -188,21 +188,11 @@ Default value: `http://www.nationalarchives.gov.uk/doc/open-government-licence`
 
 Sets the destination of the OGL symbol and text link used on the site.
 
-### `bas_style_kit_jekyll_theme.attributes.site_footer.ogl.img`
-
-Allowed values: *Any image URL*
-
-Default value: `https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png`
-
-**Note:** This value **SHOULD NOT** be changed.
-
-Sets the image to use for the OGL symbol used on the site.
-
 ### `bas_style_kit_jekyll_theme.attributes.site_footer.ogl.text_version`
 
 Allowed values: *Any string*
 
-Default value: ``v3.0``
+Default value: `v3.0`
 
 **Note:** This value **SHOULD NOT** be changed.
 
@@ -212,7 +202,7 @@ Sets the version of the OGL license used on the site.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/copyright.html`
+Default value: `/legal/copyright`
 
 **Note:** This configuration option is rarely changed.
 
@@ -225,7 +215,7 @@ layout won't work.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/cookies.html`
+Default value: `/legal/cookies`
 
 **Note:** This configuration option is rarely changed.
 
@@ -238,7 +228,7 @@ layout won't work.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/privacy.html`
+Default value: `/legal/privacy`
 
 **Note:** This configuration option is rarely changed.
 

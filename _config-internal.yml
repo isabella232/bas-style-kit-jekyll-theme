@@ -30,6 +30,8 @@ exclude:
   - docker-compose.yml
   - jekyll-theme-bas-style-kit.gemspec
   - screenshot.png
+  - docs
+  - tests
 
 # Server settings
 #
@@ -64,8 +66,11 @@ bas_style_kit_jekyll_theme:
       site_navigation: true
       development_phase: true
     standard_footer:
-      divider: false
-      ogl: true
+      is_something_wrong: true
+      back_to_top: true
+      spacer: false
+      divider: true
+      governance: true
       legal_policies: true
   attributes: 
     container: 'fixed'
@@ -91,7 +96,6 @@ bas_style_kit_jekyll_theme:
     site_footer:
       ogl:
         href: 'http://www.nationalarchives.gov.uk/doc/open-government-licence'
-        img: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.3.0/img/logos-symbols/ogl-symbol-inverse-transparent-32.png'
         text_version: 'v3.0'
       legal_policies:
         copyright_href: '#'
