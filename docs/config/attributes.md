@@ -192,7 +192,7 @@ Sets the destination of the OGL symbol and text link used on the site.
 
 Allowed values: *Any string*
 
-Default value: ``v3.0``
+Default value: `v3.0`
 
 **Note:** This value **SHOULD NOT** be changed.
 
@@ -202,7 +202,7 @@ Sets the version of the OGL license used on the site.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/copyright.html`
+Default value: `/legal/copyright`
 
 **Note:** This configuration option is rarely changed.
 
@@ -215,7 +215,7 @@ layout won't work.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/cookies.html`
+Default value: `/legal/cookies`
 
 **Note:** This configuration option is rarely changed.
 
@@ -228,7 +228,7 @@ layout won't work.
 
 Allowed values: *Any URL*
 
-Default value: `/legal/privacy.html`
+Default value: `/legal/privacy`
 
 **Note:** This configuration option is rarely changed.
 

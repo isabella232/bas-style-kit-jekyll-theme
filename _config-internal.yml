@@ -30,6 +30,8 @@ exclude:
   - docker-compose.yml
   - jekyll-theme-bas-style-kit.gemspec
   - screenshot.png
+  - docs
+  - tests
 
 # Server settings
 #

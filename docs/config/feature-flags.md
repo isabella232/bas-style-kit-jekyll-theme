@@ -111,7 +111,7 @@ Allowed values:
 
 Default value: `true`
 
-Conditional for the [bsk-footer--divider](/docs/include/bsk-footer--divider.md) include.
+Conditional for whether a divider is added between any footer content and governance and legal information.
 
 ### `feature_flags.standard_header.governance`
 
