@@ -2,9 +2,11 @@
 
 ## BAS Style Kit base layout
 
-A Style Kit specific layout which defines a basic page structure. This layout is designed for using the Style Kit as a 
-framework/foundation rather than a prescribed template. It allows for more free-form designs, whilst still using the
+A Style Kit specific layout which defines a basic content structure. This layout is designed for using the Style Kit as 
+a framework/foundation rather than a prescribed template. It allows for more free-form designs, whilst still using the
 various components of the Style Kit to give consistency.
+
+### Head
 
 The [`bsk-head`](/docs/include/bsk-head.md) include defines a `<head>` element which define properties such as the
 required [viewport](https://style-kit.web.bas.ac.uk/start/standards-accessibility/#responsiveness-and-mobile-first) for
@@ -12,6 +14,8 @@ responsiveness and optional favicon.
 
 This include also calls the [`bsk-head--core-styles`](/docs/include/bsk-head--core-styles.md) include to load the Style 
 Kit, and any site-specific, CSS files.
+
+### Body
 
 The [`bsk-body`](/docs/include/bsk-body.md) include defines a `<body>` element with page content in a 
 [layout container](https://style-kit.web.bas.ac.uk/core/layout/#containers),
