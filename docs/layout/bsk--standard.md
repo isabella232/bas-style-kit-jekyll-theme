@@ -6,6 +6,10 @@ A Style Kit specific layout which defines a typical page structure. This layout 
 an opinionated template, where you want to focus on content, rather than building a page design from scratch. It is 
 expected most content will use this layout.
 
+For specific types of content, 'child' layouts are also available to refine the structure provided by this layout:
+
+* [`bsk--standard-page`](/docs/layout/bsk--standard-page.md) - for page like content with a table of contents and header
+
 The [`bsk-head`](/docs/include/bsk-head.md) include defines a `<head>` element which define properties such as the
 required [viewport](https://style-kit.web.bas.ac.uk/start/standards-accessibility/#responsiveness-and-mobile-first) for
 responsiveness and optional favicon.

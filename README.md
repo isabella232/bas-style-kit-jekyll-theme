@@ -66,7 +66,8 @@ defaults:
 #### Style Kit specific layouts
 
 * [`bsk--base`](/docs/layout/bsk--base.md)
-* [`bsk--base`](/docs/layout/bsk--standard.md)
+* [`bsk--standard`](/docs/layout/bsk--standard.md)
+* [`bsk--standard-page`](/docs/layout/bsk--standard-page.md)
 
 ### Includes
 
@@ -108,6 +109,8 @@ HTML Body includes:
 * [`bsk-body--back-to-top`](/docs/include/bsk-body--back-to-top.md)
 * [`bsk-body--standard-header`](/docs/include/bsk-body--standard-header.md)
 * [`bsk-body--standard-footer`](/docs/include/bsk-body--standard-footer.md)
+* [`bsk-body--page-header`](/docs/include/bsk-body--page-header.md)
+* [`bsk-body--toc`](/docs/include/bsk-body--toc.md)
 
 Footer includes:
 

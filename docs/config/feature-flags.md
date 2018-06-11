@@ -134,3 +134,14 @@ Allowed values:
 Default value: `true`
 
 Conditional for the [bsk-footer--legal-policies](/docs/include/bsk-footer--legal-policies.md) include.
+
+### `feature_flags.page.toc`
+
+Allowed values:
+
+* `true`
+* `false`
+
+Default value: `true`
+
+Conditional for the [bsk-body--toc](/docs/include/bsk-body--toc.md) include.
