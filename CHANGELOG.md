@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * 'is something wrong' and 'back to top' footer includes with optional footer spacer when used with footer content
 * Governance statement for use in footers
+* Table of Contents (TOC) generic include
 
 ### Changed [BREAKING!]
 

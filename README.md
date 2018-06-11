@@ -86,6 +86,7 @@ All includes are namespaced using a `bas-style-kit/` directory - i.e. the includ
 
 * [`head`](/docs/include/head.md)
 * [`body`](/docs/include/body.md)
+* [`toc`](/docs/include/toc.md)
 
 #### Style Kit specific includes
 
