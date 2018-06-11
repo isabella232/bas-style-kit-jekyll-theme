@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed
 
 * Updating order of legal policy links and copyright statement (also changed to 'British Antarctic Survey')
+* Updating project copyright from NERC to UKRI
 
 ## 0.3.0 - 28/02/2018 - BREAKING!
 
