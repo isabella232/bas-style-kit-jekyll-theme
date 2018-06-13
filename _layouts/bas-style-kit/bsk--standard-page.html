@@ -1,21 +1,22 @@
 ---
-layout: bsk-standard
+layout: bas-style-kit/bsk--standard
 ---
+
 <div class="bsk-row">
-    <div class="bsk-col-12-sm-12 bsk-col-12-md-9 {% unless page.bas_style_kit_jekyll_theme.feature_flags.page.toc == true %}bsk-col-12-md-offset-3{% endunless %}">
-      {% include bas-style-kit/bsk-body--page-header.html %}
-    </div>
+  <div class="bsk-col-12-sm-12 bsk-col-12-md-9 bsk-col-12-xl-10 bsk-col-12-md-offset-3 bsk-col-12-xl-offset-2">
+    {% include bas-style-kit/bsk-body--page-header.html %}
   </div>
-  <div class="bsk-row">
-    {% if page.bas_style_kit_jekyll_theme.feature_flags.page.toc == true %}
-      <div class="bsk-col-12-sm-12 bsk-col-12-md-3 bsk-col-12-lg-3">
-        <aside class="bsk-sidebar bsk-sidebar-default">
-          <h2>Contents</h2>
-          {% include bas-style-kit/bsk-body--toc.html }
-        </aside>
-      </div>
-    {% endif %}
-    <div class="bsk-col-12-sm-12 bsk-col-12-md-9 {% unless page.bas_style_kit_jekyll_theme.feature_flags.page.toc == true %}bsk-col-12-md-offset-3{% endunless %}">
-      {{ content }}
+</div>
+<div class="bsk-row">
+  {% if page.bas_style_kit_jekyll_theme.feature_flags.page.toc == true %}
+    <div class="bsk-col-12-sm-12 bsk-col-12-md-3 bsk-col-12-lg-3 bsk-col-12-xl-2">
+      <aside class="bsk-sidebar bsk-sidebar-default">
+        <h2>Contents</h2>
+        {% include bas-style-kit/bsk-body--toc.html %}
+      </aside>
     </div>
+  {% endif %}
+  <div class="bsk-col-12-sm-12 bsk-col-12-md-9 bsk-col-12-xl-10 {% unless page.bas_style_kit_jekyll_theme.feature_flags.page.toc == true %}bsk-col-12-md-offset-3 bsk-col-12-xl-offset-2{% endunless %}">
+    {{ content }}
   </div>
+</div>
