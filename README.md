@@ -168,6 +168,10 @@ Refer to [Jekyll's documentation](https://jekyllrb.com/docs/configuration/) for 
 Configuration options are used extensively throughout this theme. Some variables are used to set properties such as the
 brand text or image in the navbar (attributes), others are used to enable various features (feature flags).
 
+Configuration options operate at different scopes, *site* or *page*. Site options applies to across a site, whereas 
+page options can be applied to specific content items. Default values can be set for page options, which can then be
+overridden by specific content items.
+
 Configuration options for this theme are namespaced under a `bas_style_kit_jekyll_theme` option - i.e. an option `foo`
 is set as `bas_style_kit_jekyll_theme.foo`.
 

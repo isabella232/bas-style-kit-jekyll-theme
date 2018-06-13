@@ -19,7 +19,7 @@ plugins:
 # Set default permalink format
 permalink: pretty
 
-# Theme settings
+# Theme settings - global variables
 #
 
 bas_style_kit_jekyll_theme:
@@ -39,8 +39,6 @@ bas_style_kit_jekyll_theme:
       divider: true
       governance: true
       legal_policies: true
-    page:
-      toc: true
   attributes:
     container: fixed
     head_title:
@@ -72,3 +70,17 @@ bas_style_kit_jekyll_theme:
         copyright_href: '/legal/copyright'
         cookies_href: '/legal/cookies'
         privacy_href: '/legal/privacy'
+
+# Theme settings - defaults for page level variables
+#
+
+defaults:
+  -
+    scope:
+      # an empty string here means all files in the project
+      path: ""
+    values:
+      bas_style_kit_jekyll_theme:
+        feature_flags:
+          page:
+            toc: true

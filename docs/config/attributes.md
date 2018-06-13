@@ -11,6 +11,8 @@ Allowed values:
 
 Default value: `fixed`
 
+Scope: *Site*
+
 Used to determine which [layout container](https://style-kit.web.bas.ac.uk/core/layout/#containers) to use.
 
 ### `bas_style_kit_jekyll_theme.attributes.head_title.default`
@@ -18,6 +20,8 @@ Used to determine which [layout container](https://style-kit.web.bas.ac.uk/core/
 Allowed values: *Any string*
 
 Default value: `site title`
+
+Scope: *Site*
 
 Used to set the page `<title>` meta element if a value isn't set on a per-page basis (using `page.title`).
 
@@ -28,6 +32,8 @@ It is recommended to use the name of the website for this value.
 Allowed values: *Any string*
 
 Default value: *None*
+
+Scope: *Site*
 
 If set, this value will be appended to the site title, if set on a per-page basis (using `page.title`).
 
@@ -42,6 +48,8 @@ Allowed values: *Any string*
 
 Default value: `site description`
 
+Scope: *Site*
+
 Sets the `<meta name="description" ..>` meta element.
 
 ### `bas_style_kit_jekyll_theme.attributes.site_brand.text`
@@ -49,6 +57,8 @@ Sets the `<meta name="description" ..>` meta element.
 Allowed values: *Any string*
 
 Default value: `site title`
+
+Scope: *Site*
 
 Sets the navbar brand (i.e. the site name left of the site main navigation) to a text value (i.e. the name of the site).
 
@@ -60,6 +70,8 @@ will be shown before the text.
 Allowed values: *Any image source (URL)*
 
 Default value: *None*
+
+Scope: *Site*
 
 Sets the navbar brand (i.e. the site name left of the site main navigation) to an image value (i.e. the logo of the 
 site).
@@ -80,6 +92,8 @@ Allowed values:
 
 Default value: *None*
 
+Scope: *Site*
+
 Sets the navbar image size class to apply the navbar image. These sizes are 
 [preset](https://style-kit.web.bas.ac.uk/components/navbar/#brand-image).
 
@@ -90,6 +104,8 @@ This option **MUST** be used if the `site_brand.img` option is used, otherwise i
 Allowed values: *Any URL*
 
 Default value: `/`
+
+Scope: *Site*
 
 The destination for the navbar brand link (which is a `<a>` element container an image and/or text value).
 
@@ -109,6 +125,8 @@ Allowed values:
 
 Default value: `alpha`
 
+Scope: *Site*
+
 Sets the value for the site development phase banner/notice, except `live-stable` value, where this is hidden. 
 This can also be set to show a notice about experimental/testing websites using the `experimental` value.
 
@@ -123,6 +141,8 @@ Allowed values: *Any URL*
 
 Default value: `/feedback.html`
 
+Scope: *Site*
+
 Specifies the value for links to the site feedback page.
 
 **Note:** The default value for this option assumes the site has a feedback page. If it doesn't parts of the standard
@@ -134,6 +154,8 @@ Allowed values: *Any Google Analytics property ID*
 
 Default value: *None*
 
+Scope: *Site*
+
 If set, Google Analytics page view tracking will be enabled.
 
 ### `bas_style_kit_jekyll_theme.attributes.site_styles`
@@ -141,6 +163,8 @@ If set, Google Analytics page view tracking will be enabled.
 Allowed values: *Array of Style object*
 
 Default value: *Empty array*
+
+Scope: *Site*
 
 Use to set additional site wide styles. See the documentation for the [bsk-css](/data-file/bsk-css.md) data file for
 how to define a *style object*.
@@ -151,6 +175,8 @@ Allowed values: *Array of Script object*
 
 Default value: *Empty array*
 
+Scope: *Site*
+
 Use to set additional site wide scripts. See the documentation for the [bsk-js](/data-file/bsk-js.md) data file for
 how to define a *script object*.
 
@@ -159,6 +185,8 @@ how to define a *script object*.
 Allowed values: *Any image source (URL)*
 
 Default value: `data:;base64,iVBORw0KGgo=`
+
+Scope: *Site*
 
 **Note:** This configuration option is rarely changed.
 
@@ -172,6 +200,8 @@ Allowed values: *Any URL*
 
 Default value: `#site-top`
 
+Scope: *Site*
+
 **Note:** This configuration option is rarely changed.
 
 Sets the destination for 'back to link' links.
@@ -184,6 +214,8 @@ Allowed values: *Any URL*
 
 Default value: `http://www.nationalarchives.gov.uk/doc/open-government-licence`
 
+Scope: *Site*
+
 **Note:** This value **SHOULD NOT** be changed.
 
 Sets the destination of the OGL symbol and text link used on the site.
@@ -194,6 +226,8 @@ Allowed values: *Any string*
 
 Default value: `v3.0`
 
+Scope: *Site*
+
 **Note:** This value **SHOULD NOT** be changed.
 
 Sets the version of the OGL license used on the site.
@@ -203,6 +237,8 @@ Sets the version of the OGL license used on the site.
 Allowed values: *Any URL*
 
 Default value: `/legal/copyright`
+
+Scope: *Site*
 
 **Note:** This configuration option is rarely changed.
 
@@ -217,6 +253,8 @@ Allowed values: *Any URL*
 
 Default value: `/legal/cookies`
 
+Scope: *Site*
+
 **Note:** This configuration option is rarely changed.
 
 Sets the value for links to the site cookies policy page.
@@ -229,6 +267,8 @@ layout won't work.
 Allowed values: *Any URL*
 
 Default value: `/legal/privacy`
+
+Scope: *Site*
 
 **Note:** This configuration option is rarely changed.
 
