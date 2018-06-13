@@ -13,6 +13,7 @@ layout: bas-style-kit/bsk--standard
 * [HTML]({{ '/tests/layouts/html' | prepend: site.baseurl }})
 * [BSK Base]({{ '/tests/layouts/bsk--base' | prepend: site.baseurl }})
 * [BSK Standard]({{ '/tests/layouts/bsk--standard' | prepend: site.baseurl }})
+* [BSK Standard (Page)]({{ '/tests/layouts/bsk--standard-page' | prepend: site.baseurl }})
 
 ## Pages
 

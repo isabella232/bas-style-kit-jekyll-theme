@@ -50,7 +50,7 @@ collections:
   tests:
     output: true
 
-# Theme settings
+# Theme settings - global variables
 #
 
 # This is a copy of the settings defined in `_config.yml` 
@@ -101,3 +101,17 @@ bas_style_kit_jekyll_theme:
         copyright_href: '#'
         cookies_href: '#'
         privacy_href: '#'
+
+# Theme settings - defaults for page level variables
+#
+
+defaults:
+  -
+    scope:
+      # an empty string here means all files in the project
+      path: ""
+    values:
+      bas_style_kit_jekyll_theme:
+        feature_flags:
+          page:
+            toc: true

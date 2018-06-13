@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Felix Fennell']
   spec.email         = ['felnne@bas.ac.uk']
 
-  spec.homepage      = 'https://gitlab.data.bas.ac.uk/BSK/bas-style-kit-jekyll-theme'
+  spec.homepage      = 'https://github.com/antarctica/bas-style-kit-jekyll-theme'
   spec.summary       = 'Jekyll theme for the BAS Style Kit'
   spec.license       = 'Nonstandard'
   spec.metadata    = { 'source_code_uri' => 'https://github.com/antarctica/bas-style-kit-jekyll-theme.git' }
