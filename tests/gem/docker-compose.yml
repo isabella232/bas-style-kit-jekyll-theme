@@ -1,12 +1,11 @@
 ---
-  version: '2'
-  
-  services:
-    app:
-      build: .
-      image: bas-style-kit-jekyll-theme-gem-test
-      volumes:
-        - .:/usr/src/app
-      ports:
-        - "9000:9000"
-  
+version: '2'
+
+services:
+  app:
+    build: .
+    image: bas-style-kit-jekyll-theme-gem-test
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "9000:9000"
