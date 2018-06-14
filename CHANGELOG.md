@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Fixed
 
 * Default URLs to legal policies
+* Correcting gem publishing instructions
 
 ### Changed
 

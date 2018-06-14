@@ -310,8 +310,10 @@ $ docker-compose push
 [2]
 
 ```shell
+# add 'entrypoint: ash' to the app service in /docker-compose.yml
 $ docker-compose run app gem build jekyll-theme-bas-style-kit.gemspec
 $ docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem
+# remove 'entrypoint: ash' from the app service in /docker-compose.yml
 ```
 
 **Note:** Add `entrypoint: ash` to the `app` service in `docker-compose.yml` to run these commands
