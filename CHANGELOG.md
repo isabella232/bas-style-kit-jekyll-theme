@@ -18,6 +18,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Refactored OGL statement as part of the new governance statement footer include, requiring some variable changes
 * Upgraded to Style Kit 0.4.0-beta
+* Upgraded to Jekyll 3.8.3
 
 ### Fixed
 
