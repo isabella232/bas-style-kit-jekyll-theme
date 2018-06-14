@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Table of Contents (TOC) Style Kit include
 * Page title Style Kit include
 * Standard page layout
+* Required Jekyll theme directories `_sass` and `assets`
 
 ### Changed [BREAKING!]
 

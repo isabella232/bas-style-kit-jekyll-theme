@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.metadata    = { 'source_code_uri' => 'https://github.com/antarctica/bas-style-kit-jekyll-theme.git' }
 
   spec.files         = ['screenshot.png', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'CHANGELOG.md', '_config.yml']
-  spec.files         += Dir['_data/**/*'] + Dir['_includes/**/*'] + Dir['_layouts/**/*']
+  spec.files         += Dir['_data/**/*'] + Dir['_includes/**/*'] + Dir['_layouts/**/*'] + Dir['_sass/**/*'] + Dir['assets/**/*']
 
   spec.add_runtime_dependency 'jekyll', '~> 3.8', '>= 3.8.3'
   spec.add_runtime_dependency 'jekyll-data', '~> 1.0'
