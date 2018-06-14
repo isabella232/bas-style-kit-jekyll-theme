@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Page title Style Kit include
 * Standard page layout
 * Required Jekyll theme directories `_sass` and `assets`
+* Legal pages added to gem test site to ensure footer links work as expected
 
 ### Changed [BREAKING!]
 
