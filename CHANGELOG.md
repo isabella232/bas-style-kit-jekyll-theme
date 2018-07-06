@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed
 
 * Updated to Style Kit 0.4.0
+* Changed HR under development phase to dashed line
 
 ## 0.4.0 - 2018-06-14
 
