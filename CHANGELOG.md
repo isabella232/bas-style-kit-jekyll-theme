@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Ignoring gem lock file to prevent Jekyll runtime errors
+
+### Changed
+
+* Updated to Style Kit 0.4.0
+
+## 0.4.0 - 2018-06-14
+
 ### Added
 
 * 'is something wrong' and 'back to top' footer includes with optional footer spacer when used with footer content
