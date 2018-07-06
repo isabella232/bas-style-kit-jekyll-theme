@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Ignoring gem lock file to prevent Jekyll runtime errors
+
 ### Changed
 
 * Updated to Style Kit 0.4.0
