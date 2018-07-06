@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Updated to Style Kit 0.4.0
 * Changed HR under development phase to dashed line
+* Development phase behaviour changed to show experimental phase unless `JEKYLL_ENV` is set to 'production'
 
 ## 0.4.0 - 2018-06-14
 
