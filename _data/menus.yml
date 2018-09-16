@@ -16,4 +16,4 @@ site_navigation_launcher:
     weight: 1
   - url: 'https://data.bas.ac.uk'
     title: Discover BAS Data
-    weight: 100
+    weight: 2

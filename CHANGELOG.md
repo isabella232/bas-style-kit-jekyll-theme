@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Changed
+
+* Updating order of navigation launcher items
+
 ## 0.5.0 - 2018-07-06
 
 ### Fixed
