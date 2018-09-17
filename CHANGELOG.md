@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Changed [BREAKING!]
+
+* Icon uses replaced with alternatives or removed where not needed due to the removal of Font Awesome
+
 ### Changed
 
 * Updating order of navigation launcher items
