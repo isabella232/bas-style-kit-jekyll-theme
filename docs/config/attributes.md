@@ -182,9 +182,11 @@ how to define a *script object*.
 
 ### `bas_style_kit_jekyll_theme.attributes.head_favicon`
 
-Allowed values: *Any image source (URL)*
+Allowed values:
 
-Default value: `data:;base64,iVBORw0KGgo=`
+* `default`
+
+Default value: `default`
 
 Scope: *Site*
 
@@ -192,7 +194,7 @@ Scope: *Site*
 
 If set, a site favicon will be set.
 
-The default value for this option sets an 'empty' image which will prevent requests for the conventional `favicon.ico`.
+The default value for this option uses the favicon defined by the Style Kit.
 
 ### `bas_style_kit_jekyll_theme.attributes.site_back_to_top_target_href`
 

@@ -8,10 +8,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed [BREAKING!]
 
 * Icon uses replaced with alternatives or removed where not needed due to the removal of Font Awesome
+* Favicon attribute option changed, set `bas_style_kit_jekyll_theme.attributes.head_favicon` to `default` for the Style 
+  Kit favicon, other values will be ignored and no favicon will be set 
 
 ### Added
 
-* Updated to Style Kit 0.5.0-alpha 
+* Updated to Style Kit 0.5.0-alpha
+* Implemented Style Kit Favicon
 
 ### Changed
 
