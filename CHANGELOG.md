@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed
 
 * Updating order of navigation launcher items
+* Improving Dockerfiles
 
 ### Fixed
 
