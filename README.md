@@ -320,8 +320,8 @@ $ docker-compose run app gem push jekyll-theme-bas-style-kit-*.gem
 
 ## Issue tracking
 
-This project uses [issue tracking](https://gitlab.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme) to manage 
-development of new features/improvements and reporting bugs.
+This project uses [issue tracking](https://trello.com/b/0Mhzizpk/bas-style-kit) to manage development of new 
+features/improvements and reporting bugs.
 
 **Note:** Read & write access to this issue tracker is restricted. Contact the project maintainer to request access.
 
