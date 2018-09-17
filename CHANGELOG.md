@@ -9,9 +9,15 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Icon uses replaced with alternatives or removed where not needed due to the removal of Font Awesome
 
+### Added
+
+* Updated to Style Kit 0.5.0-alpha 
+
 ### Changed
 
 * Updating order of navigation launcher items
+* Improving Dockerfiles
+* Improving internal test content
 
 ### Fixed
 

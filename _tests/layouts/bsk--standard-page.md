@@ -4,9 +4,11 @@ title: BSK standard page layout
 menus: layouts
 ---
 
+<p>Sample content - <a href="/">Back to home</a>.</p>
+
 # Heading 1 (not indexed)
 
-Sample content - <a href="/">Back to home</a>.
+...
 
 ## Section 1
 
