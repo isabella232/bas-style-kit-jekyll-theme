@@ -20,11 +20,11 @@ $ bundle
 
 Or install it yourself as:
 
-```
+```shell
 $ gem install jekyll-theme-bas-style-kit
 ```
 
-Add these lines to your `_config.yml` to use the Style Kit theme:
+Finally, to use the theme, add this line to your `_config.yml` file:
 
 ```yaml
 theme: jekyll-theme-bas-style-kit
@@ -34,25 +34,15 @@ theme: jekyll-theme-bas-style-kit
 
 Refer to [Jekyll's theme documentation](https://jekyllrb.com/docs/themes/) for general information.
 
-### Layouts
 
-This theme defines two types of layout:
 
-* *generic* - non Style Kit specific intended for atypical content
-* *non-generic* - implement the Style Kit either broadly or in more opinionated forms
 
-All layouts use the `.html` extension. I.e. the layout `blank` should be referenced as `blank.html`.
 
-All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` should be referenced as
-`bas-style-kit/blank.html`.
 
-To use a layout by default add the following to your `_config.yml`:
-
-```yml
 defaults:
   -
     scope:
-      # an empty string here means all files in the project
+      # An empty string here means all files in the project
       path: ""
     values:
       layout: "bas-style-kit/bsk--standard"
@@ -89,6 +79,18 @@ layout: views/bas-style-kit/page-not-found
 
 **Note:** You do not need to add any page content.
 
+### Layouts
+
+This theme defines two types of layout:
+
+* *generic* - non Style Kit specific intended for atypical content
+* *non-generic* - implement the Style Kit either broadly or in more opinionated forms
+
+All layouts use the `.html` extension. I.e. the layout `blank` should be referenced as `blank.html`.
+
+All layouts are namespaced using a `bas-style-kit/` directory - i.e. the layout `blank.html` should be referenced as
+`bas-style-kit/blank.html`.
+
 #### Generic layouts
 
 * [`blank`](/docs/layout/blank.md)
@@ -100,6 +102,7 @@ layout: views/bas-style-kit/page-not-found
 * [`bsk--standard`](/docs/layout/bsk--standard.md)
 * [`bsk--standard-page`](/docs/layout/bsk--standard-page.md)
 
+**Note:** The `bsk--stardard-page` layout is only available in this theme.
 
 Layouts inheriting from the `bsk--standard` layout can add additional classes to the `#main-content` element by setting 
 the `main_content_classes` variable in each layout.
