@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.6.0 - 2018-09-18
+
 ### Changed [BREAKING!]
 
 * Icon uses replaced with alternatives or removed where not needed due to the removal of Font Awesome
