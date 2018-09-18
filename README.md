@@ -289,6 +289,14 @@ $ docker-compose build app
 $ docker-compose push app
 ```
 
+#### Dependency vulnerability scanning
+
+To ensure the security of this project, and users of the Style Kit, all dependencies are checked against
+[Snyk]() for vulnerabilities.
+
+Through [Continuous Integration](#continuous-integration), on each commit current dependencies are tested and a 
+snapshot uploaded to Snyk. This snapshot is then monitored for vulnerabilities.
+
 [1] The first time you use this registry, you will need to authenticate using:
 
 ```shell
@@ -314,6 +322,12 @@ The `jekyll-theme-bas-style-kit.gemspec` file details the properties of the Gem 
 
 **Note:** The `spec.files` parameter controls which files in this project are copied into the Gem. If a file is not 
 listed it won't be included. This is separate to the Git `.gitignore` file.
+
+## Testing
+
+### Continuous Integration
+
+The BAS GitLab instance is used for Continuous Integration using settings defined in `.gitlab-ci.yml`.
 
 ## GitHub mirror
 
