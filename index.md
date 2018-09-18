@@ -21,6 +21,10 @@ layout: bas-style-kit/bsk--standard
 
 * [page not found]({{ '/tests/patterns/page-not-found' | prepend: site.baseurl }})
 
+#### Service unavailable
+
+* [Service unavailable (basic)]({{ '/tests/patterns/service-unavailable-basic' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})
