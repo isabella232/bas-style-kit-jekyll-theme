@@ -56,7 +56,38 @@ defaults:
       path: ""
     values:
       layout: "bas-style-kit/bsk--standard"
+
+### Patterns
+
+Design patterns are used to demonstrate preferred ways to pass on information to users, or ask them for information.
+For example, information to show when a service is unavailable, formatting dates consistently or asking users for their
+username in a consistent way. See the [Style Kit documentation](https://style-kit.web.bas.ac.uk/patterns) for more 
+information.
+
+These patterns are implemented by this theme based on the reference examples included in the Style Kit. These 
+include patterns for:
+
+* **pages** - standalone pages designed to be used without customisation, defined as [Views](#views)
+
+
+### Views
+
+Views provide complete pages to implement page [Patterns](#patterns).
+
+All views use the `.html` extension. I.e. the view `page-not-found` should be referenced as `page-not-found.html`.
+
+All views are namespaced using a `bas-style-kit/` directory - i.e. the view `page-not-found.html` should be referenced 
+as `bas-style-kit/page-not-found.html`.
+
+Within Jekyll views are implemented as layouts. To implement a view create a page with the relevant 'view layout.
+
 ```
+---
+layout: views/bas-style-kit/page-not-found
+---
+```
+
+**Note:** You do not need to add any page content.
 
 #### Generic layouts
 
@@ -68,6 +99,21 @@ defaults:
 * [`bsk--base`](/docs/layout/bsk--base.md)
 * [`bsk--standard`](/docs/layout/bsk--standard.md)
 * [`bsk--standard-page`](/docs/layout/bsk--standard-page.md)
+
+
+Layouts inheriting from the `bsk--standard` layout can add additional classes to the `#main-content` element by setting 
+the `main_content_classes` variable in each layout.
+
+For example:
+
+```
+---
+layout: bas-style-kit/bsk--standard
+main_content_classes: bsk-pattern-page-not-found
+---
+
+<h1 class="bsk-page-header">Page not found</h1>
+```
 
 ### Includes
 

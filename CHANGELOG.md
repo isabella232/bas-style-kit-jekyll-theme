@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 * Updated to Style Kit 0.5.0-alpha
 * Implemented Style Kit Favicon
+* Implemented 'page not found' pattern and support for design patterns generally
 
 ### Changed
 

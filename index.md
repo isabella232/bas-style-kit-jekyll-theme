@@ -15,6 +15,12 @@ layout: bas-style-kit/bsk--standard
 * [BSK Standard]({{ '/tests/layouts/bsk--standard' | prepend: site.baseurl }})
 * [BSK Standard (Page)]({{ '/tests/layouts/bsk--standard-page' | prepend: site.baseurl }})
 
+## Patterns
+
+### Page patterns
+
+* [page not found]({{ '/tests/patterns/page-not-found' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})
