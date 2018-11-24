@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ### Added
 
+* 'Service unavailable' (contact) page pattern variant
+* 'Service unavailable' (availability) page pattern variant
+* 'Service unavailable' (alternative) page pattern variant
+* 'Service unavailable' (partly closed) page pattern variant
+* 'Service unavailable' (closed) page pattern variant
+* 'Service unavailable' (replaced) page pattern variant
 * Updated to Jekyll 3.8.5 to address security vulnerability
 * Updated to Style Kit 0.5.0-beta
 * Snyk dependency scanning support

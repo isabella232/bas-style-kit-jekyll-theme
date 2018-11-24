@@ -54,10 +54,33 @@ For example, information to show when a service is unavailable, formatting dates
 username in a consistent way. See the [Style Kit documentation](https://style-kit.web.bas.ac.uk/patterns) for more 
 information.
 
-These patterns are implemented by this theme based on the reference examples included in the Style Kit. These 
-include patterns for:
+These patterns are implemented by this theme based on the reference examples included in the Style Kit.
 
-* **pages** - standalone pages designed to be used without customisation, defined as [Views](#views)
+#### Page patterns
+
+These template include [Views](#views) for all page patterns. In most cases all variants of a pattern use the same view,
+but with different options using variables and/or page content.
+
+See the [Style Kit documentation](https://style-kit.web.bas.ac.uk) for general information on using these patterns.
+
+##### 'page not found' pattern
+
+No configuration options.
+
+##### 'service unavailable' pattern
+
+Optionally, use page content for:
+
+* contact information
+* details of alternative services
+
+Optionally, use a `pattern_availability` page variable for setting the availability line:
+
+* a value of `closed` will show conventional text
+* a value of `replaced` will show conventional text
+* no value will show conventional text
+
+
 
 
 ### Views
@@ -69,7 +92,7 @@ All views use the `.html` extension. I.e. the view `page-not-found` should be re
 All views are namespaced using a `bas-style-kit/` directory - i.e. the view `page-not-found.html` should be referenced 
 as `bas-style-kit/page-not-found.html`.
 
-Within Jekyll views are implemented as layouts. To implement a view create a page with the relevant 'view layout.
+Within Jekyll, views are implemented as layouts. To use a view, create a page with the relevant 'view' layout.
 
 ```
 ---
@@ -77,7 +100,8 @@ layout: views/bas-style-kit/page-not-found
 ---
 ```
 
-**Note:** You do not need to add any page content.
+Views for some pattern variants can be used as-is, others require variables or page content to be set as well. See the
+[Page patterns](#page-patterns) section for more information.
 
 ### Layouts
 
