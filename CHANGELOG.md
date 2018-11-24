@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.7.0 - 2018-11-24
+
 ### Added
 
 * 'Problem with this service' (basic) page pattern variant
