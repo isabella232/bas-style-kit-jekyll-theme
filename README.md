@@ -289,6 +289,12 @@ $ docker-compose build app
 $ docker-compose push app
 ```
 
+[1] The first time you use this registry, you will need to authenticate using:
+
+```shell
+$ docker login docker-registry.data.bas.ac.uk
+```
+
 #### Dependency vulnerability scanning
 
 To ensure the security of this project, and users of the Style Kit, all dependencies are checked against
@@ -296,12 +302,6 @@ To ensure the security of this project, and users of the Style Kit, all dependen
 
 Through [Continuous Integration](#continuous-integration), on each commit current dependencies are tested and a 
 snapshot uploaded to Snyk. This snapshot is then monitored for vulnerabilities.
-
-[1] The first time you use this registry, you will need to authenticate using:
-
-```shell
-$ docker login docker-registry.data.bas.ac.uk
-```
 
 ### Jekyll plugins
 
@@ -382,8 +382,6 @@ $ gem push jekyll-theme-bas-style-kit-*.gem
 
 This project uses [issue tracking](https://trello.com/b/0Mhzizpk/bas-style-kit) to manage development of new 
 features/improvements and reporting bugs.
-
-**Note:** Read & write access to this issue tracker is restricted. Contact the project maintainer to request access.
 
 ## Feedback
 
