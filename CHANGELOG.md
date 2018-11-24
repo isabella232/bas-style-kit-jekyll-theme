@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.7.0 - 2018-11-24
+
 ### Added
 
 * 'Problem with this service' (basic) page pattern variant
@@ -20,9 +22,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Updated to Style Kit 0.5.0-beta
 * Snyk dependency scanning support
 
+### Fixed
+
+* README typo
+
 ### Changed
 
-* Improving release procedures 
+* Improving release procedures
 
 ## 0.6.0 - 2018-09-18
 
