@@ -31,7 +31,7 @@ variables:
 check-dependencies:
   stage: security
   image:
-    name: snyk/snyk-cli:rubygems
+    name: antarctica/snyk-cli:ruby-2
     entrypoint: [""]
   script:
     - "bundle install"
