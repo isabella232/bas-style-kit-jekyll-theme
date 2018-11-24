@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Added
 
 * Updated to Style Kit 0.5.0-beta
+* Snyk dependency scanning support
 
 ### Changed
 
@@ -27,6 +28,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Implemented Style Kit Favicon
 * Implemented 'page not found' pattern and support for design patterns generally
 * Implemented 'Service unavailable (basic)' pattern
+* Ruby dependencies are now scanned for vulnerabilities using Snyk
 
 ### Changed
 

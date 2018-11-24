@@ -1,0 +1,41 @@
+---
+
+# == Notes ==
+
+# - GitLab automatically passes artifacts from previous stages by default
+# - Set required secret variables at: https://gitlab.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme/settings/ci_cd
+
+# = Secret variables
+# - Variables are grouped by section in KEY: "value" format (e.g. FOO: "bar")
+#   Sensetive values are represented by "[Sensetive]"
+#
+# - Snyk
+# > SNYK_TOKEN: "[Sensitive]"
+
+# == Global settings ==
+
+stages:
+  - security
+
+image:
+  name: docker-registry.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme:0.7.0-develop-alpine
+  entrypoint: [""]
+
+variables:
+  APP_NAME: bas-style-kit-jekyll-theme
+  SNYK_ORG: antarctica
+  SNYK_PROJECT_NAME: bas-style-kit-jekyll-theme
+
+# == Jobs ==
+
+check-dependencies:
+  stage: security
+  image:
+    name: antarctica/snyk-cli:ruby-2
+    entrypoint: [""]
+  script:
+    - "bundle install"
+    - "snyk test"
+    - "snyk monitor --project-name=$SNYK_PROJECT_NAME --org=$SNYK_ORG"
+  only:
+    - master
