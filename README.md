@@ -1,6 +1,6 @@
 # BAS Style Kit Jekyll Theme
 
-Jekyll theme for the [BAS Style Kit](https://stlye-kit.web.bas.ac.uk).
+Jekyll theme for the [BAS Style Kit](https://style-kit.web.bas.ac.uk).
 
 ![Screenshot of theme](screenshot.png)
 
@@ -373,10 +373,11 @@ Before release:
 
 1. create a release branch
 2. remove `-develop` from the version in:
+  * `.gitlab-ci.yml`
   * `jekyll-theme-bas-style-kit.gemspec`
   * `docker-compose.yml`
   * `_data/bsk_jekyll_vars.json`
-3. push the app docker image [1]
+3. build and push the app docker image [1]
 4. if new config options have been set, update the usage section
 5. update screen-shot (width: 900px)
 6. close release in changelog
@@ -388,6 +389,7 @@ Before release:
 After release:
 
 1. bump the version with `-develop` as a prefix in:
+  * `.gitlab-ci.yml`
   * `jekyll-theme-bas-style-kit.gemspec`
   * `docker-compose.yml`
   * `_data/bsk_jekyll_vars.json`
