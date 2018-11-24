@@ -1,0 +1,20 @@
+---
+layout: bas-style-kit/bsk--standard
+main_content_classes: bsk-pattern-service-unavailable
+title: Service unavailable
+---
+
+<h1 class="bsk-page-header">Sorry, {{ site.bas_style_kit_jekyll_theme.attributes.site_brand.text }} is unavailable</h1>
+{% if page.pattern_availability %}
+  {% if page.pattern_availability == 'closed' %}
+    <p class="bsk-lead">This service has been {{ page.pattern_availability }} and can no longer be used.</p>
+  {% elsif page.pattern_availability == 'replaced' %}
+    <p class="bsk-lead">This service has been {{ page.pattern_availability }} and can no longer be used.</p>
+  {% else %}
+    <p class="bsk-lead">{{ page.pattern_availability }}</p>
+  {% endif %}
+{% else %}
+  <p class="bsk-lead">You will be able to use the service later.</p>
+{% endif %}
+
+{{ content }}
