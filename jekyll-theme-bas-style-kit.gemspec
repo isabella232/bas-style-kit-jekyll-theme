@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.files         = ['screenshot.png', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'CHANGELOG.md', '_config.yml']
   spec.files         += Dir['_data/**/*'] + Dir['_includes/**/*'] + Dir['_layouts/**/*'] + Dir['_sass/**/*'] + Dir['assets/**/*']
 
-  spec.add_runtime_dependency 'jekyll', '~> 3.8', '>= 3.8.3'
+  spec.add_runtime_dependency 'jekyll', '~> 3.8', '>= 3.8.5'
   spec.add_runtime_dependency 'jekyll-data', '~> 1.0'
   spec.add_runtime_dependency 'jekyll-menus', '~> 0.6', '>= 0.6.0'
   spec.add_runtime_dependency 'jekyll-tidy', '~> 0.2', '>= 0.2.2'
