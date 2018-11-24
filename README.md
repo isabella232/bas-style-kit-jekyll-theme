@@ -80,6 +80,13 @@ Optionally, use a `pattern_availability` page variable for setting the availabil
 * a value of `replaced` will show conventional text
 * no value will show conventional text
 
+##### 'problem with this service' pattern
+
+Optionally, use page content for:
+
+* contact information
+* details of alternative services
+
 
 
 

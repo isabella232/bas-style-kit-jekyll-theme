@@ -31,6 +31,12 @@ layout: bas-style-kit/bsk--standard
 * [Service unavailable (closed)]({{ '/tests/patterns/service-unavailable-closed' | prepend: site.baseurl }})
 * [Service unavailable (replaced)]({{ '/tests/patterns/service-unavailable-replaced' | prepend: site.baseurl }})
 
+#### Problem with this service
+
+* [Problem with this service (basic)]({{ '/tests/patterns/problem-with-service-basic' | prepend: site.baseurl }})
+* [Problem with this service (contact)]({{ '/tests/patterns/problem-with-service-contact' | prepend: site.baseurl }})
+* [Problem with this service (alternative)]({{ '/tests/patterns/problem-with-service-alternative' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})
