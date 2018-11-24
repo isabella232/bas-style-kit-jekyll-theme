@@ -406,7 +406,7 @@ $ docker-compose push
 [2]
 
 ```shell
-$ docker-compose run --entrypoint=[] app ash
+$ docker-compose run --entrypoint="" app ash
 $ gem build jekyll-theme-bas-style-kit.gemspec
 $ gem push jekyll-theme-bas-style-kit-*.gem
 ```
