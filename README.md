@@ -298,7 +298,7 @@ $ docker login docker-registry.data.bas.ac.uk
 #### Dependency vulnerability scanning
 
 To ensure the security of this project, and users of the Style Kit, all dependencies are checked against
-[Snyk]() for vulnerabilities.
+[Snyk](https://app.snyk.io/org/antarctica/project/a409ca29-86a3-45de-9838-5f1d7d1aca12) for vulnerabilities.
 
 Through [Continuous Integration](#continuous-integration), on each commit current dependencies are tested and a 
 snapshot uploaded to Snyk. This snapshot is then monitored for vulnerabilities.
