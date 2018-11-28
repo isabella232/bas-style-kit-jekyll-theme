@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+## 0.8.0 - 2018-11-28
+
 ### Added
 
 * Updated dependencies for internal Gem test site
