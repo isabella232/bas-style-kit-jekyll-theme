@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Added
 
 * Updated dependencies for internal Gem test site
+* Updated to Style Kit 0.5.0
 
 ## 0.7.0 - 2018-11-24
 
