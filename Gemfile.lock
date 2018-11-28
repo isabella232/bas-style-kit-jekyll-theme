@@ -1,3 +1,12 @@
+PATH
+  remote: .
+  specs:
+    jekyll-theme-bas-style-kit (0.8.0.pre.develop)
+      jekyll (~> 3.8, >= 3.8.5)
+      jekyll-data (~> 1.0)
+      jekyll-menus (~> 0.6, >= 0.6.0)
+      jekyll-tidy (~> 0.2, >= 0.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,11 +44,6 @@ GEM
       jekyll (~> 3.1)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-theme-bas-style-kit (0.7.0)
-      jekyll (~> 3.8, >= 3.8.5)
-      jekyll-data (~> 1.0)
-      jekyll-menus (~> 0.6, >= 0.6.0)
-      jekyll-tidy (~> 0.2, >= 0.2.2)
     jekyll-tidy (0.2.2)
       htmlbeautifier
       htmlcompressor
@@ -56,6 +60,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
+    rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -72,9 +77,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.8.5)
-  jekyll-theme-bas-style-kit (~> 0.7.0)
-  tzinfo-data
+  bundler (~> 1.16, >= 1.16.1)
+  jekyll-theme-bas-style-kit!
+  rake (~> 12.3)
 
 BUNDLED WITH
    1.16.2
