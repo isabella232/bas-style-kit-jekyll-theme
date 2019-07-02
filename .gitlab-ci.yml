@@ -18,7 +18,7 @@ stages:
   - security
 
 image:
-  name: docker-registry.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme:0.9.0-develop-alpine
+  name: docker-registry.data.bas.ac.uk/web-apps/bsk/bas-style-kit-jekyll-theme:latest-alpine
   entrypoint: [""]
 
 variables:

@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Changed
+
+* Major refactoring and simplification of README and other documentation
+* Removing versioning from Docker containers
+
 ## 0.8.0 - 2018-11-28
 
 ### Added
