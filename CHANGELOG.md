@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Updating Gem lock file to fix gem versioning issue
+
 ### Changed
 
 * Major refactoring and simplification of README and other documentation
