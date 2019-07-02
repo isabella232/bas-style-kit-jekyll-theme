@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Fixed
 
 * Updating Gem lock file to fix gem versioning issue
+* Correcting use of deprecated `js-libs` in the BAS CDN
 
 ### Changed
 
