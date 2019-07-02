@@ -373,9 +373,7 @@ layout: bas-style-kit/html
 Page content
 ```
 
-  * `.gitlab-ci.yml`
 Layouts inheriting from the `bsk--standard` layout can add additional classes to the `#main-content` element by setting 
-  * `docker-compose.yml`
 the `main_content_classes` variable in each layout.
 
 For example:
@@ -389,9 +387,7 @@ main_content_classes: foo
 Page content
 ```
 
-  * `.gitlab-ci.yml`
 ### Includes
-  * `docker-compose.yml`
 
 Refer to [Jekyll's documentation](https://jekyllrb.com/docs/includes/) for general information.
 
@@ -609,9 +605,7 @@ Before release:
 
 1. create a release branch
 2. remove `-develop` from the version in:
-  * `.gitlab-ci.yml`
   * `jekyll-theme-bas-style-kit.gemspec`
-  * `docker-compose.yml`
   * `_data/bsk_jekyll_vars.json`
 3. build and push the app docker image [1]
 4. if new config options have been set, update the usage section
@@ -625,9 +619,7 @@ Before release:
 After release:
 
 1. bump the version with `-develop` as a prefix in:
-  * `.gitlab-ci.yml`
   * `jekyll-theme-bas-style-kit.gemspec`
-  * `docker-compose.yml`
   * `_data/bsk_jekyll_vars.json`
 2. push the app docker image [1]
 3. commit changes, merge with master and close release branch
