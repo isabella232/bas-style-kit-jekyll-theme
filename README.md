@@ -155,9 +155,12 @@ No configuration options.
 
 ##### 'service unavailable' pattern
 
-Optionally, use page content for:
+Use page content for:
 
 * contact information
+
+Optionally, use page content for:
+
 * details of alternative services
 
 Optionally, use a `pattern_availability` page variable for setting the availability line:
@@ -168,10 +171,98 @@ Optionally, use a `pattern_availability` page variable for setting the availabil
 
 ##### 'problem with this service' pattern
 
-Optionally, use page content for:
+Use page content for:
 
 * contact information
+
+Optionally, use page content for:
+
 * details of alternative services
+
+##### 'start' pattern
+
+Use page content for:
+
+* a list of needs the service caters for, as a list wrapped in a section with the `bsk-service-uses` class [1]
+* a call to action, as a link wrapped in a section with the `bsk-call-to-action` class [2]
+  * if the call to action should be a 'Sign in to start' button use [3]
+* contact information, as text wrapped in a section with the `bsk-more-information` class [4]
+
+Optionally, use page content for:
+
+* 'before you start' information, wrapped in a section with the `bsk-before-you-start` class [5]
+
+**Note:** If not already included via a layout, include
+[Font Awesome](https://style-kit.web.bas.ac.uk/core/icons/#font-awesome) to show the ORCID symbol.
+
+[1]
+
+```html
+<section class="bsk-service-uses">
+    <h2 class="bsk-h3">Use this service to:</h2>
+    <ul>
+        <li>access some information</li>
+        <li>perform an action</li>
+        <li>etc.</li>
+    </ul>
+</section>
+```
+
+[2]
+
+```html
+<section class="bsk-call-to-action">
+    <a class="bsk-btn bsk-btn-primary bsk-btn-lg" href="#">
+        Start Now
+        <i class="fa-fw fas fa-chevron-right"></i>
+    </a>
+</section>
+```
+
+[3]
+
+```html
+<section class="bsk-call-to-action">
+    <button class="bsk-btn bsk-btn-ms-account bsk-btn-lg">
+        <object class="bsk-ms-pictogram" type="image/svg+xml" data="https://cdn.web.bas.ac.uk/bas-style-kit/{{ site.data.bas-style-kit.bsk-vars.bsk_version }}/img/logos-symbols/ms-pictogram.svg"></object>
+        Sign in to start
+        <i class="fa-fw fas fa-chevron-right"></i>
+    </button>
+    <p class="bsk-sign-in-hint bsk-text-muted">Use the account you use for your NERC email to sign into this service.</p>
+</section>
+```
+
+[4]
+
+```html
+<section class="bsk-more-information">
+    <h2 class="bsk-h3">More information</h2>
+    <p>Contact the <a href="#">Sample Team</a> for information and help on how to use [website or application].</p>
+</section>
+```
+
+[5]
+
+```html
+<section class="bsk-before-you-start">
+    <h2 class="bsk-h3">Before you start</h2>
+    <p>You need some information to use this service.</p>
+</section>
+```
+
+##### 'sign in' pattern
+
+Use page content for:
+
+* a call to action, as a page variable [1]
+
+```html
+---
+layout: views/bas-style-kit/bsk--sign-in-microsoft
+
+call_to_action_href: #
+---
+```
 
 ### Using custom CSS/JS
 

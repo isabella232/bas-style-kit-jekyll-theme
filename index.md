@@ -35,6 +35,16 @@ layout: bas-style-kit/bsk--standard
 * [Problem with this service (basic)]({{ '/tests/patterns/problem-with-service-basic' | prepend: site.baseurl }})
 * [Problem with this service (alternative)]({{ '/tests/patterns/problem-with-service-alternative' | prepend: site.baseurl }})
 
+#### Start
+
+* [Start (basic)]({{ '/tests/patterns/start-basic' | prepend: site.baseurl }})
+* [Start (before you begin, more information)]({{ '/tests/patterns/start-more-info' | prepend: site.baseurl }})
+* [Start (sign in, Microsoft)]({{ '/tests/patterns/start-sign-in-microsoft' | prepend: site.baseurl }})
+
+#### Sign in
+
+* [Sign in (Microsoft)]({{ '/tests/patterns/sign-in-microsoft' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})

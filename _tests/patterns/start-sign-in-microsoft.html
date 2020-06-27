@@ -1,0 +1,33 @@
+---
+layout: views/bas-style-kit/bsk--start
+menus: patterns
+body_css_files:
+    -
+        type: remote
+        href: https://cdn.web.bas.ac.uk/libs/font-awesome-pro/5.13.0/css/all.min.css
+        integrity: sha256-DjbUjEiuM4tczO997cVF1zbf91BC9OzycscGGk/ZKks=
+---
+
+<section class="bsk-service-uses">
+    <h2 class="bsk-h3">Use this service to:</h2>
+    <ul>
+        <li>access some information</li>
+        <li>perform an action</li>
+        <li>etc.</li>
+    </ul>
+</section>
+
+<section class="bsk-call-to-action">
+    <button class="bsk-btn bsk-btn-ms-account bsk-btn-lg">
+        <object class="bsk-ms-pictogram" type="image/svg+xml" data="https://cdn.web.bas.ac.uk/bas-style-kit/{{ site.data.bas-style-kit.bsk-vars.bsk_version }}/img/logos-symbols/ms-pictogram.svg"></object>
+        Sign in to start
+        <i class="fa-fw fas fa-chevron-right"></i>
+    </button>
+    <p class="bsk-sign-in-hint bsk-text-muted">Use the account you use for your NERC email to sign into this service.</p>
+</section>
+
+<section class="bsk-more-information">
+    <h2 class="bsk-h3">More information</h2>
+    <p>See the <a href="#">Sample Service</a> on GitLab for information on how to use this service.</p>
+    <p>Contact the <a href="#">IT Service Desk</a> if you are unable to sign in.</p>
+</section>

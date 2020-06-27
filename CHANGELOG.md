@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Updated to jQuery 3.5.1
 * Updated to Jekyll 4.1
 * Updated Ruby dependencies
+* Missing patterns for start and 'sign in' page patterns
 
 ### Changed
 
