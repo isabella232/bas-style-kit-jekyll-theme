@@ -18,6 +18,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed
 
 * Feedback links changed to open in a new tab
+* Updated release procedures
 
 ## 0.9.0 - 2019-07-02
 

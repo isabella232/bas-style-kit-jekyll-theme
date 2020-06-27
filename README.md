@@ -734,9 +734,6 @@ Merge requests **WILL NOT** be accepted on this mirror.
 Before release:
 
 1. create a release branch
-2. remove `-develop` from the version in:
-  * `jekyll-theme-bas-style-kit.gemspec`
-  * `_data/bsk_jekyll_vars.json`
 3. build and push the app docker image [1]
 4. if new config options have been set, update the usage section
 5. update screen-shot (width: 900px)
@@ -748,10 +745,10 @@ Before release:
 
 After release:
 
-1. bump the version with `-develop` as a prefix in:
+1. bump the version in:
   * `jekyll-theme-bas-style-kit.gemspec`
   * `_data/bsk_jekyll_vars.json`
-2. push the app docker image [1]
+2. build and push the app docker image [1]
 3. commit changes, merge with master and close release branch
 
 [1]
