@@ -130,17 +130,25 @@ layout: views/bas-style-kit/bsk--page-not-found
 ---
 ```
 
+#### Use a component pattern
+
+To include a [component pattern](#component-pattern), call the relevant include with an required parameters.
+For example:
+
+```
+{% include bas-style-kit/bsk--pattern--item-type-header.html item_type="Item type" item_title="Item title" %}
+```
+
 ### Patterns
 
-Design patterns are used to demonstrate preferred ways to pass on information to users, or ask them for information.
-For example, information to show when a service is unavailable, formatting dates consistently or asking users for their
-username in a consistent way. See the [Style Kit documentation](https://style-kit.web.bas.ac.uk/patterns) for more 
-information.
+Patterns are used to define preferred ways to pass information to users, and ask information from users, in a consistent
+way. See the [Style Kit documentation](https://style-kit.web.bas.ac.uk/patterns) for more information.
 
-These patterns are implemented by this theme based on the reference examples included in the Style Kit. These 
-include patterns for:
+There are two types of pattern used in the Style Kit and these templates:
 
-* [pages](#page-patterns) - standalone pages designed to be used without customisation, defined as [Views](#views)
+* [pages](#page-patterns) - standalone pages designed to be used without customisation using [Views](#views)
+* [components](#component-patterns) - inline elements designed to be used without customisation using
+  [Includes](#includes)
 
 #### Page patterns
 
@@ -263,6 +271,37 @@ layout: views/bas-style-kit/bsk--sign-in-microsoft
 call_to_action_href: #
 ---
 ```
+
+#### Component patterns
+
+These templates use includes for all component patterns. Include parameters are used for customising each instance of
+the component.
+
+See the [Style Kit documentation](https://style-kit.web.bas.ac.uk) for general information on using these patterns.
+
+##### Item type header pattern
+
+Parameters:
+
+* `item_type` the type or kind of thing the item is, e.g. if the item is a person, it's type is 'person'
+* `item_title` a label specific to the item, e.g. if the item is a person their name
+
+```html
+{% include bas-style-kit/bsk--pattern--item-type-header.html item_type="Item type" item_title="Item title" %}
+```
+
+##### ORCID iD pattern
+
+Parameters:
+
+* `orcid_id` the ORCID iD of an individual as a URL
+
+```
+{% include bas-style-kit/bsk--pattern--orcid-id.html orcid_id="https://sandbox.orcid.org/0000-0001-8373-6934" %}
+```
+
+**Note:** If not already included via a layout, include
+[Font Awesome](https://style-kit.web.bas.ac.uk/core/icons/#font-awesome) to show the ORCID symbol.
 
 ### Using custom CSS/JS
 

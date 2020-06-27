@@ -45,6 +45,16 @@ layout: bas-style-kit/bsk--standard
 
 * [Sign in (Microsoft)]({{ '/tests/patterns/sign-in-microsoft' | prepend: site.baseurl }})
 
+### Component patterns
+
+#### Item type header
+
+* [Item type header]({{ '/tests/patterns/item-type-header' | prepend: site.baseurl }})
+
+#### ORCID iD
+
+* [ORCID iD]({{ '/tests/patterns/orcid-id' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})

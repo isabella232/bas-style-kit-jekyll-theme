@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Updated to Jekyll 4.1
 * Updated Ruby dependencies
 * Missing patterns for start and 'sign in' page patterns
+* Support for new component patterns (item type header and ORCID iD)
 
 ### Changed
 
