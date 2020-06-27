@@ -90,7 +90,7 @@ site_navigation_launcher:
 
 #### Standard page
 
-To create a page in an application or website based on the standard BAS page structure, create an application layout 
+To create a page in an application or website based on the standard BAS page structure, create an application layout
 (e.g. `_layouts/app.html`) with the following:
 
 ```
@@ -113,7 +113,7 @@ defaults:
 
 #### Use a page pattern
 
-To create a page in an application or website based on a [page design pattern](#page-patterns), create a view 
+To create a page in an application or website based on a [page pattern](#page-patterns), create a view
 (e.g. `views/error.pug`) with the following:
 
 ```html
@@ -305,12 +305,12 @@ Parameters:
 
 ### Using custom CSS/JS
 
-Support is provided for loading additional CSS an/or JavaScript resources, such as application or website specific 
+Support is provided for loading additional CSS an/or JavaScript resources, such as application or website specific
 styling or interactivity, either as references to files.
 
 This support is available in all layouts which inherit from the `bsk--basic.html` layout.
 
-For file resources, variables are provided for adding URLs and optional SRI values. Files will be included in the 
+For file resources, variables are provided for adding URLs and optional SRI values. Files will be included in the
 relevant block automatically, after the Style Kit's own resources if a Style Kit layout is used.
 
 * CSS resources are outputted at the end of the `<head>` element
@@ -342,16 +342,16 @@ Resource objects have the following properties:
 | `type`      | String    | Yes      | `local` or `remote` | `local`                                                |
 | `integrity` | String    | No       | Any SRI value       | `sha256-ClILH8AIH4CkAybtlKhzqqQUYR4eSDiNTK5LIWfF4qQ=`  |
 
-The `integrity` property is used to specify a 
-[Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) value for 
-a resource. If specified an `integrity` attribute and will be added to the generated markup. A `crossorigin` 
-attribute will also be added for 
-[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) support with a 
-hard-coded, `anonymous`, value. 
+The `integrity` property is used to specify a
+[Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) value for
+a resource. If specified an `integrity` attribute and will be added to the generated markup. A `crossorigin`
+attribute will also be added for
+[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) support with a
+hard-coded, `anonymous`, value.
 
 ### Navigation menu items
 
-When using the `bsk--standard.html` layout, a [navbar](https://style-kit.web.bas.ac.uk/components/navbar/) is included 
+When using the `bsk--standard.html` layout, a [navbar](https://style-kit.web.bas.ac.uk/components/navbar/) is included
 as part of the 'standard header', which consists of a cookie banner, navbar and site development phase banner.
 
 This navbar consists of three menus (and other elements, documented elsewhere):
@@ -360,8 +360,8 @@ This navbar consists of three menus (and other elements, documented elsewhere):
 2. a secondary navigation menu - aligned right, before the launcher menu
 3. a navigation launcher menu - aligned right, after the secondary navigation menu
 
-The navigation launcher is a restricted menu, used to link to other BAS websites and applications. By default it 
-contains links to the [BAS public website](https://www.bas.ac.uk) and the [BAS data catalogue](https://data.bas.ac.uk). 
+The navigation launcher is a restricted menu, used to link to other BAS websites and applications. By default it
+contains links to the [BAS public website](https://www.bas.ac.uk) and the [BAS data catalogue](https://data.bas.ac.uk).
 Other websites and applications can be added as well where relevant.
 
 The primary and secondary navigation menu's support:
@@ -384,21 +384,21 @@ All navigation menus are implemented using the [Jekyll menus](https://github.com
 
 ### Navigation branding
 
-[Navbars](https://style-kit.web.bas.ac.uk/components/navbar/) are also used to display the name/identity of a website 
+[Navbars](https://style-kit.web.bas.ac.uk/components/navbar/) are also used to display the name/identity of a website
 or application, to remind users where they are. These elements are referred to as 'brand' elements within the Style Kit.
 
-In the 'standard header', navbar brand elements are shown on the far left. 
+In the 'standard header', navbar brand elements are shown on the far left.
 
 Supported brand elements:
 
-* [brand text](https://style-kit.web.bas.ac.uk/components/navbar/#brand-text) - set using the 
+* [brand text](https://style-kit.web.bas.ac.uk/components/navbar/#brand-text) - set using the
 `bas_style_kit_jekyll_theme.attributes.site_brand.text` config variable
-* [brand image](https://style-kit.web.bas.ac.uk/components/navbar/#brand-image) - set using the 
+* [brand image](https://style-kit.web.bas.ac.uk/components/navbar/#brand-image) - set using the
 `bas_style_kit_jekyll_theme.attributes.site_brand.img` config variable
 
-Brand elements can be used together or individually, with fix classes applied automatically as needed. 
+Brand elements can be used together or individually, with fix classes applied automatically as needed.
 
-Brand elements are linked to a location specified by the `bas_style_kit_jekyll_theme.attributes.site_brand.href` config 
+Brand elements are linked to a location specified by the `bas_style_kit_jekyll_theme.attributes.site_brand.href` config
 variable, which should be the index of each website or application (i.e. `/`).
 
 ### Site development phase
@@ -406,14 +406,14 @@ variable, which should be the index of each website or application (i.e. `/`).
 The site development phase reflects the stage of development for a website or application, e.g. alpha or live. They are
 described in the Style Kit [here](https://style-kit.web.bas.ac.uk/core/colours/#development-phase-colours).
 
-For websites or applications that are not firmly in the 'live' phase, a banner should be shown to inform users and 
+For websites or applications that are not firmly in the 'live' phase, a banner should be shown to inform users and
 request feedback. This forms part of the 'standard header' of cookie banner, navbar and site development phase banner.
 
-In these templates, the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable is used to 
-specify the current phase for a website or application. When using the `bsk--standard.html`layout, a banner will be 
+In these templates, the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable is used to
+specify the current phase for a website or application. When using the `bsk--standard.html`layout, a banner will be
 shown automatically based on this variable.
 
-To disable this banner, set the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable to 
+To disable this banner, set the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable to
 `live-stable`. This isn't a real phase but separates a newly released website or application from something more mature.
 
 For example:
@@ -426,7 +426,7 @@ bas_style_kit_jekyll_theme:
 
 #### Experimental development phase
 
-Alternatively, the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable can be set to 
+Alternatively, the `bas_style_kit_jekyll_theme.attributes.site_development_phase` config variable can be set to
 `experimental` to indicate where an website or application is used for staging or other development/testing activities.
 
 For example:
@@ -439,7 +439,7 @@ bas_style_kit_jekyll_theme:
 
 ### Website analytics
 
-To include the Google Analytics universal tracking library (gtag), set the 
+To include the Google Analytics universal tracking library (gtag), set the
 `bas_style_kit_jekyll_theme.attributes.site_analytics.id` property to relevant Google Analytics property ID.
 
 **Note:** When used, the anonymise IP option in Google Analytics is enabled by default.
@@ -455,8 +455,8 @@ bas_style_kit_jekyll_theme:
 
 ## Components
 
-Components in these templates are structured according to Jekyll's conventions (e.g. layouts in `_layouts/`). They are 
-also namespaced in a `bas-style-kit` directory (e.g. `_layouts/bas-style-kit/`). Components that are specific to the 
+Components in these templates are structured according to Jekyll's conventions (e.g. layouts in `_layouts/`). They are
+also namespaced in a `bas-style-kit` directory (e.g. `_layouts/bas-style-kit/`). Components that are specific to the
 Style Kit are prefixed with `bsk--`.
 
 ### Views
@@ -479,7 +479,7 @@ Views for some pattern variants can be used as-is, others require variables or p
 
 Refer to [Jekyll's documentation](https://jekyllrb.com/docs/layouts/) for general information.
 
-Layouts are 'base' templates from which views or other layouts inherit. Layouts in this theme are hierarchical, with 
+Layouts are 'base' templates from which views or other layouts inherit. Layouts in this theme are hierarchical, with
 each layout extending the last in this order:
 
 * `blank.html`: lowest level layout, intentionally as minimal as possible and not intended for direct use, unless
@@ -488,9 +488,9 @@ each layout extending the last in this order:
   compatibility
 * `bsk--base.html`: intentionally implements the BAS Style Kit as minimally as possible and not intended for direct use,
   unless the bsk_standard.j2 layout is unsuitable
-* `bsk--standard.html`: defines an opinionated, conventional, page layout with a 'standard' header/footer, recommended 
+* `bsk--standard.html`: defines an opinionated, conventional, page layout with a 'standard' header/footer, recommended
   as a base for application/website layouts
-* `bsk--standard-page.html`: defines an opinionated, conventional, content page layout, recommended as a base for 
+* `bsk--standard-page.html`: defines an opinionated, conventional, content page layout, recommended as a base for
   content type websites, such as documentation
 
 For example:
@@ -503,7 +503,7 @@ layout: bas-style-kit/html
 Page content
 ```
 
-Layouts inheriting from the `bsk--standard` layout can add additional classes to the `#main-content` element by setting 
+Layouts inheriting from the `bsk--standard` layout can add additional classes to the `#main-content` element by setting
 the `main_content_classes` variable in each layout.
 
 For example:
@@ -532,7 +532,7 @@ Refer to [Jekyll's documentation](https://jekyllrb.com/docs/datafiles/) for gene
 
 This theme uses data files to define CSS and JavaScript resources to load and for some variables about the theme.
 
-All data files use the `.yml` (Yaml) extension and are namespaced using a `bas-style-kit/` directory - i.e. a data 
+All data files use the `.yml` (Yaml) extension and are namespaced using a `bas-style-kit/` directory - i.e. a data
 element `foo` in the data file `bsk-vars.yml` is available as `site.data.bas-style-kit.bsk-vars.foo`.
 
 ### Variables
@@ -553,7 +553,7 @@ Refer to [Jekyll's documentation](https://jekyllrb.com/docs/configuration/) for 
 Configuration options are used extensively throughout this theme. Some variables are used to set properties such as the
 brand text or image in the navbar (attributes), others are used to enable various features (feature flags).
 
-Configuration options operate at different scopes, *site* or *page*. Site options applies to across a site, whereas 
+Configuration options operate at different scopes, *site* or *page*. Site options applies to across a site, whereas
 page options can be applied to specific content items. Default values can be set for page options, which can then be
 overridden by specific content items.
 
@@ -617,11 +617,11 @@ These config options must not be changed and should be treated as read only:
 | Config Option                                                                     | Value Type | Allowed Values                                                                                  | Default Value      | Notes                                                      |
 | --------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------- |
 | `bas_style_kit_jekyll_theme.feature_flags.page.toc`                               | Boolean    | `true` / `false`                                                                                | `true`             | Whether to show the table of contents in standard pages    |
-| `bas_style_kit_jekyll_theme.attributes.head_title.default`                        | String     | Any string                                                                                      | 'site title'       | Typically 1-3 words                                        | 
-| `bas_style_kit_jekyll_theme.attributes.head_title.appended`                       | String     | Any string                                                                                      | *None*             | Typically 1-3 words                                        | 
-| `bas_style_kit_jekyll_theme.attributes.head_description`                          | String     | Any string                                                                                      | 'site description' | Typically 1-2 sentences                                    | 
-| `bas_style_kit_jekyll_theme.attributes.site_analytics.id`                         | String     | Google Analytics property ID                                                                    | *None*             | See [Site analytics](#site-analytics)                      | 
-| `bas_style_kit_jekyll_theme.attributes.site_brand.text`                           | String     | Any string                                                                                      | 'site title'       | Typically 1-3 words                                        | 
+| `bas_style_kit_jekyll_theme.attributes.head_title.default`                        | String     | Any string                                                                                      | 'site title'       | Typically 1-3 words                                        |
+| `bas_style_kit_jekyll_theme.attributes.head_title.appended`                       | String     | Any string                                                                                      | *None*             | Typically 1-3 words                                        |
+| `bas_style_kit_jekyll_theme.attributes.head_description`                          | String     | Any string                                                                                      | 'site description' | Typically 1-2 sentences                                    |
+| `bas_style_kit_jekyll_theme.attributes.site_analytics.id`                         | String     | Google Analytics property ID                                                                    | *None*             | See [Site analytics](#site-analytics)                      |
+| `bas_style_kit_jekyll_theme.attributes.site_brand.text`                           | String     | Any string                                                                                      | 'site title'       | Typically 1-3 words                                        |
 | `bas_style_kit_jekyll_theme.attributes.site_development_phase`                    | String     | `discovery` / `alpha` / `beta` / `live` / `live-stable` / `retired` / `experimental` / `custom` | 'alpha'            | See [Site development phase](#site-development-phase)      |
 | `bas_style_kit_jekyll_theme.attributes.site_feedback_href`                        | String     | URL to feedback page or other content (e.g. model overlay)                                      | '/feedback.html'   | -                                                          |
 | `bas_style_kit_jekyll_theme.attributes.site_footer.legal_policies.cookies_href`   | String     | URL to cookies legal policy                                                                     | '/legal/cookies'   | -                                                          |
@@ -649,10 +649,10 @@ This theme depends on these plugins:
 
 ## Development
 
-[Git](https://git-scm.com), [Docker](https://www.docker.com/community-edition) and 
+[Git](https://git-scm.com), [Docker](https://www.docker.com/community-edition) and
 [Docker Compose](https://docs.docker.com/compose/overview/) are required to build this project locally.
 
-To update the Docker image for this project, access to the private 
+To update the Docker image for this project, access to the private
 [BAS Docker Registry](https://docker-registry.data.bas.ac.uk) [1] is also required.
 
 ```shell
@@ -663,7 +663,7 @@ $ docker-compose up
 
 Visit [localhost:9000](http://localhost:9000) to see a preview of the theme.
 
-**Note:** If you don't have access to the BAS Private Docker Registry, you will need to build the project Docker image 
+**Note:** If you don't have access to the BAS Private Docker Registry, you will need to build the project Docker image
 locally first using `docker-compose build`.
 
 [1] The first time you use this registry, you will need to authenticate using:
@@ -674,7 +674,7 @@ $ docker login docker-registry.data.bas.ac.uk
 
 ### Updating dependencies
 
-If the `.gemspec` for this project is changed, the project Docker image will need to be rebuilt and pushed to the 
+If the `.gemspec` for this project is changed, the project Docker image will need to be rebuilt and pushed to the
 private BAS Docker Repository [1].
 
 ```shell
@@ -693,7 +693,7 @@ $ docker login docker-registry.data.bas.ac.uk
 To ensure the security of this project, and users of the Style Kit, all dependencies are checked against
 [Snyk](https://app.snyk.io/org/antarctica/project/a409ca29-86a3-45de-9838-5f1d7d1aca12) for vulnerabilities.
 
-Through [Continuous Integration](#continuous-integration), on each commit current dependencies are tested and a 
+Through [Continuous Integration](#continuous-integration), on each commit current dependencies are tested and a
 snapshot uploaded to Snyk. This snapshot is then monitored for vulnerabilities.
 
 ### Jekyll plugins
@@ -704,7 +704,7 @@ They will be installed automatically when this theme is used by an end-user.
 
 ### Jekyll config options
 
-The Jekyll Data plugin is used to set config options within sites that use this theme. Make sure to document which 
+The Jekyll Data plugin is used to set config options within sites that use this theme. Make sure to document which
 config options are set by this theme.
 
 ### Ruby Gem
@@ -713,7 +713,7 @@ This theme is distributed as a Ruby Gem, through the public [Ruby Gems](https://
 
 The `jekyll-theme-bas-style-kit.gemspec` file details the properties of the Gem for this project.
 
-**Note:** The `spec.files` parameter controls which files in this project are copied into the Gem. If a file is not 
+**Note:** The `spec.files` parameter controls which files in this project are copied into the Gem. If a file is not
 listed it won't be included. This is separate to the Git `.gitignore` file.
 
 ## Testing
@@ -724,7 +724,7 @@ The BAS GitLab instance is used for Continuous Integration using settings define
 
 ## GitHub mirror
 
-A read-only mirror of this project's repository is maintained on GitHub, to support Jekyll's automatic theme 
+A read-only mirror of this project's repository is maintained on GitHub, to support Jekyll's automatic theme
 installation, and to allow use by those outside of BAS.
 
 Merge requests **WILL NOT** be accepted on this mirror.
@@ -771,19 +771,19 @@ $ gem push jekyll-theme-bas-style-kit-*.gem
 
 ## Issue tracking
 
-This project uses [issue tracking](https://trello.com/b/0Mhzizpk/bas-style-kit) to manage development of new 
+This project uses [issue tracking](https://trello.com/b/0Mhzizpk/bas-style-kit) to manage development of new
 features/improvements and reporting bugs.
 
 ## Feedback
 
-The maintainer of this project is the BAS Web & Applications Team, they can be contacted through the 
+The maintainer of this project is the BAS Web & Applications Team, they can be contacted through the
 [BAS Service Desk](mailto:servicedesk@bas.ac.uk).
 
 ## License
 
 © UK Research and Innovation (UKRI), 2017-2018, British Antarctic Survey.
 
-You may use and re-use this software and associated documentation files free of charge in any format or medium, under 
+You may use and re-use this software and associated documentation files free of charge in any format or medium, under
 the terms of the Open Government Licence v3.0.
 
 You may obtain a copy of the Open Government Licence at http://www.nationalarchives.gov.uk/doc/open-government-licence/

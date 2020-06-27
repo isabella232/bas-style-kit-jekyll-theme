@@ -73,8 +73,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Changed [BREAKING!]
 
 * Icon uses replaced with alternatives or removed where not needed due to the removal of Font Awesome
-* Favicon attribute option changed, set `bas_style_kit_jekyll_theme.attributes.head_favicon` to `default` for the Style 
-  Kit favicon, other values will be ignored and no favicon will be set 
+* Favicon attribute option changed, set `bas_style_kit_jekyll_theme.attributes.head_favicon` to `default` for the Style
+  Kit favicon, other values will be ignored and no favicon will be set
 
 ### Added
 
@@ -143,7 +143,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Re-licensing project under the Open Government License
 * Upgrading to Jekyll 3.7.2
 * Upgrading to Style Kit 0.3.0
-* Layouts, includes and data files are now in a `bas-style-kit` namespace 
+* Layouts, includes and data files are now in a `bas-style-kit` namespace
 * Generic *blank* and *HTML* layouts and associated includes have been redeveloped
 * The Style Kit layout has been split into *base* and *standard* layouts
 * Style Kit includes have been redeveloped and renamed
