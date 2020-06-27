@@ -23,6 +23,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Updated licence dates
 * Updated release procedures
 
+### Removed
+
+* Synk testing due to incompatibility with modern bundler versions
+
 ## 0.9.0 - 2019-07-02
 
 ### Added
