@@ -24,7 +24,6 @@ layout: bas-style-kit/bsk--standard
 #### Service unavailable
 
 * [Service unavailable (basic)]({{ '/tests/patterns/service-unavailable-basic' | prepend: site.baseurl }})
-* [Service unavailable (contact)]({{ '/tests/patterns/service-unavailable-contact' | prepend: site.baseurl }})
 * [Service unavailable (availability)]({{ '/tests/patterns/service-unavailable-availability' | prepend: site.baseurl }})
 * [Service unavailable (alternative)]({{ '/tests/patterns/service-unavailable-alternative' | prepend: site.baseurl }})
 * [Service unavailable (partly closed)]({{ '/tests/patterns/service-unavailable-partly-closed' | prepend: site.baseurl }})
@@ -34,7 +33,6 @@ layout: bas-style-kit/bsk--standard
 #### Problem with this service
 
 * [Problem with this service (basic)]({{ '/tests/patterns/problem-with-service-basic' | prepend: site.baseurl }})
-* [Problem with this service (contact)]({{ '/tests/patterns/problem-with-service-contact' | prepend: site.baseurl }})
 * [Problem with this service (alternative)]({{ '/tests/patterns/problem-with-service-alternative' | prepend: site.baseurl }})
 
 ## Pages
