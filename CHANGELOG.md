@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Removed
+
+* Synk testing due to incompatibility with modern bundler versions
+
 ## 0.10.0 - 2020-06-27
 
 ### Added
@@ -22,10 +26,6 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Feedback links changed to open in a new tab
 * Updated licence dates
 * Updated release procedures
-
-### Removed
-
-* Synk testing due to incompatibility with modern bundler versions
 
 ## 0.9.0 - 2019-07-02
 
