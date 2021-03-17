@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 * Updated to jQuery 3.6.0
 * Updated to Jekyll 4.2
 * Updated Ruby dependencies
+* Added optional item type header pattern integration into standard page layout
 
 ### Removed
 
