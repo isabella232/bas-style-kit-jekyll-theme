@@ -56,6 +56,10 @@ layout: bas-style-kit/bsk--standard
 
 * [ORCID iD]({{ '/tests/patterns/orcid-id' | prepend: site.baseurl }})
 
+#### Markdown textarea
+
+* [Markdown textarea]({{ '/tests/patterns/textarea-markdown' | prepend: site.baseurl }})
+
 ## Pages
 
 * [about]({{ '/tests/pages/about' | prepend: site.baseurl }})

@@ -1,4 +1,4 @@
-# This file **is** a standard Jekyll config file. 
+# This file **is** a standard Jekyll config file.
 #
 # It is used to test the components that make up the BAS Style Kit Jekyll Theme works as expected, it does not test the
 # theme itself (i.e. in terms of treating includes as 'theme' includes, rather than 'site' includes, and config merging)
@@ -26,7 +26,7 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE-MIT.md
   - LICENSE.md
-  - README.md	
+  - README.md
   - Dockerfile
   - docker-compose.yml
   - jekyll-theme-bas-style-kit.gemspec
@@ -54,7 +54,7 @@ collections:
 # Theme settings - global variables
 #
 
-# This is a copy of the settings defined in `_config.yml` 
+# This is a copy of the settings defined in `_config.yml`
 # as this file isn't loaded when the theme is being tested internally
 bas_style_kit_jekyll_theme:
   feature_flags:
@@ -73,20 +73,20 @@ bas_style_kit_jekyll_theme:
       divider: true
       governance: true
       legal_policies: true
-  attributes: 
+  attributes:
     container: 'fixed'
     head_title:
       # Used when `page.title` isn't set
       default: 'BAS Style Kit Jekyll Theme'
       # Appended to either `page.title` or `head_title.default` - e.g. ` - Site Foo`
-      appended: ' - BAS Style Kit Jekyll Theme' 
+      appended: ' - BAS Style Kit Jekyll Theme'
     head_description: 'Jekyll theme implementation of the BAS Style Kit - https://stlye-kit.web.bas.ac.uk.'
     site_brand:
       text: 'BAS Style Kit Jekyll Theme'
       href: '/'
     site_development_phase: 'alpha'
     site_feedback_href: '#'
-    site_analytics: 
+    site_analytics:
       id: 'UA-64130716-27'
     site_styles: []
     site_scripts: []
