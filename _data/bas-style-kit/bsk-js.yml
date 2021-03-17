@@ -8,6 +8,6 @@
     integrity: 'sha256-MdF5lmO7tgKSFNkLp9uc3HJfoCwW1LCQrdNyHkQji2s='
     type: 'remote'
 -
-    href: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.6.0-beta/js/bas-style-kit.min.js'
-    integrity: 'sha256-IGaRkrHf/T62GN0E75YL3iLtvmbifinJXfSo8GohRB0='
+    href: 'https://cdn.web.bas.ac.uk/bas-style-kit/0.6.1/js/bas-style-kit.min.js'
+    integrity: 'sha256-cW+jowQERFqjJwdZ1VSZgG7dXQly19ykM5kVIONXmFg='
     type: 'remote'
