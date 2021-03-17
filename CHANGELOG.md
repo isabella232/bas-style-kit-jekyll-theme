@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Updated Ruby dependencies
+
 ### Removed
 
 * Synk testing due to incompatibility with modern bundler versions

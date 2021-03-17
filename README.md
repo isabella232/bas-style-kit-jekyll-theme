@@ -644,8 +644,10 @@ These config options must not be changed and should be treated as read only:
 This theme depends on these plugins:
 
 * [Jekyll data](https://github.com/ashmaroli/jekyll-data) - for including theme data files into a site's configuration
-* [Jekyll menu](https://github.com/forestryio/jekyll-menus) - for managing navigation menus
+* [Jekyll menus](https://github.com/forestryio/jekyll-menus) - for managing navigation menus
 * [Jekyll tidy](https://github.com/apsislabs/jekyll-tidy) - for rewriting HTML output to be well structured
+
+**Note:** A patched version of the *Jekyll menus* plugin is used to fix a Ruby 3.0 incompatibility.
 
 ## Development
 
